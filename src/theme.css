@@ -1,0 +1,116 @@
+/* ZIVION Design System Theme Variables from theme.md */
+:root {
+  /* 1. Primary Colors */
+  --primary-navy: #0B1220;
+  --electric-blue: #3B82F6;
+  --cyan-blue: #22D3EE;
+  --light-bg: #F8FAFC;
+  --dark-bg: #060B14;
+
+  /* 2. UI Colors */
+  --card-glass: #FFFFFFCC;
+  --text-primary: #111827;
+  --text-secondary: #64748B;
+  --success: #10B981;
+  --warning: #F59E0B;
+  --error: #EF4444;
+  --border: #E2E8F0;
+
+  /* 3. Additional Colors */
+  --white: #FFFFFF;
+  --light-blue: #DBEAFE;
+  --dark-blue: #1E3A8A;
+  --slate-gray: #94A3B8;
+  --dark-slate: #1E293B;
+  --light-cyan: #CFFAFE;
+  --indigo: #6366F1;
+  --resolved-neutral: #E2E8F0;
+
+  /* 4. Gradient Colors */
+  --primary-gradient: linear-gradient(135deg, #3B82F6 0%, #22D3EE 100%);
+  --secondary-gradient: linear-gradient(135deg, #6366F1 0%, #22D3EE 100%);
+  --dark-gradient: linear-gradient(180deg, #060B14 0%, #0B1220 100%);
+  --blue-gradient: linear-gradient(135deg, #1D4ED8 0%, #3B82F6 100%);
+  --card-glow-gradient: linear-gradient(135deg, rgba(59, 130, 246, 0.15) 0%, rgba(34, 211, 238, 0.05) 100%);
+  --badge-glow: radial-gradient(circle at top left, rgba(34, 211, 238, 0.25), transparent 70%);
+
+  /* 5. Component Colors */
+  --btn-primary: #3B82F6;
+  --btn-primary-hover: #2563EB;
+  --btn-secondary: #FFFFFF;
+  --btn-secondary-border: #CBD5E1;
+  --input-bg: #FFFFFF;
+  --input-border: #CBD5E1;
+  --nav-active: #3B82F6;
+  --nav-inactive: #64748B;
+  --dark-card-bg: #0B1220;
+  --dark-card-border: #1E293B;
+  --dark-text: #F8FAFC;
+  --dark-text-secondary: #94A3B8;
+
+  /* 6. Status Colors */
+  --status-online: #10B981;
+  --status-pending: #F59E0B;
+  --status-error: #EF4444;
+  --status-in-progress: #3B82F6;
+  --status-resolved: #E2E8F0;
+  --status-notification: #22D3EE;
+
+  /* Semantic Theme Variables (Default: Dark Executive Zivion Theme) */
+  --bg-app: var(--dark-bg);
+  --bg-sidebar: var(--primary-navy);
+  --bg-header: rgba(11, 18, 32, 0.85);
+  --bg-card: #0e172a;
+  --bg-card-hover: #132039;
+  --bg-card-glass: rgba(11, 18, 32, 0.75);
+  --bg-surface-elevated: #15223c;
+  --border-subtle: rgba(226, 232, 240, 0.08);
+  --border-card: #1E293B;
+  --border-focus: #3B82F6;
+  --text-main: #F8FAFC;
+  --text-muted: #94A3B8;
+  --text-dim: #64748B;
+  --input-bg-theme: #0b1526;
+  --input-border-theme: #1E293B;
+
+  /* Typography & Shadows */
+  --font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -2px rgba(0, 0, 0, 0.25);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -4px rgba(0, 0, 0, 0.3);
+  --shadow-glow: 0 0 20px -3px rgba(59, 130, 246, 0.3);
+  --shadow-glow-cyan: 0 0 20px -3px rgba(34, 211, 238, 0.3);
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-pill: 9999px;
+
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Light Theme Mode */
+[data-theme="light"] {
+  --bg-app: #F8FAFC;
+  --bg-sidebar: #FFFFFF;
+  --bg-header: rgba(255, 255, 255, 0.85);
+  --bg-card: #FFFFFF;
+  --bg-card-hover: #F1F5F9;
+  --bg-card-glass: rgba(255, 255, 255, 0.88);
+  --bg-surface-elevated: #F8FAFC;
+  --border-subtle: #E2E8F0;
+  --border-card: #E2E8F0;
+  --border-focus: #3B82F6;
+  --text-main: #111827;
+  --text-muted: #64748B;
+  --text-dim: #94A3B8;
+  --input-bg-theme: #FFFFFF;
+  --input-border-theme: #CBD5E1;
+  --shadow-sm: 0 1px 3px 0 rgba(15, 23, 42, 0.06);
+  --shadow-md: 0 4px 6px -1px rgba(15, 23, 42, 0.08), 0 2px 4px -2px rgba(15, 23, 42, 0.04);
+  --shadow-lg: 0 10px 25px -5px rgba(15, 23, 42, 0.08), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
+  --shadow-glow: 0 0 18px -2px rgba(59, 130, 246, 0.2);
+}
