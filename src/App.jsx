@@ -26,6 +26,10 @@ import {
   INITIAL_TENANTS,
   INITIAL_WORK_ORDERS
 } from './data/mockData';
+import {
+  APARTMENT_TEMPLATES,
+  INITIAL_COMMUNITY_FLATS
+} from './data/communityData';
 
 export function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(true);
@@ -34,6 +38,25 @@ export function App() {
   const [theme, setTheme] = useState('dark');
   const [activeProperty, setActiveProperty] = useState(PROPERTIES[0]);
   const [searchTerm, setSearchTerm] = useState('');
+
+  // Live Hierarchy & Flats State
+  const [apartments, setApartments] = useState(() => {
+    try {
+      const saved = localStorage.getItem('bee_apartments');
+      return saved ? JSON.parse(saved) : APARTMENT_TEMPLATES;
+    } catch {
+      return APARTMENT_TEMPLATES;
+    }
+  });
+
+  const [communityFlats, setCommunityFlats] = useState(() => {
+    try {
+      const saved = localStorage.getItem('bee_community_flats');
+      return saved ? JSON.parse(saved) : INITIAL_COMMUNITY_FLATS;
+    } catch {
+      return INITIAL_COMMUNITY_FLATS;
+    }
+  });
 
   // Live state
   const [units, setUnits] = useState(INITIAL_UNITS);
@@ -214,6 +237,10 @@ export function App() {
 
           {(currentTab === 'properties' || currentTab === 'community') && (
             <PropertyCommunityScreen
+              apartments={apartments}
+              setApartments={setApartments}
+              flats={communityFlats}
+              setFlats={setCommunityFlats}
               onOpenWorkOrderModal={(unitNum) => {
                 setWorkOrderDefaultUnit(unitNum);
                 setIsWorkOrderModalOpen(true);
@@ -224,6 +251,11 @@ export function App() {
 
           {currentTab === 'residences' && (
             <ResidencesScreen
+              apartments={apartments}
+              setApartments={setApartments}
+              flats={communityFlats}
+              setFlats={setCommunityFlats}
+              onNavigateTab={(tab) => setCurrentTab(tab)}
               onOpenWorkOrderModal={(unitNum) => {
                 setWorkOrderDefaultUnit(unitNum);
                 setIsWorkOrderModalOpen(true);

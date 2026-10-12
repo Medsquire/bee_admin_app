@@ -32,7 +32,7 @@ import {
   APARTMENT_TEMPLATES,
   INITIAL_COMMUNITY_FLATS
 } from '../data/communityData';
-import { HierarchyBuilderModal } from '../components/HierarchyBuilderModal';
+import { HierarchyBuilderSubPage } from '../components/HierarchyBuilderSubPage';
 
 export function PropertyCommunityScreen({
   apartments: propApartments,
@@ -75,10 +75,12 @@ export function PropertyCommunityScreen({
   const [searchQuery, setSearchQuery] = useState('');
   const [viewMode, setViewMode] = useState('elevation'); // 'elevation' | 'grid' | 'table'
 
+  // Sub-page state: 'portfolio' (Community Portfolio & Elevation) vs 'builder' (Manual Hierarchy Builder)
+  const [propertySubPage, setPropertySubPage] = useState('portfolio');
+
   // Modal / Drawer State
   const [inspectedFlat, setInspectedFlat] = useState(null);
   const [isAddFlatModalOpen, setIsAddFlatModalOpen] = useState(false);
-  const [isHierarchyModalOpen, setIsHierarchyModalOpen] = useState(false);
 
   // New Flat Form State
   const [newFlatData, setNewFlatData] = useState({
@@ -122,6 +124,7 @@ export function PropertyCommunityScreen({
         console.warn('Storage quota exceeded', err);
       }
     }
+    setPropertySubPage('portfolio');
   };
 
   // Active Apartment Object
@@ -302,8 +305,84 @@ export function PropertyCommunityScreen({
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', paddingBottom: '3rem' }}>
 
-      {/* 1. MASTER COMMUNITY HERO BANNER */}
+      {/* PROPERTIES SUB-NAVIGATION TABS */}
       <div
+        style={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          flexWrap: 'wrap',
+          gap: '0.75rem',
+          background: '#091536',
+          border: '1px solid rgba(255, 255, 255, 0.08)',
+          borderRadius: '12px',
+          padding: '0.65rem 1rem'
+        }}
+      >
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+          <button
+            type="button"
+            onClick={() => setPropertySubPage('portfolio')}
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: '6px',
+              padding: '0.5rem 1rem',
+              borderRadius: '8px',
+              border: 'none',
+              background: propertySubPage === 'portfolio' ? '#1D4ED8' : 'transparent',
+              color: propertySubPage === 'portfolio' ? '#FFFFFF' : '#8FA3CB',
+              fontSize: '13px',
+              fontWeight: 700,
+              cursor: 'pointer',
+              transition: 'all 0.15s ease'
+            }}
+          >
+            <Building2 size={16} /> Community Portfolio & Elevation
+          </button>
+
+          <button
+            type="button"
+            onClick={() => setPropertySubPage('builder')}
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: '6px',
+              padding: '0.5rem 1.15rem',
+              borderRadius: '8px',
+              border: 'none',
+              background: propertySubPage === 'builder' ? 'linear-gradient(135deg, #2563EB 0%, #06B6D4 100%)' : 'rgba(37, 99, 235, 0.15)',
+              color: '#FFFFFF',
+              fontSize: '13px',
+              fontWeight: 700,
+              cursor: 'pointer',
+              transition: 'all 0.15s ease'
+            }}
+          >
+            <Layers size={16} /> Hierarchy Builder (Apartments ➔ Blocks ➔ Floors ➔ Flats)
+          </button>
+        </div>
+
+        <div style={{ fontSize: '12px', color: '#8FA3CB' }}>
+          {propertySubPage === 'builder' ? (
+            <span style={{ color: '#38BDF8', fontWeight: 600 }}>Active Sub-Page: Manual Hierarchy Builder</span>
+          ) : (
+            <span>{apartments.length} Complexes • {flats.length} Total Flats</span>
+          )}
+        </div>
+      </div>
+
+      {propertySubPage === 'builder' ? (
+        <HierarchyBuilderSubPage
+          onApplyHierarchy={handleApplyHierarchy}
+          onCancel={() => setPropertySubPage('portfolio')}
+          existingApartments={apartments}
+          addToast={addToast}
+        />
+      ) : (
+        <>
+          {/* 1. MASTER COMMUNITY HERO BANNER */}
+          <div
         className="glass-panel"
         style={{
           position: 'relative',
@@ -416,7 +495,7 @@ export function PropertyCommunityScreen({
             {/* Quick Actions Panel */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', minWidth: '220px' }}>
               <button
-                onClick={() => setIsHierarchyModalOpen(true)}
+                onClick={() => setPropertySubPage('builder')}
                 style={{
                   display: 'flex',
                   alignItems: 'center',
@@ -729,7 +808,7 @@ export function PropertyCommunityScreen({
 
           {/* Add Custom Apartment Hierarchy Card */}
           <div
-            onClick={() => setIsHierarchyModalOpen(true)}
+            onClick={() => setPropertySubPage('builder')}
             className="glass-panel"
             style={{
               borderRadius: 'var(--radius-lg)',
@@ -1895,13 +1974,8 @@ export function PropertyCommunityScreen({
         </div>
       )}
 
-      {/* Manual Hierarchy Builder Modal */}
-      <HierarchyBuilderModal
-        isOpen={isHierarchyModalOpen}
-        onClose={() => setIsHierarchyModalOpen(false)}
-        onApplyHierarchy={handleApplyHierarchy}
-        addToast={addToast}
-      />
+        </>
+      )}
 
     </div>
   );

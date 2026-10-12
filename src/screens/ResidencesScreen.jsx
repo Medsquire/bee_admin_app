@@ -24,13 +24,13 @@ import {
   Send
 } from 'lucide-react';
 import { INITIAL_COMMUNITY_FLATS, APARTMENT_TEMPLATES } from '../data/communityData';
-import { HierarchyBuilderModal } from '../components/HierarchyBuilderModal';
 
 export function ResidencesScreen({
   apartments: propApartments,
   setApartments: propSetApartments,
   flats: propFlats,
   setFlats: propSetFlats,
+  onNavigateTab = () => {},
   onOpenWorkOrderModal = () => {},
   addToast = () => {}
 }) {
@@ -129,7 +129,7 @@ export function ResidencesScreen({
   };
 
   const getApartmentName = (aptId) => {
-    const apt = APARTMENT_TEMPLATES.find(a => a.id === aptId);
+    const apt = apartments.find(a => a.id === aptId);
     return apt ? apt.name : aptId;
   };
 
@@ -179,8 +179,29 @@ export function ResidencesScreen({
           </p>
         </div>
 
-        {/* View Toggle */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', background: '#0B1633', padding: '0.25rem', borderRadius: '8px', border: '1px solid rgba(255, 255, 255, 0.08)' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', flexWrap: 'wrap' }}>
+          <button
+            onClick={() => onNavigateTab('properties')}
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: '6px',
+              padding: '0.45rem 0.95rem',
+              borderRadius: '8px',
+              background: 'linear-gradient(135deg, #2563EB 0%, #06B6D4 100%)',
+              border: 'none',
+              color: '#FFFFFF',
+              fontSize: '12.5px',
+              fontWeight: 700,
+              cursor: 'pointer',
+              boxShadow: '0 4px 12px rgba(37, 99, 235, 0.3)'
+            }}
+          >
+            <Layers size={14} /> Open Hierarchy Builder (In Properties)
+          </button>
+
+          {/* View Toggle */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', background: '#0B1633', padding: '0.25rem', borderRadius: '8px', border: '1px solid rgba(255, 255, 255, 0.08)' }}>
           <button
             onClick={() => setViewMode('grid')}
             style={{
@@ -215,6 +236,7 @@ export function ResidencesScreen({
           </button>
         </div>
       </div>
+    </div>
 
       {/* 2. KPI Summary Bar */}
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem' }}>
@@ -345,7 +367,7 @@ export function ResidencesScreen({
             }}
           >
             <option value="all">All Complexes</option>
-            {APARTMENT_TEMPLATES.map(apt => (
+            {apartments.map(apt => (
               <option key={apt.id} value={apt.id}>{apt.name}</option>
             ))}
           </select>
