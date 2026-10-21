@@ -314,7 +314,7 @@ export function Header({
               </div>
             </form>
           </div>
-        </div>
+       </div>
       )}
     </>
   );
