@@ -166,7 +166,7 @@ export function generateCommunityFlats() {
   let residentIndex = 0;
 
   APARTMENT_TEMPLATES.forEach(apt => {
-    apt.blocks.forEach((block, bIdx) => {
+    apt.blocks.forEach((block, _bIdx) => {
       [4, 3, 2, 1].forEach(floorNum => {
         const floorConfigs = FLOOR_SPEC_CONFIG[floorNum];
 

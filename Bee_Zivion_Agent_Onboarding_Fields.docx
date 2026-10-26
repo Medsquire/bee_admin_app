@@ -1,0 +1,207 @@
+Agent & Service Partner Onboarding
+Field Specification | Bee / Zivion
+Purpose: define the fields and workflow for registering an agent or service company, then requesting property assignments for Zivion Admin approval.
+Workflow Overview
+•	Stage 1 — Agent and Company Registration: personal information, company details, contact details, services offered, and documents.
+•	Stage 2 — Property Assignment: select properties, areas, approved service categories, and assignment dates.
+•	Approval — Zivion Admin reviews the property assignment request before access is activated.
+Key rule: company registration approval and property assignment approval are separate. Submitting a request must not grant property access automatically.
+Stage 1 — Agent and Company Registration
+1. Personal Information
+Field	Field Type	Required
+Agent / Contact Person First Name	Text	Yes
+Agent / Contact Person Last Name	Text	Yes
+Profile Photo	Image upload	No
+Designation	Text	Yes
+Mobile Number	Phone with country code	Yes
+Alternate Contact Number	Phone with country code	No
+Email Address	Email	Yes
+Preferred Communication Language	Dropdown	No
+Agent Type	Dropdown	Yes
+Employee / Agent ID	Auto-generated or text	System / Admin
+Emergency Contact Name	Text	No
+Emergency Contact Number	Phone	No
+
+Agent Type options: Company Owner; Authorized Representative; Employee; Field Agent / Technician; Service Coordinator; Other (specify).
+2. Company Details
+Field	Field Type	Required
+Company / Business Name	Text	Yes
+Registered Company Name	Text	No
+Business Type	Dropdown	Yes
+Company Registration Number	Text	Conditional
+GSTIN	Text with validation	Conditional
+PAN	Text with validation	Conditional
+Company Website	URL	No
+Year of Establishment	Year	No
+Number of Employees	Number / Dropdown	No
+Company Email Address	Email	Yes
+Company Contact Number	Phone	Yes
+Company Address Line 1	Text	Yes
+Company Address Line 2	Text	No
+Country	Dropdown	Yes
+State	Dropdown	Yes
+City	Text / Dropdown	Yes
+PIN Code	Text	Yes
+Company Description	Multiline text	No
+Authorized Signatory Name	Text	No
+Authorized Signatory Designation	Text	No
+
+Business Type options: Sole Proprietorship; Partnership; LLP; Private Limited Company; Public Limited Company; Individual / Independent Service Provider; Other (specify).
+GSTIN, PAN, and registration details should be required only where applicable under the business and onboarding policy.
+3. Contact Details
+Field	Field Type	Required
+Primary Contact Name	Text	Yes
+Primary Contact Designation	Text	Yes
+Primary Contact Mobile	Phone	Yes
+Primary Contact Email	Email	Yes
+Alternate Contact Person	Text	No
+Alternate Contact Mobile	Phone	No
+Accounts / Billing Contact Name	Text	No
+Accounts / Billing Email	Email	No
+Accounts / Billing Phone	Phone	No
+Preferred Contact Method	Dropdown	No
+Preferred Contact Time	Dropdown / Time range	No
+
+Preferred Contact Method options: Phone Call; WhatsApp; Email; Bee App Notification.
+4. Types of Services Offered
+Use a repeatable service list. The user selects a category, enters any applicable details, and clicks “+ Add Another Service” to add more services.
+Field	Field Type	Required
+Service Category	Dropdown	Yes
+Specific Service / Specialization	Dropdown or text	Conditional
+Service Description	Multiline text	Conditional
+Other Service Name	Text; shown if Other selected	Conditional
+Service Coverage Area	Text / Multi-select	No
+Years of Experience	Number / Dropdown	No
+Relevant Certifications	Text / Document reference	Conditional
+Service Availability	Dropdown	No
+
+•	Housekeeping and Cleaning
+•	Security Services
+•	Facility Management
+•	Electrical Maintenance
+•	Plumbing
+•	HVAC / Air Conditioning
+•	Fire Safety and Fire Protection Systems
+•	Lift / Elevator Maintenance
+•	DG Set / Generator Maintenance
+•	STP / WTP / Water Treatment
+•	Landscaping and Gardening
+•	Pest Control
+•	Civil Works and Carpentry
+•	Painting and Waterproofing
+•	IT, Networking and CCTV
+•	Access Control and Intercom
+•	Waste Management
+•	Swimming Pool Maintenance
+•	Gym / Clubhouse Equipment Maintenance
+•	Appliance Repair
+•	Moving and Relocation
+•	Property Leasing / Real Estate Services
+•	Other — specify
+Repeatable actions: + Add Another Service; Edit Service; Remove Service. Each service should be stored as a separate related record.
+5. Document Uploads
+Field	Field Type	Required
+Company Registration Certificate	File upload	Conditional
+GST Registration Certificate	File upload	Conditional
+PAN Document	File upload	Conditional
+Company / Business Profile	PDF upload	No
+Authorized Signatory ID / Authorization Letter	File upload	Conditional
+Service Certifications / Licences	Multiple file upload	Conditional
+Insurance Certificate	File upload	Conditional
+Previous Work / Experience Portfolio	Multiple file upload	No
+Other Supporting Documents	Multiple file upload	No
+Document Remarks	Multiline text	No
+
+For each document, store document type, secure file reference, upload date, expiry date if applicable, and verification status. Configure file type/size limits and role-restricted access.
+6. Stage 1 Submission Fields
+Field	Field Type	Required
+Registration Form Status	System status	System
+Terms and Privacy Acknowledgement	Checkbox	Yes, where applicable
+Declaration of Information Accuracy	Checkbox	Yes
+Submitted By	System user reference	System
+Submission Date	Date/time	System
+Registration Reference Number	Auto-generated ID	System
+
+Suggested status options: Draft; Submitted; Under Review; Changes Requested; Approved for Property Assignment; Rejected.
+
+ Stage 2 — Property Assignment
+7. Property Information
+Field	Field Type	Required
+Organization / Property Management Company	Searchable dropdown	Yes
+Property Name	Searchable dropdown	Yes
+Property Code	Auto-populated	System
+Property Type	Auto-populated	System
+Property Address	Auto-populated	System
+State / City	Auto-populated	System
+Assignment Type	Dropdown	Yes
+Assigned Towers / Blocks	Multi-select	Conditional
+Assigned Floors / Zones	Multi-select or text	No
+Assigned Facilities / Areas	Multi-select	No
+Assignment Start Date	Date	Yes
+Assignment End Date	Date	No
+Services to Be Provided at This Property	Multi-select from Stage 1 services	Yes
+Property-Specific Service Details	Multiline text	No
+Expected Service Hours	Text / Time range	No
+Property Contact Person	Text / Existing contact lookup	No
+Property Contact Number	Phone	No
+Property Manager / Sponsor	Existing user lookup	Yes
+Supporting Property Documents	File upload	Conditional
+Reason for Assignment	Multiline text	No
+
+Assignment Type options: Single Property; Multiple Properties; Property Portfolio; Temporary / Project-Based Assignment.
+Only services registered in Stage 1 should be selectable. Admin must be able to approve a subset of services per property.
+8. Multiple Property Assignment
+Provide a “+ Add Another Property” action. Each property assignment should be a separate record with its own property, tower/block/zone, approved services, dates, sponsor, documents, status, and approval details. This allows one company to serve several communities without duplicating its company registration.
+9. Zivion Admin Approval
+Field	Field Type	Required / Owner
+Property Assignment Request ID	Auto-generated	System
+Agent / Company Reference	Linked record	System
+Requested Properties	Linked records	System
+Requested Services	Linked records	System
+Submitted Date	Date/time	System
+Review Status	Status	Admin / System
+Assigned Reviewer	User lookup	Admin
+Verification Checklist	Checklist	Admin
+Admin Comments	Multiline text	Admin
+Approval Decision	Dropdown	Admin
+Approved Services	Multi-select	Admin
+Approved Towers / Blocks	Multi-select	Admin
+Approved Start Date	Date	Admin
+Approved End Date	Date	Admin
+Rejection / Change Request Reason	Multiline text	Admin
+Reviewed By	User reference	System
+Review Date	Date/time	System
+Approval History	Audit log	System
+
+Approval Decision options: Approve; Approve with Restrictions; Request Changes; Reject.
+Assignment status options: Draft; Submitted for Approval; Under Review; Changes Requested; Approved; Approved with Restrictions; Rejected; Suspended; Expired; Revoked.
+Workflow
+•	1. Agent submits personal, company, contact, service, and document details.
+•	2. Registration is saved and validated. Any required initial verification is completed.
+•	3. Agent / company requests one or more property assignments.
+•	4. Submission creates a request in the Zivion Admin approval queue.
+•	5. Zivion Admin verifies the company, documents, services, and property scope.
+•	6. Admin approves, approves with restrictions, requests changes, or rejects.
+•	7. Only approved property/service permissions are activated.
+Recommended System Rules
+•	Maintain one company profile with multiple property assignments; do not duplicate company registration per property.
+•	Store each offered service as a reusable related record and permit only registered services to be requested for a property.
+•	Do not grant property access on submission; activate access only after approval.
+•	Support partial approval of properties, services, and areas.
+•	Record changes to company details, services, documents, and assignments in an audit history.
+•	Expired or revoked assignments must no longer grant access.
+•	Keep company verification separate from property assignment approval.
+•	Property assignment defines where the agent may work; role-based permissions define what the agent may do.
+•	Collect sensitive identity information only when required, and restrict document access to authorized users.
+Suggested Data Entities (Implementation Reference)
+Entity	Example Fields
+Agent / User	Name, contact details, login identity, account status
+Organization / Company	Company identity, registration, address, status
+Agent Employment / Contact	Agent, employer, designation, manager, dates
+Service Offering	Company, service category, specialization, description, certifications
+Agent Document	Document type, secure file reference, expiry, verification status
+Property Assignment	Agent/company, property, area, services, dates, status
+Assignment Approval	Request, reviewer, decision, restrictions, timestamps
+Audit History	Actor, action, timestamp, changed fields
+
+End of document
