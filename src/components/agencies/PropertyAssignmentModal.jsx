@@ -76,7 +76,7 @@ export default function PropertyAssignmentModal() {
         serviceDetails: `Standing service agreement for ${agency?.name || 'Service Partner'}.`,
         expectedHours: '08:00 - 18:00 (Emergency 24/7)',
         propertyContactPerson: defaultApt.propertyManager || 'Col. Sanjeev Varma',
-        propertyContactNumber: defaultApt.propertyManagerContact || '+1 (555) 482-9901',
+        propertyContactNumber: defaultApt.propertyManagerContact || '+91 9844829901',
         propertyManagerSponsor: defaultApt.propertyManager || 'Col. Sanjeev Varma',
         reason: 'Authorized property maintenance and service deployment.',
         supportingDocs: ['Contract_Proposal.pdf']
@@ -208,7 +208,7 @@ export default function PropertyAssignmentModal() {
       subtitle="Stage 2: Specify target communities, tower blocks, approved service categories, and operational dates"
       size="xl"
     >
-      <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', maxHeight: '82vh' }}>
+      <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', height: '100%', flex: 1, minHeight: 0, overflow: 'hidden' }}>
         <div className="modal-body" style={{ flex: 1, overflowY: 'auto', padding: '1.5rem', display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
           {/* Important Rule Banner */}
           <div
@@ -505,7 +505,7 @@ export default function PropertyAssignmentModal() {
               onClick={handleAddAnotherProperty}
             >
               <Plus size={14} />
-              + Add Another Property Assignment
+              Add Another Property Assignment
             </button>
           </div>
         </div>
@@ -519,7 +519,8 @@ export default function PropertyAssignmentModal() {
             justifyContent: 'space-between',
             padding: '1rem 1.5rem',
             borderTop: '1px solid var(--border-color)',
-            backgroundColor: '#FFFFFF'
+            backgroundColor: '#FFFFFF',
+            flexShrink: 0
           }}
         >
           <button

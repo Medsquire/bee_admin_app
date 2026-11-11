@@ -1,6 +1,7 @@
 import React from 'react';
 import StatCard from '../components/common/StatCard';
 import StatusBadge from '../components/common/StatusBadge';
+import ServiceRequestCharts from '../components/dashboard/ServiceRequestCharts';
 import { useApp } from '../context/AppContext';
 import {
   Building2,
@@ -172,14 +173,14 @@ export default function Dashboard() {
         </div>
       </section>
 
+      {/* SECTION: Service Request Visualizations & Analytics */}
+      <ServiceRequestCharts maintenanceRequests={maintenanceRequests} />
+
       {/* SECTION B: Property Overview strictly matching PRD Section 3.B */}
       <section aria-label="Property Overview">
         <div className="section-header">
           <div>
-            <h2>Registered Apartment Communities</h2>
-            <p className="text-xs text-muted">
-              Live status, occupancy metrics, and architecture across all developments
-            </p>
+            <h2 style={{ margin: 0 }}>Registered Apartment Communities</h2>
           </div>
           <button
             type="button"
@@ -283,8 +284,7 @@ export default function Dashboard() {
         <section aria-label="Maintenance Overview" className="card" style={{ padding: '1.25rem' }}>
           <div className="section-header" style={{ marginBottom: '0.875rem' }}>
             <div>
-              <h2>Recent Maintenance Requests</h2>
-              <p className="text-xs text-muted">Real-time status of reported work orders</p>
+              <h2 style={{ margin: 0 }}>Recent Maintenance Requests</h2>
             </div>
             <button
               type="button"
@@ -352,8 +352,7 @@ export default function Dashboard() {
         <section aria-label="Agency Overview" className="card" style={{ padding: '1.25rem' }}>
           <div className="section-header" style={{ marginBottom: '0.875rem' }}>
             <div>
-              <h2>Agency Overview & Approvals</h2>
-              <p className="text-xs text-muted">Service partners, availability & approvals</p>
+              <h2 style={{ margin: 0 }}>Agency Overview & Approvals</h2>
             </div>
             <button
               type="button"
@@ -592,8 +591,7 @@ export default function Dashboard() {
       <section aria-label="Recent Activity" className="card" style={{ padding: '1.25rem' }}>
         <div className="section-header" style={{ marginBottom: '0.875rem' }}>
           <div>
-            <h2>Recent Activity Feed</h2>
-            <p className="text-xs text-muted">Real-time audit log of system actions and modifications</p>
+            <h2 style={{ margin: 0 }}>Recent Activity Feed</h2>
           </div>
         </div>
 

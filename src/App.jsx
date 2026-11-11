@@ -1,5 +1,6 @@
 import React from 'react';
 import { AppProvider, useApp } from './context/AppContext';
+import AdminLogin from './pages/AdminLogin';
 import Sidebar from './components/layout/Sidebar';
 import Header from './components/layout/Header';
 import Dashboard from './pages/Dashboard';
@@ -23,10 +24,21 @@ import PropertyAssignmentModal from './components/agencies/PropertyAssignmentMod
 import RegistrationReviewModal from './components/agencies/RegistrationReviewModal';
 import AssignmentApprovalModal from './components/agencies/AssignmentApprovalModal';
 import PersonnelModal from './components/agencies/PersonnelModal';
+import AddServiceCategoryModal from './components/agencies/AddServiceCategoryModal';
 import ToastContainer from './components/common/ToastContainer';
 
-function MainApp() {
-  const { activePage } = useApp();
+function AppContent() {
+  const { isAuthenticated, activePage } = useApp();
+
+  // First screen must be Admin Login page (Requirement 3)
+  if (!isAuthenticated) {
+    return (
+      <>
+        <AdminLogin />
+        <ToastContainer />
+      </>
+    );
+  }
 
   return (
     <div className="app-container">
@@ -61,12 +73,13 @@ function MainApp() {
       <AddFloorModal />
       <AddFlatModal />
 
-      {/* Agency Onboarding, Personnel & Multi-Stage Approvals */}
+      {/* Agency Onboarding, Personnel, Multi-Stage Approvals & Service Categories */}
       <AgencyOnboardingModal />
       <PropertyAssignmentModal />
       <RegistrationReviewModal />
       <AssignmentApprovalModal />
       <PersonnelModal />
+      <AddServiceCategoryModal />
 
       {/* Action Toast Feedback */}
       <ToastContainer />
@@ -77,8 +90,7 @@ function MainApp() {
 export default function App() {
   return (
     <AppProvider>
-      <MainApp />
+      <AppContent />
     </AppProvider>
   );
 }
-

@@ -97,8 +97,8 @@ export default function AgencyAllocationModal() {
       subtitle={`Ticket #${req.id} • ${req.apartmentName}`}
       size="lg"
     >
-      <form onSubmit={handleConfirmAssignment}>
-        <div className="modal-body" style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
+      <form onSubmit={handleConfirmAssignment} style={{ display: 'flex', flexDirection: 'column', height: '100%', flex: 1, minHeight: 0, overflow: 'hidden' }}>
+        <div className="modal-body" style={{ flex: 1, overflowY: 'auto', minHeight: 0, display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
           {/* Step 1 & 2: Maintenance Request Overview */}
           <div
             style={{

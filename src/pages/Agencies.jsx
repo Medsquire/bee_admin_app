@@ -24,7 +24,9 @@ export default function Agencies() {
     agencies,
     metrics,
     setAgencyDetailModalId,
-    setAgencyOnboardingModal
+    setAgencyOnboardingModal,
+    allCategoryNames,
+    setAddServiceCategoryModal
   } = useApp();
 
   // Remember view preference from storage (default: 'cards')
@@ -127,11 +129,9 @@ export default function Agencies() {
       {/* Header Bar strictly matching PRD Section 5.A:
           Title, short description, search, filters, + Add Agency button, View toggle: Table / Cards */}
       <div
+        className="glass-panel"
         style={{
           padding: '1.25rem 1.5rem',
-          backgroundColor: '#FFFFFF',
-          borderRadius: 'var(--radius-lg)',
-          border: '1px solid var(--border-color)',
           display: 'flex',
           flexDirection: 'column',
           gap: '1rem'
@@ -139,12 +139,9 @@ export default function Agencies() {
       >
         <div className="flex-between" style={{ flexWrap: 'wrap', gap: '1rem' }}>
           <div>
-            <h1 style={{ fontSize: '1.375rem', fontWeight: 800, color: 'var(--dark-navy)' }}>
+            <h1 style={{ fontSize: '1.375rem', fontWeight: 800, color: 'var(--dark-navy)', margin: 0 }}>
               Agencies & Service Partners
             </h1>
-            <p className="text-xs text-muted" style={{ marginTop: '0.15rem' }}>
-              Service partner onboarding, category coverage, multi-property assignments, and approvals.
-            </p>
           </div>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', flexWrap: 'wrap' }}>
@@ -187,6 +184,23 @@ export default function Agencies() {
               </button>
             </div>
 
+            {/* Add Service Category Button strictly adhering to Requirement 1 */}
+            <button
+              type="button"
+              className="btn btn-secondary"
+              onClick={() =>
+                setAddServiceCategoryModal({
+                  isOpen: true,
+                  onCategoryAdded: (cat) => setSelectedCategory(cat.name)
+                })
+              }
+              style={{ fontWeight: 600 }}
+              title="Add a new service category to the system"
+            >
+              <Plus size={16} />
+              Add Service Category
+            </button>
+
             {/* Add Agency Button strictly matching PRD Section 5.A */}
             <button
               type="button"
@@ -215,19 +229,29 @@ export default function Agencies() {
             />
           </div>
 
-          {/* Service Category Filter with 23 Categories */}
+          {/* Service Category Filter with Dynamic Categories */}
           <div style={{ minWidth: '190px' }}>
             <select
               className="form-select"
               value={selectedCategory}
-              onChange={(e) => setSelectedCategory(e.target.value)}
+              onChange={(e) => {
+                if (e.target.value === '__ADD_NEW__') {
+                  setAddServiceCategoryModal({
+                    isOpen: true,
+                    onCategoryAdded: (cat) => setSelectedCategory(cat.name)
+                  });
+                  return;
+                }
+                setSelectedCategory(e.target.value);
+              }}
             >
-              <option value="ALL">All Service Categories ({SERVICE_CATEGORIES.length})</option>
-              {SERVICE_CATEGORIES.map((c) => (
+              <option value="ALL">All Service Categories ({allCategoryNames.length})</option>
+              {allCategoryNames.map((c) => (
                 <option key={c} value={c}>
                   {c}
                 </option>
               ))}
+              <option value="__ADD_NEW__">+ Add New Category...</option>
             </select>
           </div>
 

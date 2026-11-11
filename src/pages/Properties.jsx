@@ -79,11 +79,9 @@ export default function Properties() {
       <div className="page-container" style={{ display: 'flex', flexDirection: 'column', gap: '1.75rem' }}>
         {/* Header Bar strictly matching PRD Section 4.A */}
         <div
+          className="glass-panel"
           style={{
             padding: '1.25rem 1.5rem',
-            backgroundColor: '#FFFFFF',
-            borderRadius: 'var(--radius-lg)',
-            border: '1px solid var(--border-color)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
@@ -92,12 +90,9 @@ export default function Properties() {
           }}
         >
           <div>
-            <h1 style={{ fontSize: '1.375rem', fontWeight: 800, color: 'var(--dark-navy)' }}>
+            <h1 style={{ fontSize: '1.375rem', fontWeight: 800, color: 'var(--dark-navy)', margin: 0 }}>
               Properties
             </h1>
-            <p className="text-xs text-muted" style={{ marginTop: '0.2rem' }}>
-              Manage apartments, blocks, flats, facilities, and property documents.
-            </p>
           </div>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', flexWrap: 'wrap' }}>
@@ -245,10 +240,7 @@ export default function Properties() {
             <div>
               <div className="section-header" style={{ marginBottom: '1rem' }}>
                 <div>
-                  <h2>Residential Blocks & Towers</h2>
-                  <p className="text-xs text-muted">
-                    Explore wings, custom floor counts, unit occupancy, and active work orders
-                  </p>
+                  <h2 style={{ margin: 0 }}>Residential Blocks & Towers</h2>
                 </div>
                 {/* Add Block Action strictly matching PRD Section 4.F */}
                 <button
@@ -294,11 +286,9 @@ export default function Properties() {
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
               {/* Block Details Header strictly matching PRD Section 4.F */}
               <div
+                className="glass-panel"
                 style={{
                   padding: '1.25rem 1.5rem',
-                  backgroundColor: '#FFFFFF',
-                  borderRadius: 'var(--radius-lg)',
-                  border: '1px solid var(--border-color)',
                   display: 'flex',
                   justifyContent: 'space-between',
                   alignItems: 'center',
@@ -347,10 +337,7 @@ export default function Properties() {
               <div>
                 <div className="section-header" style={{ marginBottom: '0.75rem' }}>
                   <div>
-                    <h2>Floors in {currentBlock.name}</h2>
-                    <p className="text-xs text-muted">
-                      Select a floor to review occupancy, resident designations, and flats
-                    </p>
+                    <h2 style={{ margin: 0 }}>Floors in {currentBlock.name}</h2>
                   </div>
                 </div>
 
@@ -374,11 +361,9 @@ export default function Properties() {
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
               {/* Floor Details Header strictly matching PRD Section 4.H */}
               <div
+                className="glass-panel"
                 style={{
                   padding: '1.25rem 1.5rem',
-                  backgroundColor: '#FFFFFF',
-                  borderRadius: 'var(--radius-lg)',
-                  border: '1px solid var(--border-color)',
                   display: 'flex',
                   justifyContent: 'space-between',
                   alignItems: 'center',
@@ -435,10 +420,7 @@ export default function Properties() {
               <div>
                 <div className="section-header" style={{ marginBottom: '0.75rem' }}>
                   <div>
-                    <h2>Flats on {currentFloor.name}</h2>
-                    <p className="text-xs text-muted">
-                      Click any flat to view resident details, designation, or update occupancy
-                    </p>
+                    <h2 style={{ margin: 0 }}>Flats on {currentFloor.name}</h2>
                   </div>
                 </div>
 
@@ -475,11 +457,9 @@ export default function Properties() {
       {propertyActiveTab === 'documents' && (
         <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
           <div
+            className="glass-panel"
             style={{
               padding: '1.25rem 1.5rem',
-              backgroundColor: '#FFFFFF',
-              borderRadius: 'var(--radius-lg)',
-              border: '1px solid var(--border-color)',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'space-between',
@@ -488,12 +468,9 @@ export default function Properties() {
             }}
           >
             <div>
-              <h2 style={{ fontSize: '1.125rem', fontWeight: 800, color: 'var(--dark-navy)' }}>
+              <h2 style={{ fontSize: '1.125rem', fontWeight: 800, color: 'var(--dark-navy)', margin: 0 }}>
                 {currentApartment.name} — Document Archive
               </h2>
-              <p className="text-xs text-muted" style={{ marginTop: '0.15rem' }}>
-                Master layout, blueprints, municipal OC, fire safety clearance, and maintenance manuals
-              </p>
             </div>
 
             <button

@@ -817,7 +817,7 @@ export default function RWAManagementModal() {
                   <input
                     type="text"
                     className="form-input"
-                    placeholder="+1 (555) 000-0000"
+                    placeholder="+91 9876543210"
                     value={newMember.phone}
                     onChange={(e) => setNewMember({ ...newMember, phone: e.target.value })}
                   />

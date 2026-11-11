@@ -54,9 +54,9 @@ export default function PropertyFormModal() {
     image: '/Images/bee-community-master.jpg',
     additionalImages: [],
     propertyManager: 'Col. Sanjeev Varma',
-    propertyManagerContact: '+1 (555) 482-9901',
+    propertyManagerContact: '+91 9844829901',
     rwaStatus: 'Active',
-    emergencyContact: '+1 (555) 911-0021',
+    emergencyContact: '+91 9811191121',
     internalNotes: '',
     blocks: [],
     documents: []
@@ -135,9 +135,9 @@ export default function PropertyFormModal() {
           image: '/Images/bee-community-master.jpg',
           additionalImages: ['/Images/ApartmentImage.jpeg'],
           propertyManager: 'Col. Sanjeev Varma',
-          propertyManagerContact: '+1 (555) 482-9901',
+          propertyManagerContact: '+91 9844829901',
           rwaStatus: 'Active',
-          emergencyContact: '+1 (555) 911-0021',
+          emergencyContact: '+91 9811191121',
           internalNotes: 'Initial onboarding registration.',
           blocks: [
             {

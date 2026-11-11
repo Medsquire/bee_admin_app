@@ -86,8 +86,8 @@ export default function NewMaintenanceModal() {
       subtitle="Register an infrastructure or unit ticket linked directly to property hierarchy"
       size="md"
     >
-      <form onSubmit={handleSubmit}>
-        <div className="modal-body" style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+      <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', height: '100%', flex: 1, minHeight: 0, overflow: 'hidden' }}>
+        <div className="modal-body" style={{ flex: 1, overflowY: 'auto', minHeight: 0, display: 'flex', flexDirection: 'column', gap: '1rem' }}>
           {/* Issue Title */}
           <div>
             <label className="form-label">Issue Summary / Title</label>

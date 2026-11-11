@@ -271,7 +271,7 @@ export default function FlatDetailModal() {
                       <input
                         type="text"
                         className="form-input"
-                        placeholder="+1 (555) 000-0000"
+                        placeholder="+91 9876543210"
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       />

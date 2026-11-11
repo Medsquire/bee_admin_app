@@ -3,7 +3,7 @@ import { useApp } from '../../context/AppContext';
 import { LayoutDashboard, Building2, Briefcase, X, ShieldCheck } from 'lucide-react';
 
 export default function Sidebar() {
-  const { activePage, navigateTo, isMobileSidebarOpen, setIsMobileSidebarOpen, metrics } = useApp();
+  const { activePage, navigateTo, isMobileSidebarOpen, setIsMobileSidebarOpen, metrics, currentUser } = useApp();
 
   const navItems = [
     {
@@ -109,8 +109,66 @@ export default function Sidebar() {
           })}
         </nav>
 
-        {/* Sidebar Footer Info */}
-        <div className="sidebar-footer">
+        {/* Sidebar Footer: Admin Profile Details & System Status */}
+        <div className="sidebar-footer" style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+          {/* Admin Profile Section matching navbar profile style */}
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: '0.625rem',
+              padding: '0.45rem 0.75rem',
+              borderRadius: 'var(--radius-md)',
+              backgroundColor: '#F8FAFC',
+              border: '1px solid var(--border-color)'
+            }}
+          >
+            <div
+              style={{
+                width: '32px',
+                height: '32px',
+                borderRadius: '50%',
+                backgroundColor: 'var(--primary-blue)',
+                color: '#FFFFFF',
+                fontWeight: 700,
+                fontSize: '0.8125rem',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                boxShadow: '0 2px 4px rgba(37, 99, 235, 0.2)',
+                flexShrink: 0
+              }}
+            >
+              {currentUser?.initials || 'SJ'}
+            </div>
+            <div style={{ minWidth: 0, flex: 1, display: 'flex', flexDirection: 'column' }}>
+              <span
+                style={{
+                  fontSize: '0.8125rem',
+                  fontWeight: 700,
+                  color: 'var(--dark-navy)',
+                  lineHeight: 1.2,
+                  whiteSpace: 'nowrap',
+                  overflow: 'hidden',
+                  textOverflow: 'ellipsis'
+                }}
+              >
+                {currentUser?.name || 'Sarah Jenkins'}
+              </span>
+              <span
+                style={{
+                  fontSize: '0.6875rem',
+                  color: 'var(--primary-blue)',
+                  fontWeight: 600,
+                  marginTop: '0.1rem'
+                }}
+              >
+                {currentUser?.role || 'Super Admin'}
+              </span>
+            </div>
+          </div>
+
+          {/* System Status Section below it */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.625rem' }}>
             <div
               style={{

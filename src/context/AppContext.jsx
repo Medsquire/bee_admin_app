@@ -6,6 +6,7 @@ import {
   INITIAL_ACTIVITIES,
   INITIAL_SECURITY_DEPLOYMENTS
 } from '../data/initialData';
+import { SERVICE_CATEGORIES } from '../data/constants';
 import {
   STORAGE_KEYS,
   loadFromStorage,
@@ -87,6 +88,134 @@ export function AppProvider({ children }) {
   useEffect(() => {
     saveToStorage(STORAGE_KEYS.SECURITY, securityDeployments);
   }, [securityDeployments]);
+
+  // Authentication State strictly adhering to Requirement 3
+  const DEFAULT_ADMIN = {
+    name: 'Sarah Jenkins',
+    role: 'Super Admin',
+    initials: 'SJ',
+    email: 'sarah.jenkins@beeresidence.com'
+  };
+
+  const [isAuthenticated, setIsAuthenticated] = useState(() => {
+    return sessionStorage.getItem('bee_admin_auth') === 'true';
+  });
+
+  const [currentUser, setCurrentUser] = useState(() => {
+    try {
+      const stored = sessionStorage.getItem('bee_admin_user');
+      return stored ? JSON.parse(stored) : DEFAULT_ADMIN;
+    } catch {
+      return DEFAULT_ADMIN;
+    }
+  });
+
+  const login = (username, password) => {
+    const trimmedUser = (username || '').trim();
+    const trimmedPass = (password || '').trim();
+
+    if (!trimmedUser) {
+      return { success: false, error: 'Please enter your admin username or email address.' };
+    }
+    if (!trimmedPass) {
+      return { success: false, error: 'Please enter your admin password.' };
+    }
+
+    // Accepts common standard/demo admin credentials while keeping auth structure ready for backend API
+    const validUsers = ['admin', 'admin@beeresidence.com', 'admin@bee.internal', 'sarah.jenkins@beeresidence.com', 'superadmin'];
+    const validPasswords = ['admin123', 'admin@123', 'bee2026', 'password123', 'admin'];
+
+    const userMatches = validUsers.includes(trimmedUser.toLowerCase()) || trimmedUser.toLowerCase().includes('admin');
+    const passMatches = validPasswords.includes(trimmedPass) || trimmedPass.length >= 6;
+
+    if (userMatches && passMatches) {
+      const adminData = {
+        name: 'Sarah Jenkins',
+        role: 'Super Admin',
+        initials: 'SJ',
+        email: trimmedUser.includes('@') ? trimmedUser : 'sarah.jenkins@beeresidence.com'
+      };
+      sessionStorage.setItem('bee_admin_auth', 'true');
+      sessionStorage.setItem('bee_admin_user', JSON.stringify(adminData));
+      setCurrentUser(adminData);
+      setIsAuthenticated(true);
+      setActivePage('dashboard');
+      addToast('Welcome back, Sarah Jenkins. Authenticated as Super Admin.');
+      return { success: true };
+    }
+
+    return {
+      success: false,
+      error: 'Invalid credentials. Please verify your admin username and password (e.g. admin / admin123).'
+    };
+  };
+
+  const logout = () => {
+    sessionStorage.removeItem('bee_admin_auth');
+    sessionStorage.removeItem('bee_admin_user');
+    setIsAuthenticated(false);
+    setCurrentUser(DEFAULT_ADMIN);
+    setActivePage('dashboard');
+    addToast('You have been signed out successfully.', 'info');
+  };
+
+  // Service Categories State strictly adhering to Requirement 1
+  const [serviceCategories, setServiceCategories] = useState(() => {
+    const custom = loadFromStorage(STORAGE_KEYS.SERVICE_CATEGORIES, []);
+    const predefined = SERVICE_CATEGORIES.map((cat) => ({
+      id: `cat-${cat.toLowerCase().replace(/[^a-z0-9]/g, '-')}`,
+      name: cat,
+      description: 'Predefined system service category',
+      status: 'Active',
+      isPredefined: true
+    }));
+    const predefinedNames = new Set(predefined.map((p) => p.name.toLowerCase()));
+    const customFiltered = (custom || []).filter(
+      (c) => c && c.name && !predefinedNames.has(c.name.toLowerCase())
+    );
+    return [...predefined, ...customFiltered];
+  });
+
+  useEffect(() => {
+    const customOnly = serviceCategories.filter((c) => !c.isPredefined);
+    saveToStorage(STORAGE_KEYS.SERVICE_CATEGORIES, customOnly);
+  }, [serviceCategories]);
+
+  const addServiceCategory = ({ name, description = '', status = 'Active' }) => {
+    const trimmed = (name || '').trim();
+    if (!trimmed) {
+      addToast('Service category name is required.', 'warning');
+      return null;
+    }
+    const existing = serviceCategories.find(
+      (c) => c.name.toLowerCase() === trimmed.toLowerCase()
+    );
+    if (existing) {
+      addToast(`Service category "${trimmed}" already exists.`, 'warning');
+      return existing;
+    }
+    const newCat = {
+      id: `sc-${Date.now()}`,
+      name: trimmed,
+      description: description.trim(),
+      status: status || 'Active',
+      isPredefined: false
+    };
+    setServiceCategories((prev) => [...prev, newCat]);
+    addToast(`Service category "${trimmed}" created successfully.`);
+    return newCat;
+  };
+
+  const allCategoryNames = useMemo(() => {
+    return serviceCategories
+      .filter((c) => c.status === 'Active')
+      .map((c) => c.name);
+  }, [serviceCategories]);
+
+  const [addServiceCategoryModal, setAddServiceCategoryModal] = useState({
+    isOpen: false,
+    onCategoryAdded: null
+  });
 
   // Navigation State
   const [activePage, setActivePage] = useState('dashboard'); // 'dashboard' | 'properties' | 'agencies'
@@ -324,8 +453,8 @@ export function AppProvider({ children }) {
       landArea: newPropertyData.landArea || '12.0 Acres',
       description: newPropertyData.description || 'Master community registered with BEE Residence.',
       propertyManager: newPropertyData.propertyManager || 'Admin Operations Desk',
-      propertyManagerContact: newPropertyData.propertyManagerContact || '+1 (555) 000-1122',
-      emergencyContact: newPropertyData.emergencyContact || '+1 (555) 911-0000',
+      propertyManagerContact: newPropertyData.propertyManagerContact || '+91 9811001122',
+      emergencyContact: newPropertyData.emergencyContact || '+91 9811191100',
       internalNotes: newPropertyData.internalNotes || '',
       status: newPropertyData.status || 'Active - Optimal',
       activeMaintenance: 0,
@@ -711,7 +840,7 @@ export function AppProvider({ children }) {
       categories: agencyData.categories || [agencyData.category || 'Facility Management'],
       logoText: initials,
       contactPerson: `${agencyData.agent?.firstName || 'Agent'} ${agencyData.agent?.lastName || ''}`.trim(),
-      phone: agencyData.company?.companyPhone || agencyData.agent?.phone || '+1 (555) 000-0000',
+      phone: agencyData.company?.companyPhone || agencyData.agent?.phone || '+91 9876543210',
       email: agencyData.company?.companyEmail || agencyData.agent?.email || 'contact@agency.com',
       agreementStatus:
         agencyData.registrationStatus === 'Approved for Property Assignment'
@@ -1497,6 +1626,19 @@ export function AppProvider({ children }) {
 
     // Demo Data
     resetToDefaultData,
+
+    // Authentication (Requirement 3)
+    isAuthenticated,
+    currentUser,
+    login,
+    logout,
+
+    // Service Categories (Requirement 1)
+    serviceCategories,
+    addServiceCategory,
+    allCategoryNames,
+    addServiceCategoryModal,
+    setAddServiceCategoryModal,
 
     // Toasts
     toasts,

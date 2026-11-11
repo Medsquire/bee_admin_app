@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useApp } from '../../context/AppContext';
-import { Search, Bell, Menu, CheckCircle2, AlertTriangle, ShieldCheck, FileText, Wrench, X } from 'lucide-react';
+import { Search, Bell, Menu, CheckCircle2, AlertTriangle, ShieldCheck, FileText, Wrench, X, LogOut, ChevronDown } from 'lucide-react';
 
 export default function Header() {
   const {
@@ -12,13 +12,17 @@ export default function Header() {
     activities,
     apartments,
     agencies,
-    maintenanceRequests
+    maintenanceRequests,
+    currentUser,
+    logout
   } = useApp();
 
   const [isNotificationOpen, setIsNotificationOpen] = useState(false);
   const [isSearchFocused, setIsSearchFocused] = useState(false);
+  const [isProfileOpen, setIsProfileOpen] = useState(false);
   const notificationRef = useRef(null);
   const searchRef = useRef(null);
+  const profileRef = useRef(null);
 
   // Close dropdown on outside click
   useEffect(() => {
@@ -28,6 +32,9 @@ export default function Header() {
       }
       if (searchRef.current && !searchRef.current.contains(event.target)) {
         setIsSearchFocused(false);
+      }
+      if (profileRef.current && !profileRef.current.contains(event.target)) {
+        setIsProfileOpen(false);
       }
     }
     document.addEventListener('mousedown', handleClickOutside);
@@ -112,12 +119,9 @@ export default function Header() {
         </button>
 
         <div>
-          <h1 style={{ fontSize: '1.25rem', fontWeight: 700, color: 'var(--dark-navy)' }}>
+          <h1 style={{ fontSize: '1.25rem', fontWeight: 700, color: 'var(--dark-navy)', margin: 0 }}>
             {currentMeta.title}
           </h1>
-          <p className="text-xs text-muted" style={{ display: 'block' }}>
-            {currentMeta.subtitle}
-          </p>
         </div>
       </div>
 
@@ -361,43 +365,166 @@ export default function Header() {
           )}
         </div>
 
-        {/* Admin Profile Pill */}
-        <div
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: '0.625rem',
-            padding: '0.35rem 0.75rem',
-            borderRadius: 'var(--radius-full)',
-            backgroundColor: '#F8FAFC',
-            border: '1px solid var(--border-color)'
-          }}
-        >
-          <div
+        {/* Admin Profile Pill & Dropdown */}
+        <div ref={profileRef} style={{ position: 'relative' }}>
+          <button
+            type="button"
+            onClick={() => setIsProfileOpen((prev) => !prev)}
+            aria-expanded={isProfileOpen}
+            aria-haspopup="true"
+            aria-label="Admin profile options"
             style={{
-              width: '32px',
-              height: '32px',
-              borderRadius: '50%',
-              backgroundColor: 'var(--primary-blue)',
-              color: '#FFFFFF',
-              fontWeight: 700,
-              fontSize: '0.8125rem',
               display: 'flex',
               alignItems: 'center',
-              justifyContent: 'center',
-              boxShadow: '0 2px 4px rgba(37, 99, 235, 0.2)'
+              gap: '0.625rem',
+              padding: '0.35rem 0.75rem',
+              borderRadius: 'var(--radius-full)',
+              backgroundColor: isProfileOpen ? '#EFF6FF' : '#F8FAFC',
+              border: isProfileOpen ? '1px solid var(--primary-blue)' : '1px solid var(--border-color)',
+              cursor: 'pointer',
+              transition: 'all var(--transition-fast)',
+              outline: 'none'
+            }}
+            onMouseEnter={(e) => {
+              if (!isProfileOpen) {
+                e.currentTarget.style.backgroundColor = '#F1F5F9';
+                e.currentTarget.style.borderColor = 'var(--primary-blue-border)';
+              }
+            }}
+            onMouseLeave={(e) => {
+              if (!isProfileOpen) {
+                e.currentTarget.style.backgroundColor = '#F8FAFC';
+                e.currentTarget.style.borderColor = 'var(--border-color)';
+              }
             }}
           >
-            SJ
-          </div>
-          <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <span style={{ fontSize: '0.8125rem', fontWeight: 700, color: 'var(--dark-navy)', lineHeight: 1.2 }}>
-              Sarah Jenkins
-            </span>
-            <span style={{ fontSize: '0.6875rem', color: 'var(--primary-blue)', fontWeight: 600 }}>
-              Super Admin
-            </span>
-          </div>
+            <div
+              style={{
+                width: '32px',
+                height: '32px',
+                borderRadius: '50%',
+                backgroundColor: 'var(--primary-blue)',
+                color: '#FFFFFF',
+                fontWeight: 700,
+                fontSize: '0.8125rem',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                boxShadow: '0 2px 4px rgba(37, 99, 235, 0.2)'
+              }}
+            >
+              {currentUser?.initials || 'SJ'}
+            </div>
+            <div style={{ display: 'flex', flexDirection: 'column', textAlign: 'left' }}>
+              <span style={{ fontSize: '0.8125rem', fontWeight: 700, color: 'var(--dark-navy)', lineHeight: 1.2 }}>
+                {currentUser?.name || 'Sarah Jenkins'}
+              </span>
+              <span style={{ fontSize: '0.6875rem', color: 'var(--primary-blue)', fontWeight: 600 }}>
+                {currentUser?.role || 'Super Admin'}
+              </span>
+            </div>
+            <ChevronDown
+              size={14}
+              style={{
+                color: 'var(--text-muted)',
+                transform: isProfileOpen ? 'rotate(180deg)' : 'none',
+                transition: 'transform var(--transition-fast)',
+                marginLeft: '0.15rem'
+              }}
+            />
+          </button>
+
+          {/* Profile Popover / Dropdown */}
+          {isProfileOpen && (
+            <div
+              className="card glass-panel"
+              style={{
+                position: 'absolute',
+                top: 'calc(100% + 0.5rem)',
+                right: 0,
+                width: '230px',
+                zIndex: 1000,
+                padding: '0.875rem',
+                borderRadius: 'var(--radius-md)',
+                boxShadow: '0 10px 25px -5px rgba(15, 23, 42, 0.12), 0 8px 10px -6px rgba(15, 23, 42, 0.08)',
+                border: '1px solid rgba(226, 232, 240, 0.9)',
+                animation: 'fadeIn 0.15s ease-out'
+              }}
+            >
+              {/* Admin Info */}
+              <div
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '0.75rem',
+                  paddingBottom: '0.75rem',
+                  borderBottom: '1px solid var(--border-color)'
+                }}
+              >
+                <div
+                  style={{
+                    width: '36px',
+                    height: '36px',
+                    borderRadius: '50%',
+                    backgroundColor: 'var(--primary-blue)',
+                    color: '#FFFFFF',
+                    fontWeight: 700,
+                    fontSize: '0.8125rem',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    boxShadow: '0 2px 6px rgba(37, 99, 235, 0.25)',
+                    flexShrink: 0
+                  }}
+                >
+                  {currentUser?.initials || 'SJ'}
+                </div>
+                <div style={{ minWidth: 0, flex: 1 }}>
+                  <div style={{ fontSize: '0.8125rem', fontWeight: 700, color: 'var(--dark-navy)', lineHeight: 1.2 }}>
+                    {currentUser?.name || 'Sarah Jenkins'}
+                  </div>
+                  <div style={{ fontSize: '0.6875rem', color: 'var(--primary-blue)', fontWeight: 600, marginTop: '0.15rem' }}>
+                    {currentUser?.role || 'Super Admin'}
+                  </div>
+                </div>
+              </div>
+
+              {/* Action / Logout */}
+              <div style={{ paddingTop: '0.5rem' }}>
+                <button
+                  type="button"
+                  onClick={() => {
+                    setIsProfileOpen(false);
+                    logout();
+                  }}
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '0.625rem',
+                    width: '100%',
+                    padding: '0.5rem 0.65rem',
+                    borderRadius: 'var(--radius-sm)',
+                    border: 'none',
+                    backgroundColor: 'transparent',
+                    color: 'var(--error)',
+                    fontSize: '0.8125rem',
+                    fontWeight: 600,
+                    cursor: 'pointer',
+                    transition: 'all var(--transition-fast)'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.backgroundColor = 'var(--error-bg)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.backgroundColor = 'transparent';
+                  }}
+                >
+                  <LogOut size={15} />
+                  <span>Logout</span>
+                </button>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </header>

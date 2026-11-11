@@ -30,7 +30,7 @@ export const INITIAL_APARTMENTS = [
       "president": "Col. Sanjeev Varma (Retd.)",
       "secretary": "Dr. Ananya Iyer",
       "treasurer": "Vikramaditya Shah, CA",
-      "contactPhone": "+1 (555) 482-9901",
+      "contactPhone": "+91 9844829901",
       "contactEmail": "rwa.executive@beeroyalheights.org",
       "officeHours": "Mon - Sat: 09:00 AM - 01:00 PM",
       "totalMembers": 7,
@@ -39,25 +39,25 @@ export const INITIAL_APARTMENTS = [
           "name": "Meera Nair",
           "role": "Joint Secretary / Cultural Head",
           "flat": "A-201",
-          "phone": "+1 (555) 482-9902"
+          "phone": "+91 9844829902"
         },
         {
           "name": "Rajesh Kulkarni",
           "role": "Security & Surveillance Lead",
           "flat": "B-304",
-          "phone": "+1 (555) 482-9903"
+          "phone": "+91 9844829903"
         },
         {
           "name": "Kavita Singhania",
           "role": "Greenery & Landscaping Head",
           "flat": "C-102",
-          "phone": "+1 (555) 482-9904"
+          "phone": "+91 9844829904"
         },
         {
           "name": "Deepak Mehta",
           "role": "Facility & Infrastructure Lead",
           "flat": "A-402",
-          "phone": "+1 (555) 482-9905"
+          "phone": "+91 9844829905"
         }
       ]
     },
@@ -91,7 +91,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Owner",
                 "residentName": "Arun & Shalini Mathur",
-                "phone": "+1 (555) 101-2291",
+                "phone": "+91 9811012291",
                 "email": "arun.mathur@emerald.com",
                 "activeMaintenance": 0
               },
@@ -100,7 +100,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Tenant",
                 "residentName": "David Chen",
-                "phone": "+1 (555) 102-4412",
+                "phone": "+91 9811024412",
                 "email": "david.chen@techcorp.io",
                 "activeMaintenance": 0
               },
@@ -109,7 +109,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Owner",
                 "residentName": "Dr. Ramesh Bose",
-                "phone": "+1 (555) 103-8821",
+                "phone": "+91 9811038821",
                 "email": "rbose.med@univ.edu",
                 "activeMaintenance": 0
               },
@@ -118,7 +118,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Tenant",
                 "residentName": "Priya & Keith Vance",
-                "phone": "+1 (555) 104-9923",
+                "phone": "+91 9811049923",
                 "email": "priya.vance@design.co",
                 "activeMaintenance": 0
               }
@@ -138,7 +138,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Owner",
                 "residentName": "Meera & Sanjay Nair",
-                "phone": "+1 (555) 201-3381",
+                "phone": "+91 9822013381",
                 "email": "meera.nair@arts.org",
                 "activeMaintenance": 0
               },
@@ -147,7 +147,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Tenant",
                 "residentName": "Marcus & Zoe Reynolds",
-                "phone": "+1 (555) 202-7719",
+                "phone": "+91 9822027719",
                 "email": "mreynolds@fintech.net",
                 "activeMaintenance": 1
               },
@@ -165,7 +165,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Owner",
                 "residentName": "Suresh & Lata Bhatia",
-                "phone": "+1 (555) 204-5510",
+                "phone": "+91 9822045510",
                 "email": "suresh.b@bhatia.in",
                 "activeMaintenance": 0
               }
@@ -185,7 +185,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Owner",
                 "residentName": "Gaurav & Neha Kapoor",
-                "phone": "+1 (555) 301-4491",
+                "phone": "+91 9833014491",
                 "email": "gkapoor@lawchambers.com",
                 "activeMaintenance": 0
               },
@@ -194,7 +194,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Tenant",
                 "residentName": "Alexander Wright",
-                "phone": "+1 (555) 302-8871",
+                "phone": "+91 9833028871",
                 "email": "alex.wright@biolabs.com",
                 "activeMaintenance": 0
               },
@@ -203,7 +203,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Owner",
                 "residentName": "Harpreet Singh Gill",
-                "phone": "+1 (555) 303-6612",
+                "phone": "+91 9833036612",
                 "email": "hsingh@agritrade.com",
                 "activeMaintenance": 0
               },
@@ -212,7 +212,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Tenant",
                 "residentName": "Sophia Loren Martinez",
-                "phone": "+1 (555) 304-2210",
+                "phone": "+91 9833042210",
                 "email": "smartinez@mediahub.org",
                 "activeMaintenance": 0
               }
@@ -232,7 +232,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Owner",
                 "residentName": "Rohit & Swati Joshi",
-                "phone": "+1 (555) 401-9922",
+                "phone": "+91 9844019922",
                 "email": "rohit.j@aerospace.io",
                 "activeMaintenance": 0
               },
@@ -241,7 +241,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Owner",
                 "residentName": "Deepak & Sneha Mehta",
-                "phone": "+1 (555) 402-3310",
+                "phone": "+91 9844023310",
                 "email": "dmehta@construct.com",
                 "activeMaintenance": 0
               },
@@ -259,7 +259,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Tenant",
                 "residentName": "Liam & Olivia Brooks",
-                "phone": "+1 (555) 404-1188",
+                "phone": "+91 9844041188",
                 "email": "brooks.family@cloud.com",
                 "activeMaintenance": 0
               }
@@ -296,7 +296,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Owner",
                 "residentName": "Pooja Deshmukh",
-                "phone": "+1 (555) 501-8841",
+                "phone": "+91 9855018841",
                 "email": "pooja.d@auditpro.com",
                 "activeMaintenance": 0
               },
@@ -305,7 +305,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Tenant",
                 "residentName": "Carlos Santoro",
-                "phone": "+1 (555) 502-1132",
+                "phone": "+91 9855021132",
                 "email": "csantoro@globalshipping.com",
                 "activeMaintenance": 0
               },
@@ -314,7 +314,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Owner",
                 "residentName": "Vikramaditya Shah",
-                "phone": "+1 (555) 503-4421",
+                "phone": "+91 9855034421",
                 "email": "vikram.shah@finadvisors.com",
                 "activeMaintenance": 0
               },
@@ -323,7 +323,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Tenant",
                 "residentName": "Anil & Sunidhi Rao",
-                "phone": "+1 (555) 504-6655",
+                "phone": "+91 9855046655",
                 "email": "arao@telecomnet.com",
                 "activeMaintenance": 0
               }
@@ -343,7 +343,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Owner",
                 "residentName": "Manish & Ritu Agarwal",
-                "phone": "+1 (555) 601-3329",
+                "phone": "+91 9866013329",
                 "email": "magarwal@retailventures.com",
                 "activeMaintenance": 0
               },
@@ -352,7 +352,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Tenant",
                 "residentName": "Elena Rostova",
-                "phone": "+1 (555) 602-9901",
+                "phone": "+91 9866029901",
                 "email": "elena.rostova@designlab.net",
                 "activeMaintenance": 0
               },
@@ -361,7 +361,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Owner",
                 "residentName": "Bhaskar & Tanvi Sen",
-                "phone": "+1 (555) 603-5511",
+                "phone": "+91 9866035511",
                 "email": "bsen@pharmagroup.com",
                 "activeMaintenance": 0
               },
@@ -370,7 +370,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Owner",
                 "residentName": "George & Mary Sterling",
-                "phone": "+1 (555) 604-7744",
+                "phone": "+91 9866047744",
                 "email": "gsterling@heritage.org",
                 "activeMaintenance": 0
               }
@@ -390,7 +390,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Owner",
                 "residentName": "Kunal & Vandana Somani",
-                "phone": "+1 (555) 701-1199",
+                "phone": "+91 9877011199",
                 "email": "ksomani@somani-inv.com",
                 "activeMaintenance": 0
               },
@@ -408,7 +408,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Tenant",
                 "residentName": "Lucas & Mia Fernandez",
-                "phone": "+1 (555) 703-2288",
+                "phone": "+91 9877032288",
                 "email": "lucas.fernandez@techdev.co",
                 "activeMaintenance": 1
               },
@@ -417,7 +417,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Owner",
                 "residentName": "Rajesh & Suman Kulkarni",
-                "phone": "+1 (555) 704-8844",
+                "phone": "+91 9877048844",
                 "email": "rkulkarni@deftech.gov",
                 "activeMaintenance": 0
               }
@@ -437,7 +437,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Owner",
                 "residentName": "Col. Sanjeev Varma",
-                "phone": "+1 (555) 801-9900",
+                "phone": "+91 9888019900",
                 "email": "sanjeev.varma@defensemail.org",
                 "activeMaintenance": 0
               },
@@ -446,7 +446,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Tenant",
                 "residentName": "Benjamin Scott",
-                "phone": "+1 (555) 802-3311",
+                "phone": "+91 9888023311",
                 "email": "bscott@equitypartners.com",
                 "activeMaintenance": 0
               },
@@ -455,7 +455,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Owner",
                 "residentName": "Dr. Ananya Iyer",
-                "phone": "+1 (555) 803-7722",
+                "phone": "+91 9888037722",
                 "email": "ananya.iyer@neuroscience.edu",
                 "activeMaintenance": 0
               },
@@ -464,7 +464,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Tenant",
                 "residentName": "Clara Oswald",
-                "phone": "+1 (555) 804-6633",
+                "phone": "+91 9888046633",
                 "email": "clara.oswald@academy.edu",
                 "activeMaintenance": 0
               }
@@ -501,7 +501,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Owner",
                 "residentName": "Tariq & Fatima Al-Mansoor",
-                "phone": "+1 (555) 901-2288",
+                "phone": "+91 9899012288",
                 "email": "talmansoor@gulfintl.com",
                 "activeMaintenance": 0
               },
@@ -510,7 +510,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Owner",
                 "residentName": "Kavita Singhania",
-                "phone": "+1 (555) 902-7711",
+                "phone": "+91 9899027711",
                 "email": "kavita.s@botanicaltrust.org",
                 "activeMaintenance": 0
               },
@@ -528,7 +528,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Tenant",
                 "residentName": "Akash & Riya Mittal",
-                "phone": "+1 (555) 904-4411",
+                "phone": "+91 9899044411",
                 "email": "mittal.akash@fintech.io",
                 "activeMaintenance": 0
               }
@@ -548,7 +548,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Owner",
                 "residentName": "Naveen & Divya Nambiar",
-                "phone": "+1 (555) 911-3322",
+                "phone": "+91 9899113322",
                 "email": "naveen.n@consulting.com",
                 "activeMaintenance": 0
               },
@@ -557,7 +557,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Tenant",
                 "residentName": "Ethan Hunt",
-                "phone": "+1 (555) 912-6644",
+                "phone": "+91 9899126644",
                 "email": "ehunt@imfservices.com",
                 "activeMaintenance": 1
               },
@@ -566,7 +566,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Owner",
                 "residentName": "Sanjay & Preeti Goel",
-                "phone": "+1 (555) 913-8855",
+                "phone": "+91 9899138855",
                 "email": "sgoel@steelcorp.in",
                 "activeMaintenance": 0
               },
@@ -575,7 +575,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Tenant",
                 "residentName": "Natasha Romanov",
-                "phone": "+1 (555) 914-9911",
+                "phone": "+91 9899149911",
                 "email": "nromanov@avengermedia.org",
                 "activeMaintenance": 0
               }
@@ -595,7 +595,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Owner",
                 "residentName": "Vijay & Madhuri Shekhawat",
-                "phone": "+1 (555) 921-5511",
+                "phone": "+91 9899215511",
                 "email": "vshekhawat@royalheritage.com",
                 "activeMaintenance": 0
               },
@@ -613,7 +613,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Tenant",
                 "residentName": "Samuel Jackson",
-                "phone": "+1 (555) 923-7722",
+                "phone": "+91 9899237722",
                 "email": "sjackson@hollywood.la",
                 "activeMaintenance": 0
               },
@@ -622,7 +622,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Owner",
                 "residentName": "Aditya & Simran Birla",
-                "phone": "+1 (555) 924-4433",
+                "phone": "+91 9899244433",
                 "email": "abirla@grouptextiles.com",
                 "activeMaintenance": 0
               }
@@ -642,7 +642,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Owner",
                 "residentName": "Karthik & Deepa Sundaram",
-                "phone": "+1 (555) 931-8844",
+                "phone": "+91 9899318844",
                 "email": "ksundaram@chiptech.com",
                 "activeMaintenance": 0
               },
@@ -651,7 +651,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Tenant",
                 "residentName": "Rachel Green",
-                "phone": "+1 (555) 932-9955",
+                "phone": "+91 9899329955",
                 "email": "rgreen@fashionhaus.nyc",
                 "activeMaintenance": 0
               },
@@ -669,7 +669,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Owner",
                 "residentName": "Devansh & Shreya Roy",
-                "phone": "+1 (555) 934-2211",
+                "phone": "+91 9899342211",
                 "email": "droy@creativemedia.co",
                 "activeMaintenance": 0
               }
@@ -681,8 +681,8 @@ export const INITIAL_APARTMENTS = [
     "propertyType": "Residential Apartment",
     "landArea": "14.5 Acres",
     "propertyManager": "Col. Sanjeev Varma",
-    "propertyManagerContact": "+1 (555) 482-9901",
-    "emergencyContact": "+1 (555) 911-0021",
+    "propertyManagerContact": "+91 9844829901",
+    "emergencyContact": "+91 9811191121",
     "internalNotes": "Bee Royal Heights operations governed by BEE Residence Executive SLA.",
     "additionalImages": [
       "/Images/bee-community-master.jpg",
@@ -768,7 +768,7 @@ export const INITIAL_APARTMENTS = [
       "president": "Naveen Malhotra",
       "secretary": "Sunita Kapoor",
       "treasurer": "Rohan Sengupta",
-      "contactPhone": "+1 (555) 329-8820",
+      "contactPhone": "+91 9833298820",
       "contactEmail": "board@honeycombtowers.com",
       "officeHours": "Mon - Fri: 10:00 AM - 04:00 PM",
       "totalMembers": 6,
@@ -777,19 +777,19 @@ export const INITIAL_APARTMENTS = [
           "name": "Alok Bansal",
           "role": "Maintenance Lead",
           "flat": "Alpha-101",
-          "phone": "+1 (555) 329-8821"
+          "phone": "+91 9833298821"
         },
         {
           "name": "Geeta Ramesh",
           "role": "Environmental Officer",
           "flat": "Beta-303",
-          "phone": "+1 (555) 329-8822"
+          "phone": "+91 9833298822"
         },
         {
           "name": "Arjun Nambiar",
           "role": "Safety In-Charge",
           "flat": "Gamma-202",
-          "phone": "+1 (555) 329-8823"
+          "phone": "+91 9833298823"
         }
       ]
     },
@@ -823,7 +823,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Owner",
                 "residentName": "Alok Bansal",
-                "phone": "+1 (555) 329-8821",
+                "phone": "+91 9833298821",
                 "email": "alok.bansal@bansalcap.com",
                 "activeMaintenance": 1
               },
@@ -832,7 +832,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Tenant",
                 "residentName": "Maya Angelis",
-                "phone": "+1 (555) 331-4411",
+                "phone": "+91 9833314411",
                 "email": "m.angelis@design.io",
                 "activeMaintenance": 0
               },
@@ -841,7 +841,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Owner",
                 "residentName": "Naveen Malhotra",
-                "phone": "+1 (555) 331-7722",
+                "phone": "+91 9833317722",
                 "email": "nmalhotra@apexgroup.com",
                 "activeMaintenance": 0
               },
@@ -850,7 +850,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Tenant",
                 "residentName": "Sarah Connor",
-                "phone": "+1 (555) 331-9933",
+                "phone": "+91 9833319933",
                 "email": "sconnor@cybersec.org",
                 "activeMaintenance": 0
               }
@@ -870,7 +870,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Owner",
                 "residentName": "Rajeev & Priya Shukla",
-                "phone": "+1 (555) 332-1100",
+                "phone": "+91 9833321100",
                 "email": "rshukla@cloudnine.com",
                 "activeMaintenance": 0
               },
@@ -879,7 +879,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Tenant",
                 "residentName": "Daniel Craig",
-                "phone": "+1 (555) 332-2211",
+                "phone": "+91 9833322211",
                 "email": "dcraig@filmmakers.uk",
                 "activeMaintenance": 0
               },
@@ -888,7 +888,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Owner",
                 "residentName": "Sunita & Arvind Kapoor",
-                "phone": "+1 (555) 332-3322",
+                "phone": "+91 9833323322",
                 "email": "skapoor@kapoorfoods.in",
                 "activeMaintenance": 0
               },
@@ -897,7 +897,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Tenant",
                 "residentName": "Jessica Jones",
-                "phone": "+1 (555) 332-4433",
+                "phone": "+91 9833324433",
                 "email": "jjones@investigations.nyc",
                 "activeMaintenance": 0
               }
@@ -917,7 +917,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Owner",
                 "residentName": "Rohan & Tanvi Sengupta",
-                "phone": "+1 (555) 333-1122",
+                "phone": "+91 9833331122",
                 "email": "rsengupta@senguptafin.com",
                 "activeMaintenance": 0
               },
@@ -935,7 +935,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Tenant",
                 "residentName": "Luke Skywalker",
-                "phone": "+1 (555) 333-3344",
+                "phone": "+91 9833333344",
                 "email": "luke@jediorder.org",
                 "activeMaintenance": 0
               },
@@ -944,7 +944,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Owner",
                 "residentName": "Tarun & Shweta Bajaj",
-                "phone": "+1 (555) 333-5566",
+                "phone": "+91 9833335566",
                 "email": "tbajaj@bajajauto.com",
                 "activeMaintenance": 0
               }
@@ -964,7 +964,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Owner",
                 "residentName": "Vikram & Anjali Seth",
-                "phone": "+1 (555) 334-1188",
+                "phone": "+91 9833341188",
                 "email": "vseth@sethpublishers.com",
                 "activeMaintenance": 0
               },
@@ -973,7 +973,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Tenant",
                 "residentName": "Bruce Banner",
-                "phone": "+1 (555) 334-2299",
+                "phone": "+91 9833342299",
                 "email": "bbanner@gammares.edu",
                 "activeMaintenance": 0
               },
@@ -982,7 +982,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Owner",
                 "residentName": "Manoj & Kiran Somaiya",
-                "phone": "+1 (555) 334-3300",
+                "phone": "+91 9833343300",
                 "email": "msomaiya@metals.co",
                 "activeMaintenance": 0
               },
@@ -991,7 +991,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Tenant",
                 "residentName": "Wanda Maximoff",
-                "phone": "+1 (555) 334-4411",
+                "phone": "+91 9833344411",
                 "email": "wanda@westview.io",
                 "activeMaintenance": 0
               }
@@ -1028,7 +1028,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Owner",
                 "residentName": "Harish & Nalini Iyer",
-                "phone": "+1 (555) 341-1100",
+                "phone": "+91 9833411100",
                 "email": "hiyer@iyerinfra.in",
                 "activeMaintenance": 0
               },
@@ -1037,7 +1037,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Tenant",
                 "residentName": "Steve Rogers",
-                "phone": "+1 (555) 341-2200",
+                "phone": "+91 9833412200",
                 "email": "srogers@brooklyn1941.org",
                 "activeMaintenance": 0
               },
@@ -1046,7 +1046,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Owner",
                 "residentName": "Amit & Neha Singhal",
-                "phone": "+1 (555) 341-3300",
+                "phone": "+91 9833413300",
                 "email": "asinghal@searchai.com",
                 "activeMaintenance": 0
               },
@@ -1055,7 +1055,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Tenant",
                 "residentName": "Peggy Carter",
-                "phone": "+1 (555) 341-4400",
+                "phone": "+91 9833414400",
                 "email": "pcarter@shieldspecial.gov",
                 "activeMaintenance": 0
               }
@@ -1075,7 +1075,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Owner",
                 "residentName": "Kunal & Shruti Shah",
-                "phone": "+1 (555) 342-1100",
+                "phone": "+91 9833421100",
                 "email": "kunal@credvest.in",
                 "activeMaintenance": 1
               },
@@ -1084,7 +1084,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Tenant",
                 "residentName": "Tony Stark",
-                "phone": "+1 (555) 342-2200",
+                "phone": "+91 9833422200",
                 "email": "tony@starkindustries.com",
                 "activeMaintenance": 0
               },
@@ -1093,7 +1093,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Owner",
                 "residentName": "Sanjay & Sunita Gupta",
-                "phone": "+1 (555) 342-3300",
+                "phone": "+91 9833423300",
                 "email": "sgupta@guptapharma.com",
                 "activeMaintenance": 0
               },
@@ -1102,7 +1102,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Tenant",
                 "residentName": "Pepper Potts",
-                "phone": "+1 (555) 342-4400",
+                "phone": "+91 9833424400",
                 "email": "pepper@starkrelief.org",
                 "activeMaintenance": 0
               }
@@ -1122,7 +1122,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Owner",
                 "residentName": "Anand & Vandana Mahindra",
-                "phone": "+1 (555) 343-1100",
+                "phone": "+91 9833431100",
                 "email": "anand@riseforward.in",
                 "activeMaintenance": 0
               },
@@ -1131,7 +1131,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Tenant",
                 "residentName": "Thor Odinson",
-                "phone": "+1 (555) 343-2200",
+                "phone": "+91 9833432200",
                 "email": "thor@asgardrealm.org",
                 "activeMaintenance": 0
               },
@@ -1140,7 +1140,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Owner",
                 "residentName": "Geeta Ramesh",
-                "phone": "+1 (555) 343-3300",
+                "phone": "+91 9833433300",
                 "email": "gramesh@greenearth.org",
                 "activeMaintenance": 0
               },
@@ -1149,7 +1149,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Tenant",
                 "residentName": "Jane Foster",
-                "phone": "+1 (555) 343-4400",
+                "phone": "+91 9833434400",
                 "email": "jfoster@astrophysics.harvard.edu",
                 "activeMaintenance": 0
               }
@@ -1169,7 +1169,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Owner",
                 "residentName": "Pradeep & Rina Jain",
-                "phone": "+1 (555) 344-1100",
+                "phone": "+91 9833441100",
                 "email": "pjain@jainjewels.com",
                 "activeMaintenance": 0
               },
@@ -1187,7 +1187,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Tenant",
                 "residentName": "Peter Parker",
-                "phone": "+1 (555) 344-3300",
+                "phone": "+91 9833443300",
                 "email": "pparker@dailybugle.photo",
                 "activeMaintenance": 0
               },
@@ -1196,7 +1196,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Owner",
                 "residentName": "Ramesh & Usha Damani",
-                "phone": "+1 (555) 344-4400",
+                "phone": "+91 9833444400",
                 "email": "rdamani@equityfunds.com",
                 "activeMaintenance": 0
               }
@@ -1233,7 +1233,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Owner",
                 "residentName": "Kishore & Alka Biyani",
-                "phone": "+1 (555) 351-1100",
+                "phone": "+91 9833511100",
                 "email": "kbiyani@futureretail.in",
                 "activeMaintenance": 0
               },
@@ -1242,7 +1242,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Tenant",
                 "residentName": "Diana Prince",
-                "phone": "+1 (555) 351-2200",
+                "phone": "+91 9833512200",
                 "email": "dprince@louvremuseum.fr",
                 "activeMaintenance": 0
               },
@@ -1251,7 +1251,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Owner",
                 "residentName": "Nitin & Preeti Gadkari",
-                "phone": "+1 (555) 351-3300",
+                "phone": "+91 9833513300",
                 "email": "ngadkari@infrahighways.gov",
                 "activeMaintenance": 0
               },
@@ -1260,7 +1260,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Tenant",
                 "residentName": "Clark Kent",
-                "phone": "+1 (555) 351-4400",
+                "phone": "+91 9833514400",
                 "email": "ckent@dailyplanet.metropolis",
                 "activeMaintenance": 0
               }
@@ -1280,7 +1280,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Owner",
                 "residentName": "Arjun & Maya Nambiar",
-                "phone": "+1 (555) 352-1100",
+                "phone": "+91 9833521100",
                 "email": "anambiar@nambiarshipping.com",
                 "activeMaintenance": 0
               },
@@ -1298,7 +1298,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Tenant",
                 "residentName": "Barry Allen",
-                "phone": "+1 (555) 352-3300",
+                "phone": "+91 9833523300",
                 "email": "ballen@centralcityforensics.gov",
                 "activeMaintenance": 0
               },
@@ -1307,7 +1307,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Owner",
                 "residentName": "Sunil & Anita Mittal",
-                "phone": "+1 (555) 352-4400",
+                "phone": "+91 9833524400",
                 "email": "smittal@bhartienterprises.com",
                 "activeMaintenance": 0
               }
@@ -1327,7 +1327,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Owner",
                 "residentName": "Pankaj & Smita Munjal",
-                "phone": "+1 (555) 353-1100",
+                "phone": "+91 9833531100",
                 "email": "pmunjal@heromotors.com",
                 "activeMaintenance": 0
               },
@@ -1336,7 +1336,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Tenant",
                 "residentName": "Arthur Curry",
-                "phone": "+1 (555) 353-2200",
+                "phone": "+91 9833532200",
                 "email": "acurry@oceanicbiocare.org",
                 "activeMaintenance": 0
               },
@@ -1345,7 +1345,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Owner",
                 "residentName": "Ajay & Swati Piramal",
-                "phone": "+1 (555) 353-3300",
+                "phone": "+91 9833533300",
                 "email": "apiramal@piramalgroup.com",
                 "activeMaintenance": 0
               },
@@ -1354,7 +1354,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Tenant",
                 "residentName": "Hal Jordan",
-                "phone": "+1 (555) 353-4400",
+                "phone": "+91 9833534400",
                 "email": "hjordan@ferrisaircraft.com",
                 "activeMaintenance": 0
               }
@@ -1374,7 +1374,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Owner",
                 "residentName": "Adi & Parmeshwar Godrej",
-                "phone": "+1 (555) 354-1100",
+                "phone": "+91 9833541100",
                 "email": "agodrej@godrejindustries.com",
                 "activeMaintenance": 0
               },
@@ -1383,7 +1383,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Tenant",
                 "residentName": "Victor Stone",
-                "phone": "+1 (555) 354-2200",
+                "phone": "+91 9833542200",
                 "email": "vstone@cyberdynamics.edu",
                 "activeMaintenance": 0
               },
@@ -1401,7 +1401,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Owner",
                 "residentName": "Cyrus & Rohiqa Mistry",
-                "phone": "+1 (555) 354-4400",
+                "phone": "+91 9833544400",
                 "email": "cmistry@shapoorji.com",
                 "activeMaintenance": 0
               }
@@ -1413,8 +1413,8 @@ export const INITIAL_APARTMENTS = [
     "propertyType": "Residential Apartment",
     "landArea": "22.0 Acres",
     "propertyManager": "Meenakshi Sundaram",
-    "propertyManagerContact": "+1 (555) 723-4411",
-    "emergencyContact": "+1 (555) 911-0021",
+    "propertyManagerContact": "+91 9877234411",
+    "emergencyContact": "+91 9811191121",
     "internalNotes": "Honeycomb Towers operations governed by BEE Residence Executive SLA.",
     "additionalImages": [
       "/Images/honeycomb-towers.jpg",
@@ -1500,7 +1500,7 @@ export const INITIAL_APARTMENTS = [
       "president": "Tanya Chawla",
       "secretary": "Harish Vardhan",
       "treasurer": "Sameer Joshi",
-      "contactPhone": "+1 (555) 781-4433",
+      "contactPhone": "+91 9877814433",
       "contactEmail": "office@ambergroverwa.org",
       "officeHours": "Tue - Sun: 09:30 AM - 01:30 PM",
       "totalMembers": 5,
@@ -1509,13 +1509,13 @@ export const INITIAL_APARTMENTS = [
           "name": "Preeti Rao",
           "role": "Community Events",
           "flat": "East-202",
-          "phone": "+1 (555) 781-4434"
+          "phone": "+91 9877814434"
         },
         {
           "name": "Nitin Saxena",
           "role": "Infrastructure Supervisor",
           "flat": "West-104",
-          "phone": "+1 (555) 781-4435"
+          "phone": "+91 9877814435"
         }
       ]
     },
@@ -1549,7 +1549,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Owner",
                 "residentName": "Sameer & Aarti Joshi",
-                "phone": "+1 (555) 791-1100",
+                "phone": "+91 9877911100",
                 "email": "sjoshi@botanica.com",
                 "activeMaintenance": 0
               },
@@ -1558,7 +1558,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Tenant",
                 "residentName": "Michael Scott",
-                "phone": "+1 (555) 791-2200",
+                "phone": "+91 9877912200",
                 "email": "mscott@dundermifflin.com",
                 "activeMaintenance": 0
               },
@@ -1567,7 +1567,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Owner",
                 "residentName": "Tanya Chawla",
-                "phone": "+1 (555) 791-3300",
+                "phone": "+91 9877913300",
                 "email": "tchawla@lawfirm.com",
                 "activeMaintenance": 0
               },
@@ -1576,7 +1576,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Tenant",
                 "residentName": "Pam Beesly",
-                "phone": "+1 (555) 791-4400",
+                "phone": "+91 9877914400",
                 "email": "pbeesly@artdesigns.com",
                 "activeMaintenance": 0
               }
@@ -1596,7 +1596,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Owner",
                 "residentName": "Harish & Rekha Vardhan",
-                "phone": "+1 (555) 792-1100",
+                "phone": "+91 9877921100",
                 "email": "hvardhan@vardhangroup.org",
                 "activeMaintenance": 0
               },
@@ -1605,7 +1605,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Tenant",
                 "residentName": "Preeti Rao",
-                "phone": "+1 (555) 792-2200",
+                "phone": "+91 9877922200",
                 "email": "prao@eventspro.co",
                 "activeMaintenance": 1
               },
@@ -1623,7 +1623,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Owner",
                 "residentName": "Jim Halpert",
-                "phone": "+1 (555) 792-4400",
+                "phone": "+91 9877924400",
                 "email": "jhalpert@athlead.sports",
                 "activeMaintenance": 0
               }
@@ -1643,7 +1643,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Owner",
                 "residentName": "Ravi & Divya Shankar",
-                "phone": "+1 (555) 793-1100",
+                "phone": "+91 9877931100",
                 "email": "rshankar@musicarts.org",
                 "activeMaintenance": 0
               },
@@ -1652,7 +1652,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Tenant",
                 "residentName": "Dwight Schrute",
-                "phone": "+1 (555) 793-2200",
+                "phone": "+91 9877932200",
                 "email": "dschrute@beetfarms.com",
                 "activeMaintenance": 0
               },
@@ -1661,7 +1661,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Owner",
                 "residentName": "Sanjay & Gita Dutt",
-                "phone": "+1 (555) 793-3300",
+                "phone": "+91 9877933300",
                 "email": "sdutt@cineproductions.com",
                 "activeMaintenance": 0
               },
@@ -1670,7 +1670,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Tenant",
                 "residentName": "Angela Martin",
-                "phone": "+1 (555) 793-4400",
+                "phone": "+91 9877934400",
                 "email": "amartin@felinesociety.org",
                 "activeMaintenance": 0
               }
@@ -1690,7 +1690,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Owner",
                 "residentName": "Anil & Tina Ambani",
-                "phone": "+1 (555) 794-1100",
+                "phone": "+91 9877941100",
                 "email": "ambani.family@venturecap.com",
                 "activeMaintenance": 0
               },
@@ -1708,7 +1708,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Tenant",
                 "residentName": "Ryan Howard",
-                "phone": "+1 (555) 794-3300",
+                "phone": "+91 9877943300",
                 "email": "rhoward@wuphf.net",
                 "activeMaintenance": 0
               },
@@ -1717,7 +1717,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Owner",
                 "residentName": "Vijay & Rekha Mallya",
-                "phone": "+1 (555) 794-4400",
+                "phone": "+91 9877944400",
                 "email": "vmallya@beverageworld.com",
                 "activeMaintenance": 0
               }
@@ -1754,7 +1754,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Owner",
                 "residentName": "Deepak & Leena Chopra",
-                "phone": "+1 (555) 795-1100",
+                "phone": "+91 9877951100",
                 "email": "dchopra@wellnesscenter.org",
                 "activeMaintenance": 0
               },
@@ -1763,7 +1763,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Tenant",
                 "residentName": "Kelly Kapoor",
-                "phone": "+1 (555) 795-2200",
+                "phone": "+91 9877952200",
                 "email": "kkapoor@customerhelp.org",
                 "activeMaintenance": 0
               },
@@ -1772,7 +1772,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Owner",
                 "residentName": "Sabeer Bhatia",
-                "phone": "+1 (555) 795-3300",
+                "phone": "+91 9877953300",
                 "email": "sbhatia@webmailpioneer.com",
                 "activeMaintenance": 0
               },
@@ -1781,7 +1781,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Tenant",
                 "residentName": "Nitin & Maya Saxena",
-                "phone": "+1 (555) 795-4400",
+                "phone": "+91 9877954400",
                 "email": "nsaxena@infra-eng.com",
                 "activeMaintenance": 0
               }
@@ -1801,7 +1801,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Owner",
                 "residentName": "Vinod & Neeru Khosla",
-                "phone": "+1 (555) 796-1100",
+                "phone": "+91 9877961100",
                 "email": "vkhosla@greenventures.com",
                 "activeMaintenance": 1
               },
@@ -1819,7 +1819,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Tenant",
                 "residentName": "Toby Flenderson",
-                "phone": "+1 (555) 796-3300",
+                "phone": "+91 9877963300",
                 "email": "tflenderson@peoplerep.org",
                 "activeMaintenance": 0
               },
@@ -1828,7 +1828,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Owner",
                 "residentName": "Sundar & Anjali Pichai",
-                "phone": "+1 (555) 796-4400",
+                "phone": "+91 9877964400",
                 "email": "spichai@alphabet.xyz",
                 "activeMaintenance": 0
               }
@@ -1848,7 +1848,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Owner",
                 "residentName": "Satya & Anupama Nadella",
-                "phone": "+1 (555) 797-1100",
+                "phone": "+91 9877971100",
                 "email": "snadella@redmondtech.com",
                 "activeMaintenance": 0
               },
@@ -1857,7 +1857,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Tenant",
                 "residentName": "Oscar Martinez",
-                "phone": "+1 (555) 797-2200",
+                "phone": "+91 9877972200",
                 "email": "omartinez@statecpa.gov",
                 "activeMaintenance": 0
               },
@@ -1866,7 +1866,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Owner",
                 "residentName": "Shantanu & Renu Narayen",
-                "phone": "+1 (555) 797-3300",
+                "phone": "+91 9877973300",
                 "email": "snarayen@creativesuites.com",
                 "activeMaintenance": 0
               },
@@ -1875,7 +1875,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Tenant",
                 "residentName": "Stanley Hudson",
-                "phone": "+1 (555) 797-4400",
+                "phone": "+91 9877974400",
                 "email": "shudson@crosswordpuzzles.net",
                 "activeMaintenance": 0
               }
@@ -1895,7 +1895,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Owner",
                 "residentName": "Nikesh & Ayesha Arora",
-                "phone": "+1 (555) 798-1100",
+                "phone": "+91 9877981100",
                 "email": "narora@cyberpaloalto.com",
                 "activeMaintenance": 0
               },
@@ -1904,7 +1904,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Tenant",
                 "residentName": "Kevin Malone",
-                "phone": "+1 (555) 798-2200",
+                "phone": "+91 9877982200",
                 "email": "kmalone@chilibar.com",
                 "activeMaintenance": 0
               },
@@ -1922,7 +1922,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Owner",
                 "residentName": "Arvind & Vandana Krishna",
-                "phone": "+1 (555) 798-4400",
+                "phone": "+91 9877984400",
                 "email": "akrishna@armonk.corp",
                 "activeMaintenance": 0
               }
@@ -1934,8 +1934,8 @@ export const INITIAL_APARTMENTS = [
     "propertyType": "Residential Apartment",
     "landArea": "18.2 Acres",
     "propertyManager": "Capt. Alok Srivastava",
-    "propertyManagerContact": "+1 (555) 619-3388",
-    "emergencyContact": "+1 (555) 911-0021",
+    "propertyManagerContact": "+91 9866193388",
+    "emergencyContact": "+91 9811191121",
     "internalNotes": "Amber Grove Residences operations governed by BEE Residence Executive SLA.",
     "additionalImages": [
       "/Images/amber-grove.jpg",
@@ -2044,7 +2044,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Owner",
                 "residentName": "Julian & Claire Sterling",
-                "phone": "+1 (555) 881-1100",
+                "phone": "+91 9888811100",
                 "email": "jsterling@marinayachting.com",
                 "activeMaintenance": 0
               },
@@ -2062,7 +2062,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Tenant",
                 "residentName": "Maya Lin",
-                "phone": "+1 (555) 881-3300",
+                "phone": "+91 9888813300",
                 "email": "mlin@memorialdesigns.org",
                 "activeMaintenance": 0
               },
@@ -2071,7 +2071,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Owner",
                 "residentName": "Arthur & Fiona Pendelton",
-                "phone": "+1 (555) 881-4400",
+                "phone": "+91 9888814400",
                 "email": "pendelton@harborbay.com",
                 "activeMaintenance": 0
               }
@@ -2091,7 +2091,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Owner",
                 "residentName": "Soren & Freja Lindstrom",
-                "phone": "+1 (555) 882-1100",
+                "phone": "+91 9888821100",
                 "email": "slindstrom@nordicwind.dk",
                 "activeMaintenance": 0
               },
@@ -2100,7 +2100,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Tenant",
                 "residentName": "Oliver Queen",
-                "phone": "+1 (555) 882-2200",
+                "phone": "+91 9888822200",
                 "email": "oqueen@starlingcity.org",
                 "activeMaintenance": 1
               },
@@ -2109,7 +2109,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Owner",
                 "residentName": "Rashid & Zoya Merchant",
-                "phone": "+1 (555) 882-3300",
+                "phone": "+91 9888823300",
                 "email": "rmerchant@gulfshipping.ae",
                 "activeMaintenance": 0
               },
@@ -2118,7 +2118,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Tenant",
                 "residentName": "Felicity Smoak",
-                "phone": "+1 (555) 882-4400",
+                "phone": "+91 9888824400",
                 "email": "fsmoak@smoaktech.io",
                 "activeMaintenance": 0
               }
@@ -2138,7 +2138,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Owner",
                 "residentName": "Harrison & Linda Ford",
-                "phone": "+1 (555) 883-1100",
+                "phone": "+91 9888831100",
                 "email": "hford@aviationarts.com",
                 "activeMaintenance": 0
               },
@@ -2156,7 +2156,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Tenant",
                 "residentName": "John Diggle",
-                "phone": "+1 (555) 883-3300",
+                "phone": "+91 9888833300",
                 "email": "jdiggle@argussec.gov",
                 "activeMaintenance": 0
               },
@@ -2165,7 +2165,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Owner",
                 "residentName": "Liam & Emma Hemsworth",
-                "phone": "+1 (555) 883-4400",
+                "phone": "+91 9888834400",
                 "email": "lhemsworth@coastalfilms.au",
                 "activeMaintenance": 0
               }
@@ -2185,7 +2185,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Owner",
                 "residentName": "Gabriel & Lucia Morales",
-                "phone": "+1 (555) 884-1100",
+                "phone": "+91 9888841100",
                 "email": "gmorales@maritimeinvest.es",
                 "activeMaintenance": 0
               },
@@ -2194,7 +2194,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Tenant",
                 "residentName": "Thea Queen",
-                "phone": "+1 (555) 884-2200",
+                "phone": "+91 9888842200",
                 "email": "tqueen@verdantlounge.com",
                 "activeMaintenance": 0
               },
@@ -2212,7 +2212,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Owner",
                 "residentName": "Dmitri & Anastasia Volkov",
-                "phone": "+1 (555) 884-4400",
+                "phone": "+91 9888844400",
                 "email": "dvolkov@volkovholding.ch",
                 "activeMaintenance": 0
               }
@@ -2249,7 +2249,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Owner",
                 "residentName": "Christian & Vivienne Ward",
-                "phone": "+1 (555) 891-1100",
+                "phone": "+91 9888911100",
                 "email": "cward@wardgalleries.uk",
                 "activeMaintenance": 0
               },
@@ -2267,7 +2267,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Tenant",
                 "residentName": "Roy Harper",
-                "phone": "+1 (555) 891-3300",
+                "phone": "+91 9888913300",
                 "email": "rharper@gladeshaven.org",
                 "activeMaintenance": 0
               },
@@ -2276,7 +2276,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Owner",
                 "residentName": "Jean-Luc & Camille Picard",
-                "phone": "+1 (555) 891-4400",
+                "phone": "+91 9888914400",
                 "email": "jlpicard@chateaupicard.fr",
                 "activeMaintenance": 0
               }
@@ -2296,7 +2296,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Owner",
                 "residentName": "Kenji & Aoi Takahashi",
-                "phone": "+1 (555) 892-1100",
+                "phone": "+91 9888921100",
                 "email": "ktakahashi@tokyorobotics.jp",
                 "activeMaintenance": 0
               },
@@ -2305,7 +2305,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Tenant",
                 "residentName": "Sara Lance",
-                "phone": "+1 (555) 892-2200",
+                "phone": "+91 9888922200",
                 "email": "slance@waverideradventures.org",
                 "activeMaintenance": 1
               },
@@ -2314,7 +2314,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Owner",
                 "residentName": "Matteo & Isabella Rossi",
-                "phone": "+1 (555) 892-3300",
+                "phone": "+91 9888923300",
                 "email": "mrossi@milanoarchitettura.it",
                 "activeMaintenance": 0
               },
@@ -2323,7 +2323,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Tenant",
                 "residentName": "Ray Palmer",
-                "phone": "+1 (555) 892-4400",
+                "phone": "+91 9888924400",
                 "email": "rpalmer@palmertech.io",
                 "activeMaintenance": 0
               }
@@ -2343,7 +2343,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Owner",
                 "residentName": "Magnus & Astrid Carlsen",
-                "phone": "+1 (555) 893-1100",
+                "phone": "+91 9888931100",
                 "email": "mcarlsen@grandmasterstrat.no",
                 "activeMaintenance": 0
               },
@@ -2361,7 +2361,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Tenant",
                 "residentName": "Leonard Snart",
-                "phone": "+1 (555) 893-3300",
+                "phone": "+91 9888933300",
                 "email": "lsnart@coldlineconsulting.com",
                 "activeMaintenance": 0
               },
@@ -2370,7 +2370,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Owner",
                 "residentName": "Elias & Helena Vance",
-                "phone": "+1 (555) 893-4400",
+                "phone": "+91 9888934400",
                 "email": "evance@vanceholdings.org",
                 "activeMaintenance": 0
               }
@@ -2390,7 +2390,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Owner",
                 "residentName": "Xavier & Genevieve Dupont",
-                "phone": "+1 (555) 894-1100",
+                "phone": "+91 9888941100",
                 "email": "xdupont@luxurymarine.fr",
                 "activeMaintenance": 0
               },
@@ -2399,7 +2399,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Tenant",
                 "residentName": "Mick Rory",
-                "phone": "+1 (555) 894-2200",
+                "phone": "+91 9888942200",
                 "email": "mrory@heatventures.com",
                 "activeMaintenance": 0
               },
@@ -2417,7 +2417,7 @@ export const INITIAL_APARTMENTS = [
                 "status": "Occupied",
                 "residentType": "Owner",
                 "residentName": "Alvaro & Sofia Morte",
-                "phone": "+1 (555) 894-4400",
+                "phone": "+91 9888944400",
                 "email": "amorte@mintiberia.es",
                 "activeMaintenance": 0
               }
@@ -2429,8 +2429,8 @@ export const INITIAL_APARTMENTS = [
     "propertyType": "Residential Apartment",
     "landArea": "28.4 Acres",
     "propertyManager": "Elena Rostova",
-    "propertyManagerContact": "+1 (555) 891-0022",
-    "emergencyContact": "+1 (555) 911-0021",
+    "propertyManagerContact": "+91 9888910022",
+    "emergencyContact": "+91 9811191121",
     "internalNotes": "Nectar Bay Enclave operations governed by BEE Residence Executive SLA.",
     "additionalImages": [
       "/Images/nectar-bay.jpg",
@@ -2502,7 +2502,7 @@ export const INITIAL_AGENCIES = [
     ],
     "logoText": "ASVF",
     "contactPerson": "Capt. Raghavan Menon",
-    "phone": "+1 (555) 839-2041",
+    "phone": "+91 9888392041",
     "email": "dispatch@apexsecurity.com",
     "agreementStatus": "Active (Contracted thru Dec 2027)",
     "availabilityStatus": "Available",
@@ -2519,7 +2519,7 @@ export const INITIAL_AGENCIES = [
         "experience": "9 yrs",
         "status": "Assigned",
         "currentShift": "Morning Shift (06:00 - 14:00)",
-        "phone": "+1 (555) 839-2101"
+        "phone": "+91 9888392101"
       },
       {
         "id": "p-102",
@@ -2528,7 +2528,7 @@ export const INITIAL_AGENCIES = [
         "experience": "7 yrs",
         "status": "Assigned",
         "currentShift": "Morning Shift (06:00 - 14:00)",
-        "phone": "+1 (555) 839-2102"
+        "phone": "+91 9888392102"
       },
       {
         "id": "p-103",
@@ -2537,7 +2537,7 @@ export const INITIAL_AGENCIES = [
         "experience": "5 yrs",
         "status": "Available",
         "currentShift": "Unassigned",
-        "phone": "+1 (555) 839-2103"
+        "phone": "+91 9888392103"
       },
       {
         "id": "p-104",
@@ -2546,7 +2546,7 @@ export const INITIAL_AGENCIES = [
         "experience": "4 yrs",
         "status": "Available",
         "currentShift": "Unassigned",
-        "phone": "+1 (555) 839-2104"
+        "phone": "+91 9888392104"
       },
       {
         "id": "p-105",
@@ -2555,7 +2555,7 @@ export const INITIAL_AGENCIES = [
         "experience": "6 yrs",
         "status": "Available",
         "currentShift": "Unassigned",
-        "phone": "+1 (555) 839-2105"
+        "phone": "+91 9888392105"
       },
       {
         "id": "p-106",
@@ -2564,7 +2564,7 @@ export const INITIAL_AGENCIES = [
         "experience": "8 yrs",
         "status": "Available",
         "currentShift": "Unassigned",
-        "phone": "+1 (555) 839-2106"
+        "phone": "+91 9888392106"
       },
       {
         "id": "p-107",
@@ -2573,7 +2573,7 @@ export const INITIAL_AGENCIES = [
         "experience": "4 yrs",
         "status": "Available",
         "currentShift": "Unassigned",
-        "phone": "+1 (555) 839-2107"
+        "phone": "+91 9888392107"
       },
       {
         "id": "p-108",
@@ -2582,7 +2582,7 @@ export const INITIAL_AGENCIES = [
         "experience": "3 yrs",
         "status": "On Leave",
         "currentShift": "Medical Leave",
-        "phone": "+1 (555) 839-2108"
+        "phone": "+91 9888392108"
       }
     ],
     "assignments": [
@@ -2647,14 +2647,14 @@ export const INITIAL_AGENCIES = [
       "lastName": "Raghavan Menon",
       "profilePhoto": null,
       "designation": "Operations Director",
-      "phone": "+1 (555) 839-2041",
-      "alternatePhone": "+1 (555) 777-1020",
+      "phone": "+91 9888392041",
+      "alternatePhone": "+91 9877771020",
       "email": "dispatch@apexsecurity.com",
       "preferredLanguage": "English",
       "agentType": "Authorized Representative",
       "employeeId": "AGT-ASVF-01",
       "emergencyContactName": "Pooja Hegde",
-      "emergencyContactNumber": "+1 (555) 901-2234"
+      "emergencyContactNumber": "+91 9899012234"
     },
     "company": {
       "name": "Apex Security & Vigilance Force",
@@ -2667,7 +2667,7 @@ export const INITIAL_AGENCIES = [
       "yearOfEstablishment": 2018,
       "numberOfEmployees": 34,
       "companyEmail": "dispatch@apexsecurity.com",
-      "companyPhone": "+1 (555) 839-2041",
+      "companyPhone": "+91 9888392041",
       "addressLine1": "100 Service Boulevard, Tech Corridor",
       "addressLine2": "Suite 400",
       "country": "United States",
@@ -2681,13 +2681,13 @@ export const INITIAL_AGENCIES = [
     "contacts": {
       "primaryContactName": "Capt. Raghavan Menon",
       "primaryContactDesignation": "Operations Director",
-      "primaryContactMobile": "+1 (555) 839-2041",
+      "primaryContactMobile": "+91 9888392041",
       "primaryContactEmail": "dispatch@apexsecurity.com",
       "alternateContactPerson": "Pooja Hegde",
-      "alternateContactMobile": "+1 (555) 901-2234",
+      "alternateContactMobile": "+91 9899012234",
       "accountsBillingName": "Rohan Deshmukh, Finance Lead",
       "accountsBillingEmail": "billing@apexsecurity.com",
-      "accountsBillingPhone": "+1 (555) 839-2041",
+      "accountsBillingPhone": "+91 9888392041",
       "preferredContactMethod": "Bee App Notification",
       "preferredContactTime": "09:00 AM - 06:00 PM"
     },
@@ -2796,7 +2796,7 @@ export const INITIAL_AGENCIES = [
           "BRH-C"
         ],
         "propertyContactPerson": "Col. Sanjeev Varma",
-        "propertyContactNumber": "+1 (555) 482-9901",
+        "propertyContactNumber": "+91 9844829901",
         "propertyManagerSponsor": "Col. Sanjeev Varma",
         "supportingDocs": [
           "SLA_Agreement_2024_Apex.pdf"
@@ -2841,7 +2841,7 @@ export const INITIAL_AGENCIES = [
           "HCT-B"
         ],
         "propertyContactPerson": "Meenakshi Sundaram",
-        "propertyContactNumber": "+1 (555) 723-4411",
+        "propertyContactNumber": "+91 9877234411",
         "propertyManagerSponsor": "Meenakshi Sundaram",
         "supportingDocs": [
           "SLA_Agreement_Honeycomb_Apex.pdf"
@@ -2876,7 +2876,7 @@ export const INITIAL_AGENCIES = [
     ],
     "logoText": "FTPS",
     "contactPerson": "Devendra Patil",
-    "phone": "+1 (555) 912-3844",
+    "phone": "+91 9899123844",
     "email": "service@flowtechplumbing.com",
     "agreementStatus": "Active (Contracted thru Oct 2027)",
     "availabilityStatus": "Available",
@@ -2893,7 +2893,7 @@ export const INITIAL_AGENCIES = [
         "experience": "11 yrs",
         "status": "Available",
         "currentShift": "Unassigned",
-        "phone": "+1 (555) 912-3801"
+        "phone": "+91 9899123801"
       },
       {
         "id": "p-202",
@@ -2902,7 +2902,7 @@ export const INITIAL_AGENCIES = [
         "experience": "6 yrs",
         "status": "Available",
         "currentShift": "Unassigned",
-        "phone": "+1 (555) 912-3802"
+        "phone": "+91 9899123802"
       },
       {
         "id": "p-203",
@@ -2911,7 +2911,7 @@ export const INITIAL_AGENCIES = [
         "experience": "8 yrs",
         "status": "Available",
         "currentShift": "Unassigned",
-        "phone": "+1 (555) 912-3803"
+        "phone": "+91 9899123803"
       },
       {
         "id": "p-204",
@@ -2920,7 +2920,7 @@ export const INITIAL_AGENCIES = [
         "experience": "4 yrs",
         "status": "Assigned",
         "currentShift": "Oct 26 (09:00 - 12:00)",
-        "phone": "+1 (555) 912-3804"
+        "phone": "+91 9899123804"
       },
       {
         "id": "p-205",
@@ -2929,7 +2929,7 @@ export const INITIAL_AGENCIES = [
         "experience": "5 yrs",
         "status": "On Leave",
         "currentShift": "Leave",
-        "phone": "+1 (555) 912-3805"
+        "phone": "+91 9899123805"
       }
     ],
     "assignments": [
@@ -2968,14 +2968,14 @@ export const INITIAL_AGENCIES = [
       "lastName": "Patil",
       "profilePhoto": null,
       "designation": "Operations Director",
-      "phone": "+1 (555) 912-3844",
-      "alternatePhone": "+1 (555) 777-1020",
+      "phone": "+91 9899123844",
+      "alternatePhone": "+91 9877771020",
       "email": "service@flowtechplumbing.com",
       "preferredLanguage": "English",
       "agentType": "Authorized Representative",
       "employeeId": "AGT-FTPS-01",
       "emergencyContactName": "Pooja Hegde",
-      "emergencyContactNumber": "+1 (555) 901-2234"
+      "emergencyContactNumber": "+91 9899012234"
     },
     "company": {
       "name": "FlowTech Plumbing Solutions",
@@ -2988,7 +2988,7 @@ export const INITIAL_AGENCIES = [
       "yearOfEstablishment": 2018,
       "numberOfEmployees": 20,
       "companyEmail": "service@flowtechplumbing.com",
-      "companyPhone": "+1 (555) 912-3844",
+      "companyPhone": "+91 9899123844",
       "addressLine1": "100 Service Boulevard, Tech Corridor",
       "addressLine2": "Suite 400",
       "country": "United States",
@@ -3002,13 +3002,13 @@ export const INITIAL_AGENCIES = [
     "contacts": {
       "primaryContactName": "Devendra Patil",
       "primaryContactDesignation": "Operations Director",
-      "primaryContactMobile": "+1 (555) 912-3844",
+      "primaryContactMobile": "+91 9899123844",
       "primaryContactEmail": "service@flowtechplumbing.com",
       "alternateContactPerson": "Pooja Hegde",
-      "alternateContactMobile": "+1 (555) 901-2234",
+      "alternateContactMobile": "+91 9899012234",
       "accountsBillingName": "Rohan Deshmukh, Finance Lead",
       "accountsBillingEmail": "billing@flowtechplumbing.com",
-      "accountsBillingPhone": "+1 (555) 912-3844",
+      "accountsBillingPhone": "+91 9899123844",
       "preferredContactMethod": "Bee App Notification",
       "preferredContactTime": "09:00 AM - 06:00 PM"
     },
@@ -3116,7 +3116,7 @@ export const INITIAL_AGENCIES = [
           "BRH-C"
         ],
         "propertyContactPerson": "Col. Sanjeev Varma",
-        "propertyContactNumber": "+1 (555) 482-9901",
+        "propertyContactNumber": "+91 9844829901",
         "propertyManagerSponsor": "Col. Sanjeev Varma",
         "supportingDocs": [
           "FlowTech_SLA_BRH.pdf"
@@ -3151,7 +3151,7 @@ export const INITIAL_AGENCIES = [
     ],
     "logoText": "VGPS",
     "contactPerson": "Ashish Chandra",
-    "phone": "+1 (555) 438-1920",
+    "phone": "+91 9844381920",
     "email": "support@voltguard.org",
     "agreementStatus": "Active (Contracted thru Aug 2027)",
     "availabilityStatus": "Available",
@@ -3168,7 +3168,7 @@ export const INITIAL_AGENCIES = [
         "experience": "12 yrs",
         "status": "Available",
         "currentShift": "Unassigned",
-        "phone": "+1 (555) 438-1901"
+        "phone": "+91 9844381901"
       },
       {
         "id": "p-302",
@@ -3177,7 +3177,7 @@ export const INITIAL_AGENCIES = [
         "experience": "7 yrs",
         "status": "Available",
         "currentShift": "Unassigned",
-        "phone": "+1 (555) 438-1902"
+        "phone": "+91 9844381902"
       },
       {
         "id": "p-303",
@@ -3186,7 +3186,7 @@ export const INITIAL_AGENCIES = [
         "experience": "5 yrs",
         "status": "Available",
         "currentShift": "Unassigned",
-        "phone": "+1 (555) 438-1903"
+        "phone": "+91 9844381903"
       },
       {
         "id": "p-304",
@@ -3195,7 +3195,7 @@ export const INITIAL_AGENCIES = [
         "experience": "4 yrs",
         "status": "Assigned",
         "currentShift": "Oct 26 (14:00 - 17:00)",
-        "phone": "+1 (555) 438-1904"
+        "phone": "+91 9844381904"
       },
       {
         "id": "p-305",
@@ -3204,7 +3204,7 @@ export const INITIAL_AGENCIES = [
         "experience": "6 yrs",
         "status": "Available",
         "currentShift": "Unassigned",
-        "phone": "+1 (555) 438-1905"
+        "phone": "+91 9844381905"
       }
     ],
     "assignments": [
@@ -3243,14 +3243,14 @@ export const INITIAL_AGENCIES = [
       "lastName": "Chandra",
       "profilePhoto": null,
       "designation": "Operations Director",
-      "phone": "+1 (555) 438-1920",
-      "alternatePhone": "+1 (555) 777-1020",
+      "phone": "+91 9844381920",
+      "alternatePhone": "+91 9877771020",
       "email": "support@voltguard.org",
       "preferredLanguage": "English",
       "agentType": "Authorized Representative",
       "employeeId": "AGT-VGPS-01",
       "emergencyContactName": "Pooja Hegde",
-      "emergencyContactNumber": "+1 (555) 901-2234"
+      "emergencyContactNumber": "+91 9899012234"
     },
     "company": {
       "name": "VoltGuard Electrical & Power Systems",
@@ -3263,7 +3263,7 @@ export const INITIAL_AGENCIES = [
       "yearOfEstablishment": 2018,
       "numberOfEmployees": 22,
       "companyEmail": "support@voltguard.org",
-      "companyPhone": "+1 (555) 438-1920",
+      "companyPhone": "+91 9844381920",
       "addressLine1": "100 Service Boulevard, Tech Corridor",
       "addressLine2": "Suite 400",
       "country": "United States",
@@ -3277,13 +3277,13 @@ export const INITIAL_AGENCIES = [
     "contacts": {
       "primaryContactName": "Ashish Chandra",
       "primaryContactDesignation": "Operations Director",
-      "primaryContactMobile": "+1 (555) 438-1920",
+      "primaryContactMobile": "+91 9844381920",
       "primaryContactEmail": "support@voltguard.org",
       "alternateContactPerson": "Pooja Hegde",
-      "alternateContactMobile": "+1 (555) 901-2234",
+      "alternateContactMobile": "+91 9899012234",
       "accountsBillingName": "Rohan Deshmukh, Finance Lead",
       "accountsBillingEmail": "billing@voltguard.org",
-      "accountsBillingPhone": "+1 (555) 438-1920",
+      "accountsBillingPhone": "+91 9844381920",
       "preferredContactMethod": "Bee App Notification",
       "preferredContactTime": "09:00 AM - 06:00 PM"
     },
@@ -3389,7 +3389,7 @@ export const INITIAL_AGENCIES = [
           "BRH-C"
         ],
         "propertyContactPerson": "Col. Sanjeev Varma",
-        "propertyContactNumber": "+1 (555) 482-9901",
+        "propertyContactNumber": "+91 9844829901",
         "propertyManagerSponsor": "Col. Sanjeev Varma",
         "supportingDocs": [
           "VoltGuard_Electrical_Contract.pdf"
@@ -3424,7 +3424,7 @@ export const INITIAL_AGENCIES = [
     ],
     "logoText": "VBLG",
     "contactPerson": "Farhan Siddiqui",
-    "phone": "+1 (555) 674-5512",
+    "phone": "+91 9866745512",
     "email": "contact@verdantbloom.com",
     "agreementStatus": "Active (Contracted thru Mar 2028)",
     "availabilityStatus": "Available",
@@ -3441,7 +3441,7 @@ export const INITIAL_AGENCIES = [
         "experience": "15 yrs",
         "status": "Available",
         "currentShift": "Unassigned",
-        "phone": "+1 (555) 674-5501"
+        "phone": "+91 9866745501"
       },
       {
         "id": "p-402",
@@ -3450,7 +3450,7 @@ export const INITIAL_AGENCIES = [
         "experience": "8 yrs",
         "status": "Available",
         "currentShift": "Unassigned",
-        "phone": "+1 (555) 674-5502"
+        "phone": "+91 9866745502"
       },
       {
         "id": "p-403",
@@ -3459,7 +3459,7 @@ export const INITIAL_AGENCIES = [
         "experience": "6 yrs",
         "status": "Available",
         "currentShift": "Unassigned",
-        "phone": "+1 (555) 674-5503"
+        "phone": "+91 9866745503"
       },
       {
         "id": "p-404",
@@ -3468,7 +3468,7 @@ export const INITIAL_AGENCIES = [
         "experience": "5 yrs",
         "status": "Assigned",
         "currentShift": "Oct 26 (08:00 - 12:00)",
-        "phone": "+1 (555) 674-5504"
+        "phone": "+91 9866745504"
       }
     ],
     "assignments": [
@@ -3507,14 +3507,14 @@ export const INITIAL_AGENCIES = [
       "lastName": "Siddiqui",
       "profilePhoto": null,
       "designation": "Operations Director",
-      "phone": "+1 (555) 674-5512",
-      "alternatePhone": "+1 (555) 777-1020",
+      "phone": "+91 9866745512",
+      "alternatePhone": "+91 9877771020",
       "email": "contact@verdantbloom.com",
       "preferredLanguage": "English",
       "agentType": "Authorized Representative",
       "employeeId": "AGT-VBLG-01",
       "emergencyContactName": "Pooja Hegde",
-      "emergencyContactNumber": "+1 (555) 901-2234"
+      "emergencyContactNumber": "+91 9899012234"
     },
     "company": {
       "name": "Verdant Bloom Landscaping & Gardening",
@@ -3527,7 +3527,7 @@ export const INITIAL_AGENCIES = [
       "yearOfEstablishment": 2018,
       "numberOfEmployees": 24,
       "companyEmail": "contact@verdantbloom.com",
-      "companyPhone": "+1 (555) 674-5512",
+      "companyPhone": "+91 9866745512",
       "addressLine1": "100 Service Boulevard, Tech Corridor",
       "addressLine2": "Suite 400",
       "country": "United States",
@@ -3541,13 +3541,13 @@ export const INITIAL_AGENCIES = [
     "contacts": {
       "primaryContactName": "Farhan Siddiqui",
       "primaryContactDesignation": "Operations Director",
-      "primaryContactMobile": "+1 (555) 674-5512",
+      "primaryContactMobile": "+91 9866745512",
       "primaryContactEmail": "contact@verdantbloom.com",
       "alternateContactPerson": "Pooja Hegde",
-      "alternateContactMobile": "+1 (555) 901-2234",
+      "alternateContactMobile": "+91 9899012234",
       "accountsBillingName": "Rohan Deshmukh, Finance Lead",
       "accountsBillingEmail": "billing@verdantbloom.com",
-      "accountsBillingPhone": "+1 (555) 674-5512",
+      "accountsBillingPhone": "+91 9866745512",
       "preferredContactMethod": "Bee App Notification",
       "preferredContactTime": "09:00 AM - 06:00 PM"
     },
@@ -3653,7 +3653,7 @@ export const INITIAL_AGENCIES = [
           "BRH-C"
         ],
         "propertyContactPerson": "Col. Sanjeev Varma",
-        "propertyContactNumber": "+1 (555) 482-9901",
+        "propertyContactNumber": "+91 9844829901",
         "propertyManagerSponsor": "Col. Sanjeev Varma",
         "supportingDocs": [
           "VerdantBloom_Contract.pdf"
@@ -3688,7 +3688,7 @@ export const INITIAL_AGENCIES = [
     ],
     "logoText": "SCFM",
     "contactPerson": "Kiran Bala",
-    "phone": "+1 (555) 238-9901",
+    "phone": "+91 9822389901",
     "email": "operations@sparkleclean.io",
     "agreementStatus": "Active (Contracted thru Nov 2027)",
     "availabilityStatus": "Partially Available",
@@ -3705,7 +3705,7 @@ export const INITIAL_AGENCIES = [
         "experience": "7 yrs",
         "status": "Assigned",
         "currentShift": "Morning (07:00 - 13:00)",
-        "phone": "+1 (555) 238-9911"
+        "phone": "+91 9822389911"
       },
       {
         "id": "p-502",
@@ -3714,7 +3714,7 @@ export const INITIAL_AGENCIES = [
         "experience": "5 yrs",
         "status": "Available",
         "currentShift": "Unassigned",
-        "phone": "+1 (555) 238-9912"
+        "phone": "+91 9822389912"
       },
       {
         "id": "p-503",
@@ -3723,7 +3723,7 @@ export const INITIAL_AGENCIES = [
         "experience": "8 yrs",
         "status": "Available",
         "currentShift": "Unassigned",
-        "phone": "+1 (555) 238-9913"
+        "phone": "+91 9822389913"
       },
       {
         "id": "p-504",
@@ -3732,7 +3732,7 @@ export const INITIAL_AGENCIES = [
         "experience": "4 yrs",
         "status": "Available",
         "currentShift": "Unassigned",
-        "phone": "+1 (555) 238-9914"
+        "phone": "+91 9822389914"
       }
     ],
     "assignments": [
@@ -3772,14 +3772,14 @@ export const INITIAL_AGENCIES = [
       "lastName": "Bala",
       "profilePhoto": null,
       "designation": "Operations Director",
-      "phone": "+1 (555) 238-9901",
-      "alternatePhone": "+1 (555) 777-1020",
+      "phone": "+91 9822389901",
+      "alternatePhone": "+91 9877771020",
       "email": "operations@sparkleclean.io",
       "preferredLanguage": "English",
       "agentType": "Authorized Representative",
       "employeeId": "AGT-SCFM-01",
       "emergencyContactName": "Pooja Hegde",
-      "emergencyContactNumber": "+1 (555) 901-2234"
+      "emergencyContactNumber": "+91 9899012234"
     },
     "company": {
       "name": "SparkleClean Facility Management",
@@ -3792,7 +3792,7 @@ export const INITIAL_AGENCIES = [
       "yearOfEstablishment": 2018,
       "numberOfEmployees": 28,
       "companyEmail": "operations@sparkleclean.io",
-      "companyPhone": "+1 (555) 238-9901",
+      "companyPhone": "+91 9822389901",
       "addressLine1": "100 Service Boulevard, Tech Corridor",
       "addressLine2": "Suite 400",
       "country": "United States",
@@ -3806,13 +3806,13 @@ export const INITIAL_AGENCIES = [
     "contacts": {
       "primaryContactName": "Kiran Bala",
       "primaryContactDesignation": "Operations Director",
-      "primaryContactMobile": "+1 (555) 238-9901",
+      "primaryContactMobile": "+91 9822389901",
       "primaryContactEmail": "operations@sparkleclean.io",
       "alternateContactPerson": "Pooja Hegde",
-      "alternateContactMobile": "+1 (555) 901-2234",
+      "alternateContactMobile": "+91 9899012234",
       "accountsBillingName": "Rohan Deshmukh, Finance Lead",
       "accountsBillingEmail": "billing@sparkleclean.io",
-      "accountsBillingPhone": "+1 (555) 238-9901",
+      "accountsBillingPhone": "+91 9822389901",
       "preferredContactMethod": "Bee App Notification",
       "preferredContactTime": "09:00 AM - 06:00 PM"
     },
@@ -3918,7 +3918,7 @@ export const INITIAL_AGENCIES = [
           "BRH-C"
         ],
         "propertyContactPerson": "Col. Sanjeev Varma",
-        "propertyContactNumber": "+1 (555) 482-9901",
+        "propertyContactNumber": "+91 9844829901",
         "propertyManagerSponsor": "Col. Sanjeev Varma",
         "supportingDocs": [
           "SparkleClean_SLA.pdf"
@@ -3953,7 +3953,7 @@ export const INITIAL_AGENCIES = [
     ],
     "logoText": "SOCL",
     "contactPerson": "Robert D'Souza",
-    "phone": "+1 (555) 512-7729",
+    "phone": "+91 9855127729",
     "email": "emergency@elevatorservice.pro",
     "agreementStatus": "Active (Contracted thru Jan 2028)",
     "availabilityStatus": "Partially Available",
@@ -3970,7 +3970,7 @@ export const INITIAL_AGENCIES = [
         "experience": "14 yrs",
         "status": "Available",
         "currentShift": "Unassigned",
-        "phone": "+1 (555) 512-7701"
+        "phone": "+91 9855127701"
       },
       {
         "id": "p-602",
@@ -3979,7 +3979,7 @@ export const INITIAL_AGENCIES = [
         "experience": "8 yrs",
         "status": "Available",
         "currentShift": "Unassigned",
-        "phone": "+1 (555) 512-7702"
+        "phone": "+91 9855127702"
       },
       {
         "id": "p-603",
@@ -3988,7 +3988,7 @@ export const INITIAL_AGENCIES = [
         "experience": "10 yrs",
         "status": "Assigned",
         "currentShift": "Oct 26 (10:00 - 14:00)",
-        "phone": "+1 (555) 512-7703"
+        "phone": "+91 9855127703"
       }
     ],
     "assignments": [
@@ -4027,14 +4027,14 @@ export const INITIAL_AGENCIES = [
       "lastName": "D'Souza",
       "profilePhoto": null,
       "designation": "Operations Director",
-      "phone": "+1 (555) 512-7729",
-      "alternatePhone": "+1 (555) 777-1020",
+      "phone": "+91 9855127729",
+      "alternatePhone": "+91 9877771020",
       "email": "emergency@elevatorservice.pro",
       "preferredLanguage": "English",
       "agentType": "Authorized Representative",
       "employeeId": "AGT-SOCL-01",
       "emergencyContactName": "Pooja Hegde",
-      "emergencyContactNumber": "+1 (555) 901-2234"
+      "emergencyContactNumber": "+91 9899012234"
     },
     "company": {
       "name": "Schindler & Otis Certified Lift Care",
@@ -4047,7 +4047,7 @@ export const INITIAL_AGENCIES = [
       "yearOfEstablishment": 2018,
       "numberOfEmployees": 16,
       "companyEmail": "emergency@elevatorservice.pro",
-      "companyPhone": "+1 (555) 512-7729",
+      "companyPhone": "+91 9855127729",
       "addressLine1": "100 Service Boulevard, Tech Corridor",
       "addressLine2": "Suite 400",
       "country": "United States",
@@ -4061,13 +4061,13 @@ export const INITIAL_AGENCIES = [
     "contacts": {
       "primaryContactName": "Robert D'Souza",
       "primaryContactDesignation": "Operations Director",
-      "primaryContactMobile": "+1 (555) 512-7729",
+      "primaryContactMobile": "+91 9855127729",
       "primaryContactEmail": "emergency@elevatorservice.pro",
       "alternateContactPerson": "Pooja Hegde",
-      "alternateContactMobile": "+1 (555) 901-2234",
+      "alternateContactMobile": "+91 9899012234",
       "accountsBillingName": "Rohan Deshmukh, Finance Lead",
       "accountsBillingEmail": "billing@elevatorservice.pro",
-      "accountsBillingPhone": "+1 (555) 512-7729",
+      "accountsBillingPhone": "+91 9855127729",
       "preferredContactMethod": "Bee App Notification",
       "preferredContactTime": "09:00 AM - 06:00 PM"
     },
@@ -4172,7 +4172,7 @@ export const INITIAL_AGENCIES = [
           "BRH-C"
         ],
         "propertyContactPerson": "Col. Sanjeev Varma",
-        "propertyContactNumber": "+1 (555) 482-9901",
+        "propertyContactNumber": "+91 9844829901",
         "propertyManagerSponsor": "Col. Sanjeev Varma",
         "supportingDocs": [
           "Lift_Maintenance_OEM_SLA.pdf"
@@ -4207,7 +4207,7 @@ export const INITIAL_AGENCIES = [
     ],
     "logoText": "PCPR",
     "contactPerson": "Manish Trivedi",
-    "phone": "+1 (555) 762-1144",
+    "phone": "+91 9877621144",
     "email": "admin@procoatpainters.com",
     "agreementStatus": "Active (Contracted thru Jun 2027)",
     "availabilityStatus": "Fully Allocated",
@@ -4224,7 +4224,7 @@ export const INITIAL_AGENCIES = [
         "experience": "9 yrs",
         "status": "Assigned",
         "currentShift": "Full Day (08:00 - 17:00)",
-        "phone": "+1 (555) 762-1101"
+        "phone": "+91 9877621101"
       },
       {
         "id": "p-702",
@@ -4233,7 +4233,7 @@ export const INITIAL_AGENCIES = [
         "experience": "7 yrs",
         "status": "Assigned",
         "currentShift": "Full Day (08:00 - 17:00)",
-        "phone": "+1 (555) 762-1102"
+        "phone": "+91 9877621102"
       }
     ],
     "assignments": [
@@ -4261,14 +4261,14 @@ export const INITIAL_AGENCIES = [
       "lastName": "Trivedi",
       "profilePhoto": null,
       "designation": "Operations Director",
-      "phone": "+1 (555) 762-1144",
-      "alternatePhone": "+1 (555) 777-1020",
+      "phone": "+91 9877621144",
+      "alternatePhone": "+91 9877771020",
       "email": "admin@procoatpainters.com",
       "preferredLanguage": "English",
       "agentType": "Authorized Representative",
       "employeeId": "AGT-PCPR-01",
       "emergencyContactName": "Pooja Hegde",
-      "emergencyContactNumber": "+1 (555) 901-2234"
+      "emergencyContactNumber": "+91 9899012234"
     },
     "company": {
       "name": "ProCoat Painting & Restoration",
@@ -4281,7 +4281,7 @@ export const INITIAL_AGENCIES = [
       "yearOfEstablishment": 2018,
       "numberOfEmployees": 20,
       "companyEmail": "admin@procoatpainters.com",
-      "companyPhone": "+1 (555) 762-1144",
+      "companyPhone": "+91 9877621144",
       "addressLine1": "100 Service Boulevard, Tech Corridor",
       "addressLine2": "Suite 400",
       "country": "United States",
@@ -4295,13 +4295,13 @@ export const INITIAL_AGENCIES = [
     "contacts": {
       "primaryContactName": "Manish Trivedi",
       "primaryContactDesignation": "Operations Director",
-      "primaryContactMobile": "+1 (555) 762-1144",
+      "primaryContactMobile": "+91 9877621144",
       "primaryContactEmail": "admin@procoatpainters.com",
       "alternateContactPerson": "Pooja Hegde",
-      "alternateContactMobile": "+1 (555) 901-2234",
+      "alternateContactMobile": "+91 9899012234",
       "accountsBillingName": "Rohan Deshmukh, Finance Lead",
       "accountsBillingEmail": "billing@procoatpainters.com",
-      "accountsBillingPhone": "+1 (555) 762-1144",
+      "accountsBillingPhone": "+91 9877621144",
       "preferredContactMethod": "Bee App Notification",
       "preferredContactTime": "09:00 AM - 06:00 PM"
     },
@@ -4394,7 +4394,7 @@ export const INITIAL_AGENCIES = [
     ],
     "logoText": "CBHV",
     "contactPerson": "Tariq Ansar",
-    "phone": "+1 (555) 309-8812",
+    "phone": "+91 9833098812",
     "email": "dispatch@coolbreezehvac.net",
     "agreementStatus": "Active (Contracted thru Sep 2027)",
     "availabilityStatus": "Available",
@@ -4411,7 +4411,7 @@ export const INITIAL_AGENCIES = [
         "experience": "10 yrs",
         "status": "Available",
         "currentShift": "Unassigned",
-        "phone": "+1 (555) 309-8801"
+        "phone": "+91 9833098801"
       },
       {
         "id": "p-802",
@@ -4420,7 +4420,7 @@ export const INITIAL_AGENCIES = [
         "experience": "6 yrs",
         "status": "Available",
         "currentShift": "Unassigned",
-        "phone": "+1 (555) 309-8802"
+        "phone": "+91 9833098802"
       },
       {
         "id": "p-803",
@@ -4429,7 +4429,7 @@ export const INITIAL_AGENCIES = [
         "experience": "5 yrs",
         "status": "Available",
         "currentShift": "Unassigned",
-        "phone": "+1 (555) 309-8803"
+        "phone": "+91 9833098803"
       }
     ],
     "assignments": [
@@ -4456,14 +4456,14 @@ export const INITIAL_AGENCIES = [
       "lastName": "Ansar",
       "profilePhoto": null,
       "designation": "Operations Director",
-      "phone": "+1 (555) 309-8812",
-      "alternatePhone": "+1 (555) 777-1020",
+      "phone": "+91 9833098812",
+      "alternatePhone": "+91 9877771020",
       "email": "dispatch@coolbreezehvac.net",
       "preferredLanguage": "English",
       "agentType": "Authorized Representative",
       "employeeId": "AGT-CBHV-01",
       "emergencyContactName": "Pooja Hegde",
-      "emergencyContactNumber": "+1 (555) 901-2234"
+      "emergencyContactNumber": "+91 9899012234"
     },
     "company": {
       "name": "CoolBreeze AC & HVAC Systems",
@@ -4476,7 +4476,7 @@ export const INITIAL_AGENCIES = [
       "yearOfEstablishment": 2018,
       "numberOfEmployees": 18,
       "companyEmail": "dispatch@coolbreezehvac.net",
-      "companyPhone": "+1 (555) 309-8812",
+      "companyPhone": "+91 9833098812",
       "addressLine1": "100 Service Boulevard, Tech Corridor",
       "addressLine2": "Suite 400",
       "country": "United States",
@@ -4490,13 +4490,13 @@ export const INITIAL_AGENCIES = [
     "contacts": {
       "primaryContactName": "Tariq Ansar",
       "primaryContactDesignation": "Operations Director",
-      "primaryContactMobile": "+1 (555) 309-8812",
+      "primaryContactMobile": "+91 9833098812",
       "primaryContactEmail": "dispatch@coolbreezehvac.net",
       "alternateContactPerson": "Pooja Hegde",
-      "alternateContactMobile": "+1 (555) 901-2234",
+      "alternateContactMobile": "+91 9899012234",
       "accountsBillingName": "Rohan Deshmukh, Finance Lead",
       "accountsBillingEmail": "billing@coolbreezehvac.net",
-      "accountsBillingPhone": "+1 (555) 309-8812",
+      "accountsBillingPhone": "+91 9833098812",
       "preferredContactMethod": "Bee App Notification",
       "preferredContactTime": "09:00 AM - 06:00 PM"
     },
@@ -4596,7 +4596,7 @@ export const INITIAL_AGENCIES = [
         "approvedServices": [],
         "approvedBlocks": [],
         "propertyContactPerson": "Col. Sanjeev Varma",
-        "propertyContactNumber": "+1 (555) 482-9901",
+        "propertyContactNumber": "+91 9844829901",
         "propertyManagerSponsor": "Col. Sanjeev Varma",
         "supportingDocs": [
           "CoolBreeze_HVAC_Proposal_BRH.pdf"
@@ -4633,7 +4633,7 @@ export const INITIAL_AGENCIES = [
     ],
     "logoText": "OFGM",
     "contactPerson": "Sanjay Raut",
-    "phone": "+1 (555) 441-2993",
+    "phone": "+91 9844412993",
     "email": "helpdesk@omnifixservice.com",
     "agreementStatus": "Active (Contracted thru Dec 2027)",
     "availabilityStatus": "Available",
@@ -4650,7 +4650,7 @@ export const INITIAL_AGENCIES = [
         "experience": "12 yrs",
         "status": "Available",
         "currentShift": "Unassigned",
-        "phone": "+1 (555) 441-2901"
+        "phone": "+91 9844412901"
       },
       {
         "id": "p-902",
@@ -4659,7 +4659,7 @@ export const INITIAL_AGENCIES = [
         "experience": "8 yrs",
         "status": "Available",
         "currentShift": "Unassigned",
-        "phone": "+1 (555) 441-2902"
+        "phone": "+91 9844412902"
       },
       {
         "id": "p-903",
@@ -4668,7 +4668,7 @@ export const INITIAL_AGENCIES = [
         "experience": "6 yrs",
         "status": "Available",
         "currentShift": "Unassigned",
-        "phone": "+1 (555) 441-2903"
+        "phone": "+91 9844412903"
       },
       {
         "id": "p-904",
@@ -4677,7 +4677,7 @@ export const INITIAL_AGENCIES = [
         "experience": "5 yrs",
         "status": "Available",
         "currentShift": "Unassigned",
-        "phone": "+1 (555) 441-2904"
+        "phone": "+91 9844412904"
       }
     ],
     "assignments": [
@@ -4716,14 +4716,14 @@ export const INITIAL_AGENCIES = [
       "lastName": "Raut",
       "profilePhoto": null,
       "designation": "Operations Director",
-      "phone": "+1 (555) 441-2993",
-      "alternatePhone": "+1 (555) 777-1020",
+      "phone": "+91 9844412993",
+      "alternatePhone": "+91 9877771020",
       "email": "helpdesk@omnifixservice.com",
       "preferredLanguage": "English",
       "agentType": "Authorized Representative",
       "employeeId": "AGT-OFGM-01",
       "emergencyContactName": "Pooja Hegde",
-      "emergencyContactNumber": "+1 (555) 901-2234"
+      "emergencyContactNumber": "+91 9899012234"
     },
     "company": {
       "name": "OmniFix General Maintenance",
@@ -4736,7 +4736,7 @@ export const INITIAL_AGENCIES = [
       "yearOfEstablishment": 2018,
       "numberOfEmployees": 22,
       "companyEmail": "helpdesk@omnifixservice.com",
-      "companyPhone": "+1 (555) 441-2993",
+      "companyPhone": "+91 9844412993",
       "addressLine1": "100 Service Boulevard, Tech Corridor",
       "addressLine2": "Suite 400",
       "country": "United States",
@@ -4750,13 +4750,13 @@ export const INITIAL_AGENCIES = [
     "contacts": {
       "primaryContactName": "Sanjay Raut",
       "primaryContactDesignation": "Operations Director",
-      "primaryContactMobile": "+1 (555) 441-2993",
+      "primaryContactMobile": "+91 9844412993",
       "primaryContactEmail": "helpdesk@omnifixservice.com",
       "alternateContactPerson": "Pooja Hegde",
-      "alternateContactMobile": "+1 (555) 901-2234",
+      "alternateContactMobile": "+91 9899012234",
       "accountsBillingName": "Rohan Deshmukh, Finance Lead",
       "accountsBillingEmail": "billing@omnifixservice.com",
-      "accountsBillingPhone": "+1 (555) 441-2993",
+      "accountsBillingPhone": "+91 9844412993",
       "preferredContactMethod": "Bee App Notification",
       "preferredContactTime": "09:00 AM - 06:00 PM"
     },
@@ -4860,7 +4860,7 @@ export const INITIAL_AGENCIES = [
     ],
     "logoText": "TFLS",
     "contactPerson": "Rameshwar Sen",
-    "phone": "+1 (555) 349-1188",
+    "phone": "+91 9833491188",
     "email": "compliance@titanfiresafety.com",
     "agreementStatus": "Registration Under Review",
     "availabilityStatus": "Available",
@@ -4879,14 +4879,14 @@ export const INITIAL_AGENCIES = [
       "lastName": "Sen",
       "profilePhoto": null,
       "designation": "Chief Safety Consultant",
-      "phone": "+1 (555) 349-1188",
-      "alternatePhone": "+1 (555) 349-1199",
+      "phone": "+91 9833491188",
+      "alternatePhone": "+91 9833491199",
       "email": "compliance@titanfiresafety.com",
       "preferredLanguage": "English",
       "agentType": "Company Owner",
       "employeeId": "AGT-TFLS-01",
       "emergencyContactName": "Anil Sen",
-      "emergencyContactNumber": "+1 (555) 349-9900"
+      "emergencyContactNumber": "+91 9833499900"
     },
     "company": {
       "name": "Titan Fire & Life Safety Solutions",
@@ -4899,7 +4899,7 @@ export const INITIAL_AGENCIES = [
       "yearOfEstablishment": 2020,
       "numberOfEmployees": 16,
       "companyEmail": "compliance@titanfiresafety.com",
-      "companyPhone": "+1 (555) 349-1188",
+      "companyPhone": "+91 9833491188",
       "addressLine1": "400 Industrial Ring Road",
       "addressLine2": "Fire Protection Wing",
       "country": "United States",
@@ -4913,13 +4913,13 @@ export const INITIAL_AGENCIES = [
     "contacts": {
       "primaryContactName": "Rameshwar Sen",
       "primaryContactDesignation": "Chief Safety Consultant",
-      "primaryContactMobile": "+1 (555) 349-1188",
+      "primaryContactMobile": "+91 9833491188",
       "primaryContactEmail": "compliance@titanfiresafety.com",
       "alternateContactPerson": "Sandeep Ghosh",
-      "alternateContactMobile": "+1 (555) 349-2233",
+      "alternateContactMobile": "+91 9833492233",
       "accountsBillingName": "Nidhi Sen",
       "accountsBillingEmail": "accounts@titanfiresafety.com",
-      "accountsBillingPhone": "+1 (555) 349-1188",
+      "accountsBillingPhone": "+91 9833491188",
       "preferredContactMethod": "Email",
       "preferredContactTime": "09:00 AM - 05:00 PM"
     },
@@ -4987,7 +4987,7 @@ export const INITIAL_AGENCIES = [
         "experience": "12 yrs",
         "status": "Available",
         "currentShift": "Unassigned",
-        "phone": "+1 (555) 349-1101"
+        "phone": "+91 9833491101"
       },
       {
         "id": "p-1002",
@@ -4996,7 +4996,7 @@ export const INITIAL_AGENCIES = [
         "experience": "8 yrs",
         "status": "Available",
         "currentShift": "Unassigned",
-        "phone": "+1 (555) 349-1102"
+        "phone": "+91 9833491102"
       }
     ],
     "assignments": [],

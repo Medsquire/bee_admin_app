@@ -35,7 +35,9 @@ export default function AgencyOnboardingModal() {
     agencies,
     addAgency,
     updateAgency,
-    addToast
+    addToast,
+    allCategoryNames,
+    setAddServiceCategoryModal
   } = useApp();
 
   const { isOpen, mode, agencyId } = agencyOnboardingModal;
@@ -578,7 +580,7 @@ export default function AgencyOnboardingModal() {
                   <input
                     type="tel"
                     className="form-input"
-                    placeholder="+1 (555) 839-2041"
+                    placeholder="+91 9888392041"
                     value={formData.agent.phone}
                     onChange={(e) =>
                       setFormData({
@@ -595,7 +597,7 @@ export default function AgencyOnboardingModal() {
                   <input
                     type="tel"
                     className="form-input"
-                    placeholder="+1 (555) 839-9900"
+                    placeholder="+91 9888399900"
                     value={formData.agent.alternatePhone}
                     onChange={(e) =>
                       setFormData({
@@ -692,7 +694,7 @@ export default function AgencyOnboardingModal() {
                   <input
                     type="tel"
                     className="form-input"
-                    placeholder="+1 (555) 000-0000"
+                    placeholder="+91 9876543210"
                     value={formData.agent.emergencyContactNumber}
                     onChange={(e) =>
                       setFormData({
@@ -960,7 +962,7 @@ export default function AgencyOnboardingModal() {
                   <input
                     type="tel"
                     className="form-input"
-                    placeholder="+1 (555) 839-2041"
+                    placeholder="+91 9888392041"
                     value={formData.company.companyPhone}
                     onChange={(e) =>
                       setFormData({
@@ -1364,8 +1366,25 @@ export default function AgencyOnboardingModal() {
                   gap: '0.75rem'
                 }}
               >
-                <div style={{ fontWeight: 700, fontSize: '0.8125rem', color: 'var(--dark-navy)' }}>
-                  + Add Service Category
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '0.5rem' }}>
+                  <div style={{ fontWeight: 700, fontSize: '0.8125rem', color: 'var(--dark-navy)' }}>
+                    Add Service Category
+                  </div>
+                  <button
+                    type="button"
+                    className="btn btn-secondary btn-sm"
+                    onClick={() =>
+                      setAddServiceCategoryModal({
+                        isOpen: true,
+                        onCategoryAdded: (cat) => setNewService({ ...newService, category: cat.name })
+                      })
+                    }
+                    style={{ fontSize: '0.75rem', padding: '0.25rem 0.65rem' }}
+                    title="Define a new category not listed in the standard options"
+                  >
+                    <Plus size={14} />
+                    Add Service Category
+                  </button>
                 </div>
 
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '0.75rem' }}>
@@ -1374,11 +1393,21 @@ export default function AgencyOnboardingModal() {
                     <select
                       className="form-select"
                       value={newService.category}
-                      onChange={(e) => setNewService({ ...newService, category: e.target.value })}
+                      onChange={(e) => {
+                        if (e.target.value === '__ADD_NEW__') {
+                          setAddServiceCategoryModal({
+                            isOpen: true,
+                            onCategoryAdded: (cat) => setNewService({ ...newService, category: cat.name })
+                          });
+                          return;
+                        }
+                        setNewService({ ...newService, category: e.target.value });
+                      }}
                     >
-                      {SERVICE_CATEGORIES.map((cat) => (
+                      {allCategoryNames.map((cat) => (
                         <option key={cat} value={cat}>{cat}</option>
                       ))}
+                      <option value="__ADD_NEW__">+ Add New Service Category...</option>
                     </select>
                   </div>
 
@@ -1446,7 +1475,7 @@ export default function AgencyOnboardingModal() {
                       style={{ width: '100%' }}
                     >
                       <Plus size={16} />
-                      + Add Another Service
+                      Add Another Service
                     </button>
                   </div>
                 </div>

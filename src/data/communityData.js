@@ -92,21 +92,21 @@ export const APARTMENT_TEMPLATES = [
 
 // Resident Seed Pool for realism
 const RESIDENT_NAMES = [
-  { name: 'Dr. Marcus Vance', email: 'm.vance@techcorp.io', phone: '+1 (555) 234-8901', avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80' },
-  { name: 'Elena & Lucas Moreau', email: 'moreau.family@luxestate.com', phone: '+1 (555) 345-6789', avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80' },
-  { name: 'Dr. Sarah Sterling', email: 's.sterling@metromedical.org', phone: '+1 (555) 456-7890', avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&auto=format&fit=crop&q=80' },
-  { name: 'David & Hannah Miller', email: 'miller.h@designgroup.com', phone: '+1 (555) 567-8901', avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80' },
-  { name: 'Chloe Bennett', email: 'chloe.bennett@mediahive.net', phone: '+1 (555) 678-9012', avatar: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&auto=format&fit=crop&q=80' },
-  { name: 'Sebastian Wright', email: 'sebastian@wright-holdings.co', phone: '+1 (555) 789-0123', avatar: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=150&auto=format&fit=crop&q=80' },
-  { name: 'Nadia Kovac', email: 'nadia.kovac@fintech-ai.com', phone: '+1 (555) 890-1234', avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&auto=format&fit=crop&q=80' },
-  { name: 'Julian Thorne', email: 'jthorne@globalcapital.io', phone: '+1 (555) 901-2345', avatar: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&auto=format&fit=crop&q=80' },
-  { name: 'Aria Chen', email: 'aria.chen@venturepoint.vc', phone: '+1 (555) 112-3344', avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80' },
-  { name: 'Oliver & Priya Patel', email: 'patel.family@biolabs.com', phone: '+1 (555) 223-4455', avatar: 'https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=150&auto=format&fit=crop&q=80' },
-  { name: 'Samantha Reed', email: 's.reed@architects-studio.com', phone: '+1 (555) 334-5566', avatar: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=150&auto=format&fit=crop&q=80' },
-  { name: 'Carlos Mendez', email: 'c.mendez@aerotech.org', phone: '+1 (555) 445-6677', avatar: 'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=150&auto=format&fit=crop&q=80' },
-  { name: 'Maya Lin', email: 'maya.lin@sounddesign.com', phone: '+1 (555) 556-7788', avatar: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=150&auto=format&fit=crop&q=80' },
-  { name: 'Zachary Cole', email: 'z.cole@cloudmesh.io', phone: '+1 (555) 667-8899', avatar: 'https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?w=150&auto=format&fit=crop&q=80' },
-  { name: 'Victoria Hawthorne', email: 'v.hawthorne@royalgallery.com', phone: '+1 (555) 778-9900', avatar: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=150&auto=format&fit=crop&q=80' }
+  { name: 'Dr. Marcus Vance', email: 'm.vance@techcorp.io', phone: '+91 9822348901', avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80' },
+  { name: 'Elena & Lucas Moreau', email: 'moreau.family@luxestate.com', phone: '+91 9833456789', avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80' },
+  { name: 'Dr. Sarah Sterling', email: 's.sterling@metromedical.org', phone: '+91 9844567890', avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&auto=format&fit=crop&q=80' },
+  { name: 'David & Hannah Miller', email: 'miller.h@designgroup.com', phone: '+91 9855678901', avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80' },
+  { name: 'Chloe Bennett', email: 'chloe.bennett@mediahive.net', phone: '+91 9866789012', avatar: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&auto=format&fit=crop&q=80' },
+  { name: 'Sebastian Wright', email: 'sebastian@wright-holdings.co', phone: '+91 9877890123', avatar: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=150&auto=format&fit=crop&q=80' },
+  { name: 'Nadia Kovac', email: 'nadia.kovac@fintech-ai.com', phone: '+91 9888901234', avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&auto=format&fit=crop&q=80' },
+  { name: 'Julian Thorne', email: 'jthorne@globalcapital.io', phone: '+91 9899012345', avatar: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&auto=format&fit=crop&q=80' },
+  { name: 'Aria Chen', email: 'aria.chen@venturepoint.vc', phone: '+91 9811123344', avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80' },
+  { name: 'Oliver & Priya Patel', email: 'patel.family@biolabs.com', phone: '+91 9822234455', avatar: 'https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=150&auto=format&fit=crop&q=80' },
+  { name: 'Samantha Reed', email: 's.reed@architects-studio.com', phone: '+91 9833345566', avatar: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=150&auto=format&fit=crop&q=80' },
+  { name: 'Carlos Mendez', email: 'c.mendez@aerotech.org', phone: '+91 9844456677', avatar: 'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=150&auto=format&fit=crop&q=80' },
+  { name: 'Maya Lin', email: 'maya.lin@sounddesign.com', phone: '+91 9855567788', avatar: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=150&auto=format&fit=crop&q=80' },
+  { name: 'Zachary Cole', email: 'z.cole@cloudmesh.io', phone: '+91 9866678899', avatar: 'https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?w=150&auto=format&fit=crop&q=80' },
+  { name: 'Victoria Hawthorne', email: 'v.hawthorne@royalgallery.com', phone: '+91 9877789900', avatar: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=150&auto=format&fit=crop&q=80' }
 ];
 
 // Flat Configuration Matrix by Floor (Floor 1 to 4)

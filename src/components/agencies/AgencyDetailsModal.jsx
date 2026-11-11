@@ -114,7 +114,7 @@ export default function AgencyDetailsModal() {
       subtitle={`Service Partner • Ref: ${agency.registrationRefNumber || 'N/A'}`}
       size="xl"
     >
-      <div style={{ display: 'flex', flexDirection: 'column', maxHeight: '82vh' }}>
+      <div style={{ display: 'flex', flexDirection: 'column', height: '100%', flex: 1, minHeight: 0, overflow: 'hidden' }}>
         {/* Top Header Card */}
         <div
           style={{
@@ -125,7 +125,8 @@ export default function AgencyDetailsModal() {
             alignItems: 'center',
             justifyContent: 'space-between',
             flexWrap: 'wrap',
-            gap: '1rem'
+            gap: '1rem',
+            flexShrink: 0
           }}
         >
           <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
@@ -202,7 +203,8 @@ export default function AgencyDetailsModal() {
             backgroundColor: '#FFFFFF',
             overflowX: 'auto',
             padding: '0.25rem 0.75rem',
-            gap: '0.35rem'
+            gap: '0.35rem',
+            flexShrink: 0
           }}
         >
           {tabs.map((tab) => {
@@ -690,10 +692,9 @@ export default function AgencyDetailsModal() {
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                 <div>
-                  <h3 style={{ fontSize: '0.9375rem', fontWeight: 700, color: 'var(--dark-navy)' }}>
+                  <h3 style={{ fontSize: '0.9375rem', fontWeight: 700, color: 'var(--dark-navy)', margin: 0 }}>
                     Personnel Roster ({(agency.personnel || []).length} registered)
                   </h3>
-                  <p className="text-xs text-muted">Track technicians, guards, shifts, and job status</p>
                 </div>
 
                 <button
@@ -826,10 +827,9 @@ export default function AgencyDetailsModal() {
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                 <div>
-                  <h3 style={{ fontSize: '0.9375rem', fontWeight: 700, color: 'var(--dark-navy)' }}>
+                  <h3 style={{ fontSize: '0.9375rem', fontWeight: 700, color: 'var(--dark-navy)', margin: 0 }}>
                     Property Assignments ({(agency.propertyAssignments || []).length})
                   </h3>
-                  <p className="text-xs text-muted">Access permissions to communities, towers, and approved services</p>
                 </div>
 
                 <button
@@ -838,7 +838,7 @@ export default function AgencyDetailsModal() {
                   onClick={() => setPropertyAssignmentModal({ isOpen: true, agencyId: agency.id })}
                 >
                   <Plus size={14} />
-                  + Request Property Assignment
+                  Request Property Assignment
                 </button>
               </div>
 
@@ -993,7 +993,8 @@ export default function AgencyDetailsModal() {
             justifyContent: 'space-between',
             padding: '1rem 1.5rem',
             borderTop: '1px solid var(--border-color)',
-            backgroundColor: '#FFFFFF'
+            backgroundColor: '#FFFFFF',
+            flexShrink: 0
           }}
         >
           <button
@@ -1014,7 +1015,7 @@ export default function AgencyDetailsModal() {
               }}
             >
               <Plus size={15} />
-              + Request Property Assignment
+              Request Property Assignment
             </button>
           </div>
         </div>

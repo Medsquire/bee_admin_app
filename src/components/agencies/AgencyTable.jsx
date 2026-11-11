@@ -16,9 +16,7 @@ export default function AgencyTable({ agencies, onSelectAgency }) {
       className="card"
       style={{
         overflowX: 'auto',
-        borderRadius: 'var(--radius-lg)',
-        border: '1px solid var(--border-color)',
-        backgroundColor: '#FFFFFF'
+        borderRadius: 'var(--radius-lg)'
       }}
     >
       <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'left', minWidth: '950px' }}>

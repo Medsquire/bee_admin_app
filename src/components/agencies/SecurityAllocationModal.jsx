@@ -66,8 +66,8 @@ export default function SecurityAllocationModal() {
       subtitle="Deploy licensed security squads to communities, towers, and perimeter gates"
       size="md"
     >
-      <form onSubmit={handleConfirm}>
-        <div className="modal-body" style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
+      <form onSubmit={handleConfirm} style={{ display: 'flex', flexDirection: 'column', height: '100%', flex: 1, minHeight: 0, overflow: 'hidden' }}>
+        <div className="modal-body" style={{ flex: 1, overflowY: 'auto', minHeight: 0, display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
           {/* Target Apartment Community */}
           <div>
             <label className="form-label">Apartment Community</label>

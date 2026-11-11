@@ -232,7 +232,7 @@ export const INITIAL_TENANTS = [
     avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80',
     unit: '101',
     email: 'm.vance@techcorp.io',
-    phone: '+1 (555) 234-8901',
+    phone: '+91 9822348901',
     leaseStart: '2025-05-01',
     leaseEnd: '2027-04-30',
     status: 'Active',
@@ -241,7 +241,7 @@ export const INITIAL_TENANTS = [
     autoPay: true,
     pet: 'Golden Retriever (Buster)',
     vehicle: 'Tesla Model Y — #7XYZ88',
-    emergencyContact: 'Jessica Vance (Sister) • +1 (555) 890-1234'
+    emergencyContact: 'Jessica Vance (Sister) • +91 9888901234'
   },
   {
     id: 'TEN-103',
@@ -249,7 +249,7 @@ export const INITIAL_TENANTS = [
     avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80',
     unit: '103',
     email: 'elena.moreau@designstudio.fr',
-    phone: '+1 (555) 345-6712',
+    phone: '+91 9833456712',
     leaseStart: '2025-01-01',
     leaseEnd: '2026-12-31',
     status: 'Renewal Pending',
@@ -258,7 +258,7 @@ export const INITIAL_TENANTS = [
     autoPay: true,
     pet: 'French Bulldog (Oreo)',
     vehicle: 'Audi e-tron — #4KJL99',
-    emergencyContact: 'Pierre Moreau (Father) • +1 (555) 332-9011'
+    emergencyContact: 'Pierre Moreau (Father) • +91 9833329011'
   },
   {
     id: 'TEN-201',
@@ -266,7 +266,7 @@ export const INITIAL_TENANTS = [
     avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&auto=format&fit=crop&q=80',
     unit: '201',
     email: 's.sterling@metromedical.org',
-    phone: '+1 (555) 456-7890',
+    phone: '+91 9844567890',
     leaseStart: '2026-03-01',
     leaseEnd: '2027-02-28',
     status: 'Active',
@@ -275,7 +275,7 @@ export const INITIAL_TENANTS = [
     autoPay: true,
     pet: 'None',
     vehicle: 'BMW i4 — #9MED44',
-    emergencyContact: 'Robert Sterling (Brother) • +1 (555) 123-6677'
+    emergencyContact: 'Robert Sterling (Brother) • +91 9811236677'
   },
   {
     id: 'TEN-203',
@@ -283,7 +283,7 @@ export const INITIAL_TENANTS = [
     avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80',
     unit: '203',
     email: 'miller.family@gmail.com',
-    phone: '+1 (555) 567-8910',
+    phone: '+91 9855678910',
     leaseStart: '2025-07-01',
     leaseEnd: '2027-06-30',
     status: 'Active',
@@ -292,7 +292,7 @@ export const INITIAL_TENANTS = [
     autoPay: true,
     pet: 'Maine Coon Cat (Milo)',
     vehicle: 'Volvo XC90 — #3FAM77',
-    emergencyContact: 'Karen Miller (Mother) • +1 (555) 776-9022'
+    emergencyContact: 'Karen Miller (Mother) • +91 9877769022'
   },
   {
     id: 'TEN-204',
@@ -300,7 +300,7 @@ export const INITIAL_TENANTS = [
     avatar: 'https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=150&auto=format&fit=crop&q=80',
     unit: '204',
     email: 'j.thorne@quantumai.dev',
-    phone: '+1 (555) 678-9012',
+    phone: '+91 9866789012',
     leaseStart: '2025-11-15',
     leaseEnd: '2026-11-15',
     status: 'Notice Given',
@@ -309,7 +309,7 @@ export const INITIAL_TENANTS = [
     autoPay: false,
     pet: 'None',
     vehicle: 'Ducati Monster — #8BIK01',
-    emergencyContact: 'Mark Thorne (Father) • +1 (555) 998-1122'
+    emergencyContact: 'Mark Thorne (Father) • +91 9899981122'
   },
   {
     id: 'TEN-301',
@@ -317,7 +317,7 @@ export const INITIAL_TENANTS = [
     avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&auto=format&fit=crop&q=80',
     unit: '301',
     email: 'chloe.bennett@creativemedia.com',
-    phone: '+1 (555) 789-0123',
+    phone: '+91 9877890123',
     leaseStart: '2025-09-01',
     leaseEnd: '2027-08-31',
     status: 'Active',
@@ -326,7 +326,7 @@ export const INITIAL_TENANTS = [
     autoPay: true,
     pet: 'Poodle Mix (Luna)',
     vehicle: 'Porsche Taycan — #1LUX55',
-    emergencyContact: 'Grace Bennett (Mother) • +1 (555) 667-3311'
+    emergencyContact: 'Grace Bennett (Mother) • +91 9866673311'
   },
   {
     id: 'TEN-401',
@@ -334,7 +334,7 @@ export const INITIAL_TENANTS = [
     avatar: 'https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=150&auto=format&fit=crop&q=80',
     unit: '401',
     email: 'sebastian@wrightcapital.com',
-    phone: '+1 (555) 890-1234',
+    phone: '+91 9888901234',
     leaseStart: '2025-10-01',
     leaseEnd: '2027-09-30',
     status: 'Active',
@@ -343,7 +343,7 @@ export const INITIAL_TENANTS = [
     autoPay: true,
     pet: 'Siamese Cat (Cleo)',
     vehicle: 'Mercedes AMG GT & Tesla X',
-    emergencyContact: 'Victoria Wright (Spouse) • +1 (555) 443-8899'
+    emergencyContact: 'Victoria Wright (Spouse) • +91 9844438899'
   },
   {
     id: 'TEN-402',
@@ -351,7 +351,7 @@ export const INITIAL_TENANTS = [
     avatar: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=150&auto=format&fit=crop&q=80',
     unit: '402',
     email: 'kovac.team@bioventure.com',
-    phone: '+1 (555) 901-2345',
+    phone: '+91 9899012345',
     leaseStart: '2025-06-01',
     leaseEnd: '2027-05-31',
     status: 'Active',
@@ -360,7 +360,7 @@ export const INITIAL_TENANTS = [
     autoPay: true,
     pet: 'None',
     vehicle: 'Rivian R1S — #6EVV12',
-    emergencyContact: 'Dr. Emil Kovac • +1 (555) 887-2200'
+    emergencyContact: 'Dr. Emil Kovac • +91 9888872200'
   }
 ];
 
@@ -374,7 +374,7 @@ export const INITIAL_WORK_ORDERS = [
     priority: 'Urgent',
     status: 'In Progress',
     assignedTo: 'Alex Mercer (Prime HVAC)',
-    vendorPhone: '+1 (555) 404-9812',
+    vendorPhone: '+91 9844049812',
     createdDate: '2026-10-09 08:30 AM',
     estimatedCost: '$280.00',
     tenantAccessPermission: true,
@@ -390,7 +390,7 @@ export const INITIAL_WORK_ORDERS = [
     priority: 'Medium',
     status: 'Reported',
     assignedTo: 'Dave Callahan (Rapid Flow Plumbing)',
-    vendorPhone: '+1 (555) 777-1290',
+    vendorPhone: '+91 9877771290',
     createdDate: '2026-10-10 09:15 AM',
     estimatedCost: '$160.00',
     tenantAccessPermission: true,
@@ -406,7 +406,7 @@ export const INITIAL_WORK_ORDERS = [
     priority: 'Low',
     status: 'Completed',
     assignedTo: 'Elena Rostova (Apex Electric)',
-    vendorPhone: '+1 (555) 888-4422',
+    vendorPhone: '+91 9888884422',
     createdDate: '2026-10-07 02:40 PM',
     estimatedCost: '$195.00',
     tenantAccessPermission: true,
@@ -438,7 +438,7 @@ export const INITIAL_WORK_ORDERS = [
     priority: 'High',
     status: 'Reported',
     assignedTo: 'SecureLink Systems',
-    vendorPhone: '+1 (555) 991-3421',
+    vendorPhone: '+91 9899913421',
     createdDate: '2026-10-10 11:45 AM',
     estimatedCost: '$350.00',
     tenantAccessPermission: false,

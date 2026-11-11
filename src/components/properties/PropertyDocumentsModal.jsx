@@ -81,7 +81,7 @@ export default function PropertyDocumentsModal() {
       subtitle="Manage master plans, blueprints, occupancy approvals, and certificates"
       size="lg"
     >
-      <div className="modal-body" style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
+      <div className="modal-body" style={{ flex: 1, minHeight: 0, overflowY: 'auto', display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
         {/* Controls Bar: Category Filter & Upload Trigger */}
         <div
           style={{
@@ -378,7 +378,7 @@ export default function PropertyDocumentsModal() {
         )}
       </div>
 
-      <div className="modal-footer" style={{ padding: '0.875rem 1.5rem', display: 'flex', justifyContent: 'flex-end', backgroundColor: '#FFFFFF', borderTop: '1px solid var(--border-color)' }}>
+      <div className="modal-footer" style={{ padding: '0.875rem 1.5rem', display: 'flex', justifyContent: 'flex-end', backgroundColor: '#FFFFFF', borderTop: '1px solid var(--border-color)', flexShrink: 0 }}>
         <button
           type="button"
           className="btn btn-secondary"
