@@ -1,9 +1,10 @@
 import React from 'react';
 import { useApp } from '../../context/AppContext';
-import { LayoutDashboard, Building2, Briefcase, X, ShieldCheck } from 'lucide-react';
+import { LayoutDashboard, Building2, Briefcase, Settings, X } from 'lucide-react';
+import logoImg from '../../assets/logo.jpg';
 
 export default function Sidebar() {
-  const { activePage, navigateTo, isMobileSidebarOpen, setIsMobileSidebarOpen, metrics, currentUser } = useApp();
+  const { activePage, navigateTo, isMobileSidebarOpen, setIsMobileSidebarOpen, metrics } = useApp();
 
   const navItems = [
     {
@@ -37,24 +38,28 @@ export default function Sidebar() {
       <aside className={`sidebar ${isMobileSidebarOpen ? 'open' : ''}`}>
         {/* Brand Header */}
         <div className="sidebar-header">
-          <div className="sidebar-logo-icon">
-            <svg
-              width="22"
-              height="22"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2.3"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M12 2L4 7v10l8 5 8-5V7l-8-5z" />
-              <path d="M12 22V12" />
-              <path d="M20 7l-8 5-8-5" />
-            </svg>
+          <div
+            className="sidebar-logo-icon"
+            style={{
+              background: '#FFFFFF',
+              padding: '2px',
+              border: '1px solid rgba(226, 232, 240, 0.9)',
+              overflow: 'hidden'
+            }}
+          >
+            <img
+              src={logoImg}
+              alt="Bee Property Logo"
+              style={{
+                width: '100%',
+                height: '100%',
+                objectFit: 'contain',
+                borderRadius: 'calc(var(--radius-md) - 2px)'
+              }}
+            />
           </div>
           <div style={{ flex: 1, minWidth: 0 }}>
-            <div className="sidebar-brand-name">BEE Residence</div>
+            <div className="sidebar-brand-name">Bee Property</div>
             <div className="sidebar-brand-subtitle">Admin Portal</div>
           </div>
           {isMobileSidebarOpen && (
@@ -69,7 +74,7 @@ export default function Sidebar() {
           )}
         </div>
 
-        {/* Navigation List strictly limited to the 3 required pages */}
+        {/* Navigation List strictly limited to the required pages */}
         <nav className="sidebar-nav">
           <div
             className="text-xs font-semibold"
@@ -86,7 +91,10 @@ export default function Sidebar() {
                 key={item.id}
                 type="button"
                 className={`nav-item ${isActive ? 'active' : ''}`}
-                onClick={() => navigateTo(item.id)}
+                onClick={() => {
+                  navigateTo(item.id);
+                  if (isMobileSidebarOpen) setIsMobileSidebarOpen(false);
+                }}
               >
                 <Icon size={18} strokeWidth={isActive ? 2.4 : 2} style={{ flexShrink: 0 }} />
                 <span style={{ flex: 1, textAlign: 'left' }}>{item.label}</span>
@@ -97,7 +105,8 @@ export default function Sidebar() {
                       fontWeight: 600,
                       padding: '0.15rem 0.45rem',
                       borderRadius: 'var(--radius-full)',
-                      backgroundColor: isActive ? 'var(--primary-blue)' : '#F1F5F9',
+                      backgroundColor: isActive ? 'var(--primary-blue)' : 'var(--bg-subtle)',
+                      border: isActive ? 'none' : '1px solid var(--border-color)',
                       color: isActive ? '#FFFFFF' : 'var(--text-secondary)'
                     }}
                   >
@@ -109,92 +118,20 @@ export default function Sidebar() {
           })}
         </nav>
 
-        {/* Sidebar Footer: Admin Profile Details & System Status */}
-        <div className="sidebar-footer" style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
-          {/* Admin Profile Section matching navbar profile style */}
-          <div
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: '0.625rem',
-              padding: '0.45rem 0.75rem',
-              borderRadius: 'var(--radius-md)',
-              backgroundColor: '#F8FAFC',
-              border: '1px solid var(--border-color)'
+        {/* Sidebar Footer: Replaced entire bottom area with a single Settings navigation button */}
+        <div className="sidebar-footer" style={{ padding: '0.875rem 0.75rem', borderTop: '1px solid var(--border-color)' }}>
+          <button
+            type="button"
+            className={`nav-item ${activePage === 'settings' ? 'active' : ''}`}
+            onClick={() => {
+              navigateTo('settings');
+              if (isMobileSidebarOpen) setIsMobileSidebarOpen(false);
             }}
+            style={{ width: '100%', margin: 0 }}
           >
-            <div
-              style={{
-                width: '32px',
-                height: '32px',
-                borderRadius: '50%',
-                backgroundColor: 'var(--primary-blue)',
-                color: '#FFFFFF',
-                fontWeight: 700,
-                fontSize: '0.8125rem',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                boxShadow: '0 2px 4px rgba(37, 99, 235, 0.2)',
-                flexShrink: 0
-              }}
-            >
-              {currentUser?.initials || 'SJ'}
-            </div>
-            <div style={{ minWidth: 0, flex: 1, display: 'flex', flexDirection: 'column' }}>
-              <span
-                style={{
-                  fontSize: '0.8125rem',
-                  fontWeight: 700,
-                  color: 'var(--dark-navy)',
-                  lineHeight: 1.2,
-                  whiteSpace: 'nowrap',
-                  overflow: 'hidden',
-                  textOverflow: 'ellipsis'
-                }}
-              >
-                {currentUser?.name || 'Sarah Jenkins'}
-              </span>
-              <span
-                style={{
-                  fontSize: '0.6875rem',
-                  color: 'var(--primary-blue)',
-                  fontWeight: 600,
-                  marginTop: '0.1rem'
-                }}
-              >
-                {currentUser?.role || 'Super Admin'}
-              </span>
-            </div>
-          </div>
-
-          {/* System Status Section below it */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.625rem' }}>
-            <div
-              style={{
-                width: '32px',
-                height: '32px',
-                borderRadius: 'var(--radius-sm)',
-                backgroundColor: 'var(--light-blue)',
-                color: 'var(--primary-blue)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                flexShrink: 0
-              }}
-            >
-              <ShieldCheck size={18} />
-            </div>
-            <div style={{ minWidth: 0, flex: 1 }}>
-              <div style={{ fontSize: '0.8125rem', fontWeight: 600, color: 'var(--dark-navy)' }}>
-                System Status
-              </div>
-              <div style={{ fontSize: '0.75rem', color: 'var(--success)', display: 'flex', alignItems: 'center', gap: '0.35rem' }}>
-                <span style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: 'var(--success)' }} />
-                All Systems Normal
-              </div>
-            </div>
-          </div>
+            <Settings size={18} strokeWidth={activePage === 'settings' ? 2.4 : 2} style={{ flexShrink: 0 }} />
+            <span style={{ flex: 1, textAlign: 'left' }}>Settings</span>
+          </button>
         </div>
       </aside>
     </>

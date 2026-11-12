@@ -10,8 +10,11 @@ export default function PropertyBreadcrumbs({ isOverHero = false }) {
     selectedFloorId,
     clearPropertySelection,
     selectApartment,
-    selectBlock
+    selectBlock,
+    theme
   } = useApp();
+
+  const isDark = theme === 'dark';
 
   const currentApartment = apartments.find((a) => a.id === selectedApartmentId);
   const currentBlock = currentApartment?.blocks.find((b) => b.id === selectedBlockId);
@@ -37,16 +40,29 @@ export default function PropertyBreadcrumbs({ isOverHero = false }) {
     <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', flexWrap: 'wrap' }}>
       <button
         type="button"
-        className={`btn ${isOverHero ? 'btn-secondary' : 'btn-secondary'} btn-sm`}
+        className="btn btn-secondary btn-sm property-hero-back-btn"
         onClick={handleBack}
         style={{
           display: 'inline-flex',
           alignItems: 'center',
           gap: '0.35rem',
-          backgroundColor: isOverHero ? 'rgba(255, 255, 255, 0.9)' : '#FFFFFF'
+          backgroundColor: isDark
+            ? (isOverHero ? 'rgba(15, 23, 42, 0.78)' : 'var(--bg-card)')
+            : (isOverHero ? 'rgba(255, 255, 255, 0.9)' : 'var(--bg-card)'),
+          border: isDark
+            ? (isOverHero ? '1px solid rgba(255, 255, 255, 0.25)' : '1px solid var(--border-color)')
+            : '1px solid var(--border-color)',
+          color: isDark
+            ? '#F8FAFC'
+            : (isOverHero ? 'var(--dark-navy)' : 'var(--text-main)'),
+          backdropFilter: isOverHero ? 'blur(8px)' : 'none',
+          WebkitBackdropFilter: isOverHero ? 'blur(8px)' : 'none',
+          fontWeight: 600,
+          textShadow: (isDark && isOverHero) ? '0 1px 2px rgba(0, 0, 0, 0.6)' : 'none',
+          boxShadow: (isDark && isOverHero) ? '0 2px 8px rgba(0, 0, 0, 0.35)' : 'none'
         }}
       >
-        <ArrowLeft size={14} />
+        <ArrowLeft size={14} color={isDark && isOverHero ? '#F8FAFC' : undefined} />
         Back
       </button>
 

@@ -35,7 +35,6 @@ export default function AddFloorModal() {
       isOpen={isOpen}
       onClose={() => setAddFloorModal({ isOpen: false, apartmentId: null, blockId: null })}
       title={`Add Floor to ${block.name}`}
-      subtitle={`${apartment.name} • Current Floors: ${block.floors?.length || 0}`}
       size="sm"
     >
       <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', height: '100%', flex: 1, minHeight: 0, overflow: 'hidden' }}>
@@ -66,7 +65,7 @@ export default function AddFloorModal() {
           </div>
         </div>
 
-        <div className="modal-footer" style={{ padding: '0.875rem 1.5rem', display: 'flex', justifyContent: 'space-between', backgroundColor: '#FFFFFF', borderTop: '1px solid var(--border-color)', flexShrink: 0 }}>
+        <div className="modal-footer" style={{ padding: '0.875rem 1.5rem', display: 'flex', justifyContent: 'space-between', backgroundColor: 'var(--bg-card)', borderTop: '1px solid var(--border-color)', flexShrink: 0 }}>
           <button
             type="button"
             className="btn btn-secondary"

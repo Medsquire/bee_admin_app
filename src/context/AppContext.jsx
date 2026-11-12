@@ -6,7 +6,16 @@ import {
   INITIAL_ACTIVITIES,
   INITIAL_SECURITY_DEPLOYMENTS
 } from '../data/initialData';
-import { SERVICE_CATEGORIES } from '../data/constants';
+import {
+  SERVICE_CATEGORIES,
+  PROPERTY_TYPES,
+  PROPERTY_STATUSES,
+  PROPERTY_DOCUMENT_CATEGORIES,
+  BUSINESS_TYPES,
+  AGENT_TYPES,
+  PREFERRED_CONTACT_METHODS,
+  AGENCY_DOCUMENT_TYPES
+} from '../data/constants';
 import {
   STORAGE_KEYS,
   loadFromStorage,
@@ -94,7 +103,9 @@ export function AppProvider({ children }) {
     name: 'Sarah Jenkins',
     role: 'Super Admin',
     initials: 'SJ',
-    email: 'sarah.jenkins@beeresidence.com'
+    email: 'sarah.jenkins@beeproperty.com',
+    phone: '+91 9876543210',
+    title: 'Super Admin'
   };
 
   const [isAuthenticated, setIsAuthenticated] = useState(() => {
@@ -122,7 +133,15 @@ export function AppProvider({ children }) {
     }
 
     // Accepts common standard/demo admin credentials while keeping auth structure ready for backend API
-    const validUsers = ['admin', 'admin@beeresidence.com', 'admin@bee.internal', 'sarah.jenkins@beeresidence.com', 'superadmin'];
+    const validUsers = [
+      'admin',
+      'admin@beeproperty.com',
+      'admin@beeresidence.com',
+      'admin@bee.internal',
+      'sarah.jenkins@beeproperty.com',
+      'sarah.jenkins@beeresidence.com',
+      'superadmin'
+    ];
     const validPasswords = ['admin123', 'admin@123', 'bee2026', 'password123', 'admin'];
 
     const userMatches = validUsers.includes(trimmedUser.toLowerCase()) || trimmedUser.toLowerCase().includes('admin');
@@ -133,7 +152,7 @@ export function AppProvider({ children }) {
         name: 'Sarah Jenkins',
         role: 'Super Admin',
         initials: 'SJ',
-        email: trimmedUser.includes('@') ? trimmedUser : 'sarah.jenkins@beeresidence.com'
+        email: trimmedUser.includes('@') ? trimmedUser : 'sarah.jenkins@beeproperty.com'
       };
       sessionStorage.setItem('bee_admin_auth', 'true');
       sessionStorage.setItem('bee_admin_user', JSON.stringify(adminData));
@@ -212,10 +231,329 @@ export function AppProvider({ children }) {
       .map((c) => c.name);
   }, [serviceCategories]);
 
+  const updateServiceCategory = (id, updatedFields) => {
+    setServiceCategories((prev) =>
+      prev.map((cat) => {
+        if (cat.id === id) {
+          return {
+            ...cat,
+            ...updatedFields,
+            name: updatedFields.name !== undefined ? updatedFields.name.trim() : cat.name,
+            description: updatedFields.description !== undefined ? updatedFields.description.trim() : cat.description,
+            status: updatedFields.status !== undefined ? updatedFields.status : cat.status
+          };
+        }
+        return cat;
+      })
+    );
+    addToast('Service category updated successfully.');
+  };
+
+  const toggleServiceCategoryStatus = (id) => {
+    setServiceCategories((prev) =>
+      prev.map((cat) => {
+        if (cat.id === id) {
+          const nextStatus = cat.status === 'Active' ? 'Inactive' : 'Active';
+          addToast(`Service category "${cat.name}" is now ${nextStatus}.`);
+          return { ...cat, status: nextStatus };
+        }
+        return cat;
+      })
+    );
+  };
+
+  const deleteServiceCategory = (id) => {
+    const target = serviceCategories.find((c) => c.id === id);
+    if (!target) return;
+    if (target.isPredefined) {
+      addToast('Predefined system service categories cannot be deleted. You can deactivate it instead.', 'warning');
+      return;
+    }
+    setServiceCategories((prev) => prev.filter((c) => c.id !== id));
+    addToast(`Service category "${target.name}" removed.`);
+  };
+
   const [addServiceCategoryModal, setAddServiceCategoryModal] = useState({
     isOpen: false,
     onCategoryAdded: null
   });
+
+  // Property Configuration (Options & Dropdowns)
+  const [propertyTypes, setPropertyTypes] = useState(() => {
+    const saved = loadFromStorage(STORAGE_KEYS.PROPERTY_CONFIG, null);
+    return saved?.propertyTypes || PROPERTY_TYPES;
+  });
+  const [propertyStatuses, setPropertyStatuses] = useState(() => {
+    const saved = loadFromStorage(STORAGE_KEYS.PROPERTY_CONFIG, null);
+    return saved?.propertyStatuses || PROPERTY_STATUSES;
+  });
+  const [propertyDocumentCategories, setPropertyDocumentCategories] = useState(() => {
+    const saved = loadFromStorage(STORAGE_KEYS.PROPERTY_CONFIG, null);
+    return saved?.propertyDocumentCategories || PROPERTY_DOCUMENT_CATEGORIES;
+  });
+
+  useEffect(() => {
+    saveToStorage(STORAGE_KEYS.PROPERTY_CONFIG, {
+      propertyTypes,
+      propertyStatuses,
+      propertyDocumentCategories
+    });
+  }, [propertyTypes, propertyStatuses, propertyDocumentCategories]);
+
+  const addPropertyType = (type) => {
+    const trimmed = (type || '').trim();
+    if (!trimmed) {
+      addToast('Property type name is required.', 'warning');
+      return false;
+    }
+    if (propertyTypes.some((t) => t.toLowerCase() === trimmed.toLowerCase())) {
+      addToast(`Property type "${trimmed}" already exists.`, 'warning');
+      return false;
+    }
+    setPropertyTypes((prev) => [...prev, trimmed]);
+    addToast(`Property type "${trimmed}" added successfully.`);
+    return true;
+  };
+
+  const updatePropertyType = (oldType, updatedType) => {
+    const trimmed = (updatedType || '').trim();
+    if (!trimmed) return false;
+    setPropertyTypes((prev) => prev.map((t) => (t === oldType ? trimmed : t)));
+    addToast(`Property type updated to "${trimmed}".`);
+    return true;
+  };
+
+  const deletePropertyType = (type) => {
+    if (propertyTypes.length <= 1) {
+      addToast('At least one property type must remain configured.', 'warning');
+      return false;
+    }
+    setPropertyTypes((prev) => prev.filter((t) => t !== type));
+    addToast(`Property type "${type}" removed.`);
+    return true;
+  };
+
+  const addPropertyStatus = (status) => {
+    const trimmed = (status || '').trim();
+    if (!trimmed) return false;
+    if (propertyStatuses.some((s) => s.toLowerCase() === trimmed.toLowerCase())) {
+      addToast(`Status "${trimmed}" already exists.`, 'warning');
+      return false;
+    }
+    setPropertyStatuses((prev) => [...prev, trimmed]);
+    addToast(`Property status "${trimmed}" added.`);
+    return true;
+  };
+
+  const updatePropertyStatus = (oldStatus, updatedStatus) => {
+    const trimmed = (updatedStatus || '').trim();
+    if (!trimmed) return false;
+    setPropertyStatuses((prev) => prev.map((s) => (s === oldStatus ? trimmed : s)));
+    addToast(`Property status updated to "${trimmed}".`);
+    return true;
+  };
+
+  const addPropertyDocumentCategory = (cat) => {
+    const trimmed = (cat || '').trim();
+    if (!trimmed) return false;
+    if (propertyDocumentCategories.some((c) => c.toLowerCase() === trimmed.toLowerCase())) {
+      addToast(`Document category "${trimmed}" already exists.`, 'warning');
+      return false;
+    }
+    setPropertyDocumentCategories((prev) => [...prev, trimmed]);
+    addToast(`Document category "${trimmed}" added.`);
+    return true;
+  };
+
+  // Agency & Service Configuration
+  const [agencyBusinessTypes, setAgencyBusinessTypes] = useState(() => {
+    const saved = loadFromStorage(STORAGE_KEYS.AGENCY_CONFIG, null);
+    return saved?.agencyBusinessTypes || BUSINESS_TYPES;
+  });
+  const [agencyAgentTypes, setAgencyAgentTypes] = useState(() => {
+    const saved = loadFromStorage(STORAGE_KEYS.AGENCY_CONFIG, null);
+    return saved?.agencyAgentTypes || AGENT_TYPES;
+  });
+  const [agencyContactMethods, setAgencyContactMethods] = useState(() => {
+    const saved = loadFromStorage(STORAGE_KEYS.AGENCY_CONFIG, null);
+    return saved?.agencyContactMethods || PREFERRED_CONTACT_METHODS;
+  });
+  const [agencyDocumentTypes, setAgencyDocumentTypes] = useState(() => {
+    const saved = loadFromStorage(STORAGE_KEYS.AGENCY_CONFIG, null);
+    return saved?.agencyDocumentTypes || AGENCY_DOCUMENT_TYPES;
+  });
+
+  useEffect(() => {
+    saveToStorage(STORAGE_KEYS.AGENCY_CONFIG, {
+      agencyBusinessTypes,
+      agencyAgentTypes,
+      agencyContactMethods,
+      agencyDocumentTypes
+    });
+  }, [agencyBusinessTypes, agencyAgentTypes, agencyContactMethods, agencyDocumentTypes]);
+
+  const addAgencyBusinessType = (type) => {
+    const trimmed = (type || '').trim();
+    if (!trimmed) return false;
+    if (agencyBusinessTypes.some((t) => t.toLowerCase() === trimmed.toLowerCase())) {
+      addToast(`Business type "${trimmed}" already exists.`, 'warning');
+      return false;
+    }
+    setAgencyBusinessTypes((prev) => [...prev, trimmed]);
+    addToast(`Business type "${trimmed}" added.`);
+    return true;
+  };
+
+  const updateAgencyBusinessType = (oldType, updatedType) => {
+    const trimmed = (updatedType || '').trim();
+    if (!trimmed) return false;
+    setAgencyBusinessTypes((prev) => prev.map((t) => (t === oldType ? trimmed : t)));
+    addToast(`Business type updated to "${trimmed}".`);
+    return true;
+  };
+
+  const addAgencyAgentType = (type) => {
+    const trimmed = (type || '').trim();
+    if (!trimmed) return false;
+    if (agencyAgentTypes.some((t) => t.toLowerCase() === trimmed.toLowerCase())) {
+      addToast(`Agent designation "${trimmed}" already exists.`, 'warning');
+      return false;
+    }
+    setAgencyAgentTypes((prev) => [...prev, trimmed]);
+    addToast(`Agent designation "${trimmed}" added.`);
+    return true;
+  };
+
+  const addAgencyContactMethod = (method) => {
+    const trimmed = (method || '').trim();
+    if (!trimmed) return false;
+    if (agencyContactMethods.some((m) => m.toLowerCase() === trimmed.toLowerCase())) {
+      addToast(`Contact method "${trimmed}" already exists.`, 'warning');
+      return false;
+    }
+    setAgencyContactMethods((prev) => [...prev, trimmed]);
+    addToast(`Contact method "${trimmed}" added.`);
+    return true;
+  };
+
+  const addAgencyDocumentType = (docType) => {
+    const trimmed = (docType || '').trim();
+    if (!trimmed) return false;
+    if (agencyDocumentTypes.some((d) => d.toLowerCase() === trimmed.toLowerCase())) {
+      addToast(`Document type "${trimmed}" already exists.`, 'warning');
+      return false;
+    }
+    setAgencyDocumentTypes((prev) => [...prev, trimmed]);
+    addToast(`Document type "${trimmed}" added.`);
+    return true;
+  };
+
+  // Admin Profile & Account Management
+  const updateAdminProfile = ({ name, email, role, phone, title }) => {
+    const trimmedName = (name || currentUser.name).trim();
+    const trimmedEmail = (email || currentUser.email).trim();
+    const initials = trimmedName
+      .split(' ')
+      .map((part) => part[0])
+      .filter(Boolean)
+      .slice(0, 2)
+      .join('')
+      .toUpperCase() || 'SJ';
+
+    const updated = {
+      ...currentUser,
+      name: trimmedName,
+      email: trimmedEmail,
+      initials,
+      role: (role || currentUser.role || 'Super Admin').trim(),
+      phone: (phone || currentUser.phone || '+91 9876543210').trim(),
+      title: (title || currentUser.title || 'Super Admin').trim()
+    };
+    setCurrentUser(updated);
+    sessionStorage.setItem('bee_admin_user', JSON.stringify(updated));
+    addToast('Admin profile details updated successfully.');
+    return true;
+  };
+
+  const changeAdminPassword = ({ currentPassword, newPassword, confirmPassword }) => {
+    if (!currentPassword) {
+      addToast('Please enter your current password.', 'warning');
+      return false;
+    }
+    if (!newPassword || newPassword.length < 6) {
+      addToast('New password must be at least 6 characters long.', 'warning');
+      return false;
+    }
+    if (newPassword !== confirmPassword) {
+      addToast('New passwords do not match. Please verify.', 'warning');
+      return false;
+    }
+    sessionStorage.setItem('bee_admin_custom_password', newPassword);
+    addToast('Admin password changed successfully.');
+    return true;
+  };
+
+  // Application Preferences
+  const DEFAULT_APP_PREFERENCES = {
+    defaultRequestStatus: 'Pending Review',
+    defaultRequestPriority: 'Normal',
+    notificationEmail: true,
+    notificationSms: true,
+    notificationSlaBreach: true,
+    dateFormat: 'DD/MM/YYYY',
+    timeFormat: '12-Hour (AM/PM)',
+    currency: 'INR (₹)',
+    itemsPerPage: '10',
+    autoRefreshInterval: '60s'
+  };
+
+  const [appPreferences, setAppPreferences] = useState(() => {
+    return loadFromStorage(STORAGE_KEYS.APP_PREFERENCES, DEFAULT_APP_PREFERENCES);
+  });
+
+  useEffect(() => {
+    saveToStorage(STORAGE_KEYS.APP_PREFERENCES, appPreferences);
+  }, [appPreferences]);
+
+  const updateAppPreferences = (newPrefs) => {
+    setAppPreferences((prev) => ({ ...prev, ...newPrefs }));
+    addToast('Application preferences saved.');
+  };
+
+  // Theme State (Dark / Light Mode)
+  const [theme, setThemeState] = useState(() => {
+    try {
+      const stored = localStorage.getItem('bee_property_theme');
+      if (stored === 'dark' || stored === 'light') return stored;
+    } catch {
+      // ignore
+    }
+    return 'light';
+  });
+
+  const setTheme = (newTheme) => {
+    const validTheme = newTheme === 'dark' ? 'dark' : 'light';
+    setThemeState(validTheme);
+    try {
+      localStorage.setItem('bee_property_theme', validTheme);
+      document.documentElement.setAttribute('data-theme', validTheme);
+    } catch {
+      // ignore
+    }
+  };
+
+  const toggleTheme = () => {
+    setTheme(theme === 'dark' ? 'light' : 'dark');
+  };
+
+  useEffect(() => {
+    try {
+      document.documentElement.setAttribute('data-theme', theme);
+      localStorage.setItem('bee_property_theme', theme);
+    } catch {
+      // ignore
+    }
+  }, [theme]);
 
   // Navigation State
   const [activePage, setActivePage] = useState('dashboard'); // 'dashboard' | 'properties' | 'agencies'
@@ -441,17 +779,17 @@ export function AppProvider({ children }) {
       tagline: newPropertyData.tagline || 'Residential Community',
       address: newPropertyData.address || '',
       address2: newPropertyData.address2 || '',
-      city: newPropertyData.city || 'Emerald City',
-      state: newPropertyData.state || 'CA',
-      zip: newPropertyData.zip || '94016',
-      country: newPropertyData.country || 'United States',
+      city: newPropertyData.city || 'Hyderabad',
+      state: newPropertyData.state || 'Telangana',
+      zip: newPropertyData.zip || '500032',
+      country: newPropertyData.country || 'India',
       mapLink: newPropertyData.mapLink || '',
       image: newPropertyData.image || '/Images/bee-community-master.jpg',
       additionalImages: newPropertyData.additionalImages || [],
       builtYear: Number(newPropertyData.builtYear) || new Date().getFullYear(),
       registrationNumber: newPropertyData.registrationNumber || `REG-${code}-2026`,
       landArea: newPropertyData.landArea || '12.0 Acres',
-      description: newPropertyData.description || 'Master community registered with BEE Residence.',
+      description: newPropertyData.description || 'Master community registered with Bee Property.',
       propertyManager: newPropertyData.propertyManager || 'Admin Operations Desk',
       propertyManagerContact: newPropertyData.propertyManagerContact || '+91 9811001122',
       emergencyContact: newPropertyData.emergencyContact || '+91 9811191100',
@@ -1064,7 +1402,7 @@ export function AppProvider({ children }) {
     const id = `par-${Date.now()}`;
     const newAssignment = {
       id,
-      organization: assignmentData.organization || 'BEE Residence / Zivion Management',
+      organization: assignmentData.organization || 'Bee Property / Zivion Management',
       propertyId: assignmentData.propertyId,
       propertyName: assignmentData.propertyName,
       propertyCode: assignmentData.propertyCode,
@@ -1328,6 +1666,51 @@ export function AppProvider({ children }) {
     }
 
     addToast(`Status updated to "${newStatus}".`);
+  };
+
+  // Add Admin Feedback / Request Action to Maintenance Work Order
+  const addMaintenanceFeedback = (maintenanceId, feedbackData) => {
+    let reqTitle = '';
+    const newFeedback = {
+      id: `fb-${Date.now()}`,
+      message: feedbackData.message,
+      adminName: feedbackData.adminName || currentUser?.name || 'Sarah Jenkins',
+      timestamp: feedbackData.timestamp || new Date().toLocaleString('en-IN', {
+        day: '2-digit',
+        month: 'short',
+        year: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit',
+        hour12: true
+      }),
+      status: feedbackData.status || 'Sent'
+    };
+
+    setMaintenanceRequests((prev) =>
+      prev.map((req) => {
+        if (req.id !== maintenanceId) return req;
+        reqTitle = req.title;
+        const currentFeedback = Array.isArray(req.adminFeedback) ? req.adminFeedback : [];
+        return {
+          ...req,
+          adminFeedback: [...currentFeedback, newFeedback]
+        };
+      })
+    );
+
+    setMaintenanceDetailModalRequest((prev) => {
+      if (prev && prev.id === maintenanceId) {
+        const currentFeedback = Array.isArray(prev.adminFeedback) ? prev.adminFeedback : [];
+        return {
+          ...prev,
+          adminFeedback: [...currentFeedback, newFeedback]
+        };
+      }
+      return prev;
+    });
+
+    addToast(`Feedback sent for "${reqTitle || 'Maintenance Request'}".`);
+    return newFeedback;
   };
 
   // Create New Maintenance Request
@@ -1621,6 +2004,7 @@ export function AppProvider({ children }) {
     // Maintenance & Security
     assignAgencyToMaintenance,
     updateMaintenanceStatus,
+    addMaintenanceFeedback,
     createMaintenanceRequest,
     allocateSecurity,
 
@@ -1633,12 +2017,48 @@ export function AppProvider({ children }) {
     login,
     logout,
 
-    // Service Categories (Requirement 1)
+    // Service Categories
     serviceCategories,
     addServiceCategory,
+    updateServiceCategory,
+    toggleServiceCategoryStatus,
+    deleteServiceCategory,
     allCategoryNames,
     addServiceCategoryModal,
     setAddServiceCategoryModal,
+
+    // Admin Profile & Account
+    updateAdminProfile,
+    changeAdminPassword,
+
+    // Property Configuration
+    propertyTypes,
+    addPropertyType,
+    updatePropertyType,
+    deletePropertyType,
+    propertyStatuses,
+    addPropertyStatus,
+    updatePropertyStatus,
+    propertyDocumentCategories,
+    addPropertyDocumentCategory,
+
+    // Agency & Service Configuration
+    agencyBusinessTypes,
+    addAgencyBusinessType,
+    updateAgencyBusinessType,
+    agencyAgentTypes,
+    addAgencyAgentType,
+    agencyContactMethods,
+    addAgencyContactMethod,
+    agencyDocumentTypes,
+    addAgencyDocumentType,
+
+    // Application Preferences & Theme
+    theme,
+    setTheme,
+    toggleTheme,
+    appPreferences,
+    updateAppPreferences,
 
     // Toasts
     toasts,

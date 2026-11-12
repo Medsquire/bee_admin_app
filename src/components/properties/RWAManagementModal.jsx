@@ -200,7 +200,6 @@ export default function RWAManagementModal() {
       isOpen={Boolean(rwaModalApartmentId)}
       onClose={handleCloseModal}
       title={`RWA Administration — ${apartment.name}`}
-      subtitle="Residents' Welfare Association governance, executive committee, & bylaws"
       size="lg"
     >
       <div className="modal-body">
@@ -208,7 +207,7 @@ export default function RWAManagementModal() {
         <div
           style={{
             padding: '1.25rem',
-            backgroundColor: '#F8FAFC',
+            backgroundColor: 'var(--bg-subtle)',
             borderRadius: 'var(--radius-md)',
             border: '1px solid var(--border-color)',
             display: 'flex',
@@ -267,7 +266,7 @@ export default function RWAManagementModal() {
             onSubmit={handleSaveRWA}
             style={{
               padding: '1.25rem',
-              backgroundColor: '#FFFFFF',
+              backgroundColor: 'var(--bg-card)',
               borderRadius: 'var(--radius-md)',
               border: '1px solid var(--primary-blue-border)',
               display: 'flex',
@@ -417,7 +416,7 @@ export default function RWAManagementModal() {
               <div
                 style={{
                   padding: '0.875rem',
-                  backgroundColor: '#FFFFFF',
+                  backgroundColor: 'var(--bg-card)',
                   borderRadius: 'var(--radius-md)',
                   border: '1px solid var(--border-color)'
                 }}
@@ -436,7 +435,7 @@ export default function RWAManagementModal() {
               <div
                 style={{
                   padding: '0.875rem',
-                  backgroundColor: '#FFFFFF',
+                  backgroundColor: 'var(--bg-card)',
                   borderRadius: 'var(--radius-md)',
                   border: '1px solid var(--border-color)'
                 }}
@@ -455,7 +454,7 @@ export default function RWAManagementModal() {
               <div
                 style={{
                   padding: '0.875rem',
-                  backgroundColor: '#FFFFFF',
+                  backgroundColor: 'var(--bg-card)',
                   borderRadius: 'var(--radius-md)',
                   border: '1px solid var(--border-color)'
                 }}
@@ -480,7 +479,7 @@ export default function RWAManagementModal() {
                 gap: '0.75rem',
                 marginTop: '0.75rem',
                 padding: '0.75rem 1rem',
-                backgroundColor: '#F8FAFC',
+                backgroundColor: 'var(--bg-subtle)',
                 borderRadius: 'var(--radius-md)',
                 fontSize: '0.8125rem'
               }}
@@ -504,9 +503,9 @@ export default function RWAManagementModal() {
               style={{
                 marginTop: '1rem',
                 padding: '1.15rem 1.25rem',
-                backgroundColor: '#FFFFFF',
+                backgroundColor: 'var(--bg-card)',
                 borderRadius: 'var(--radius-md)',
-                border: '1.5px solid #DBEAFE',
+                border: '1.5px solid var(--primary-blue-border)',
                 boxShadow: '0 2px 8px rgba(37, 99, 235, 0.06)'
               }}
             >
@@ -517,7 +516,7 @@ export default function RWAManagementModal() {
                       width: '32px',
                       height: '32px',
                       borderRadius: 'var(--radius-sm)',
-                      backgroundColor: '#EFF6FF',
+                      backgroundColor: 'var(--primary-blue-subtle)',
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
@@ -529,9 +528,6 @@ export default function RWAManagementModal() {
                   <div>
                     <div style={{ fontWeight: 700, fontSize: '0.9375rem', color: 'var(--dark-navy)' }}>
                       RWA Portal Login Credentials & Access Control
-                    </div>
-                    <div className="text-xs text-muted">
-                      Admin-managed authentication for society executive committee login
                     </div>
                   </div>
                 </div>
@@ -564,9 +560,9 @@ export default function RWAManagementModal() {
                   gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
                   gap: '0.75rem',
                   padding: '0.875rem 1rem',
-                  backgroundColor: '#F8FAFC',
+                  backgroundColor: 'var(--bg-subtle)',
                   borderRadius: 'var(--radius-md)',
-                  border: '1px solid #E2E8F0'
+                  border: '1px solid var(--border-color)'
                 }}
               >
                 <div>
@@ -740,12 +736,9 @@ export default function RWAManagementModal() {
         <div>
           <div className="flex-between" style={{ marginBottom: '0.75rem' }}>
             <div>
-              <h3 style={{ fontSize: '0.9375rem', fontWeight: 700, color: 'var(--dark-navy)' }}>
+              <h3 style={{ fontSize: '0.9375rem', fontWeight: 700, color: 'var(--dark-navy)', margin: 0 }}>
                 Governing Committee Members ({formData.committee ? formData.committee.length : 0})
               </h3>
-              <p className="text-xs text-muted">
-                Elected block representatives, sub-committee leads, and area wardens
-              </p>
             </div>
             {!isAddingMember && (
               <button
@@ -843,7 +836,7 @@ export default function RWAManagementModal() {
             <div
               style={{
                 padding: '1.5rem',
-                backgroundColor: '#FFFFFF',
+                backgroundColor: 'var(--bg-card)',
                 borderRadius: 'var(--radius-md)',
                 border: '1px solid var(--border-color)',
                 textAlign: 'center',

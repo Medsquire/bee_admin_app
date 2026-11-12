@@ -37,8 +37,15 @@ export default function AgencyOnboardingModal() {
     updateAgency,
     addToast,
     allCategoryNames,
-    setAddServiceCategoryModal
+    setAddServiceCategoryModal,
+    agencyBusinessTypes,
+    agencyAgentTypes,
+    agencyContactMethods
   } = useApp();
+
+  const availableBusinessTypes = agencyBusinessTypes || BUSINESS_TYPES;
+  const availableAgentTypes = agencyAgentTypes || AGENT_TYPES;
+  const availableContactMethods = agencyContactMethods || PREFERRED_CONTACT_METHODS;
 
   const { isOpen, mode, agencyId } = agencyOnboardingModal;
 
@@ -84,10 +91,10 @@ export default function AgencyOnboardingModal() {
       companyPhone: '',
       addressLine1: '',
       addressLine2: '',
-      country: 'United States',
-      state: 'California',
-      city: 'Emerald City',
-      pinCode: '94016',
+      country: 'India',
+      state: 'Telangana',
+      city: 'Hyderabad',
+      pinCode: '500081',
       description: '',
       authorizedSignatoryName: '',
       authorizedSignatoryDesignation: ''
@@ -173,12 +180,12 @@ export default function AgencyOnboardingModal() {
               numberOfEmployees: ag.totalPersonnel || 10,
               companyEmail: ag.email || '',
               companyPhone: ag.phone || '',
-              addressLine1: '100 Service Boulevard',
+              addressLine1: 'Plot 42, Cyber Gateway Sector, HITEC City',
               addressLine2: '',
-              country: 'United States',
-              state: 'California',
-              city: 'Emerald City',
-              pinCode: '94016',
+              country: 'India',
+              state: 'Telangana',
+              city: 'Hyderabad',
+              pinCode: '500081',
               description: '',
               authorizedSignatoryName: ag.contactPerson || '',
               authorizedSignatoryDesignation: 'Director'
@@ -250,10 +257,10 @@ export default function AgencyOnboardingModal() {
             companyPhone: '',
             addressLine1: '',
             addressLine2: '',
-            country: 'United States',
-            state: 'California',
-            city: 'Emerald City',
-            pinCode: '94016',
+            country: 'India',
+            state: 'Telangana',
+            city: 'Hyderabad',
+            pinCode: '500081',
             description: '',
             authorizedSignatoryName: '',
             authorizedSignatoryDesignation: 'Managing Director'
@@ -470,19 +477,19 @@ export default function AgencyOnboardingModal() {
       isOpen={isOpen}
       onClose={() => setAgencyOnboardingModal({ isOpen: false, mode: 'create', agencyId: null })}
       title={mode === 'edit' ? `Edit Agency Onboarding — ${formData.company.name}` : 'Agent & Service Partner Onboarding'}
-      subtitle="Stage 1: Register agent, company, services, and corporate documents for Zivion Admin Review"
       size="xl"
     >
-      <div style={{ display: 'flex', flexDirection: 'column', height: '100%', flex: 1, minHeight: 0, overflow: 'hidden' }}>
+      <div style={{ display: 'flex', flexDirection: 'column', flex: 1, minHeight: 0, overflow: 'hidden' }}>
         {/* Step Indicator Header */}
         <div
           style={{
             display: 'flex',
             borderBottom: '1px solid var(--border-color)',
-            backgroundColor: '#F8FAFC',
+            backgroundColor: 'var(--bg-subtle)',
             overflowX: 'auto',
             padding: '0.35rem 0.75rem',
-            gap: '0.35rem'
+            gap: '0.35rem',
+            flexShrink: 0
           }}
         >
           {steps.map((st) => {
@@ -499,7 +506,8 @@ export default function AgencyOnboardingModal() {
                   fontSize: '0.75rem',
                   fontWeight: 600,
                   whiteSpace: 'nowrap',
-                  padding: '0.4rem 0.75rem'
+                  padding: '0.4rem 0.75rem',
+                  flexShrink: 0
                 }}
               >
                 <Icon size={14} />
@@ -510,17 +518,14 @@ export default function AgencyOnboardingModal() {
         </div>
 
         {/* Modal Scrollable Body */}
-        <div className="modal-body" style={{ flex: 1, overflowY: 'auto', padding: '1.5rem' }}>
+        <div className="modal-body" style={{ flex: 1, overflowY: 'auto', padding: '1.5rem 1.5rem 2.5rem 1.5rem' }}>
           {/* STEP 1: PERSONAL INFORMATION */}
           {activeStep === 1 && (
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
               <div>
-                <h3 style={{ fontSize: '1rem', fontWeight: 700, color: 'var(--dark-navy)', marginBottom: '0.2rem' }}>
+                <h3 style={{ fontSize: '1rem', fontWeight: 700, color: 'var(--dark-navy)', margin: 0 }}>
                   Stage 1 — 1. Personal Information
                 </h3>
-                <p className="text-xs text-muted">
-                  Primary agent / contact person details responsible for service coordination
-                </p>
               </div>
 
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '1rem' }}>
@@ -637,7 +642,7 @@ export default function AgencyOnboardingModal() {
                       })
                     }
                   >
-                    {AGENT_TYPES.map((t) => (
+                    {availableAgentTypes.map((t) => (
                       <option key={t} value={t}>{t}</option>
                     ))}
                   </select>
@@ -711,9 +716,9 @@ export default function AgencyOnboardingModal() {
                     gridColumn: '1 / -1',
                     marginTop: '0.5rem',
                     padding: '1.15rem 1.25rem',
-                    backgroundColor: '#F8FAFC',
+                    backgroundColor: 'var(--bg-subtle)',
                     borderRadius: 'var(--radius-md)',
-                    border: '1.5px solid #DBEAFE'
+                    border: '1.5px solid var(--primary-blue-border)'
                   }}
                 >
                   <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '0.75rem', flexWrap: 'wrap', gap: '0.5rem' }}>
@@ -723,11 +728,11 @@ export default function AgencyOnboardingModal() {
                           width: '30px',
                           height: '30px',
                           borderRadius: 'var(--radius-sm)',
-                          backgroundColor: '#EFF6FF',
+                          backgroundColor: 'var(--primary-blue-subtle)',
                           display: 'flex',
                           alignItems: 'center',
                           justifyContent: 'center',
-                          color: '#2563EB'
+                          color: 'var(--primary-blue)'
                         }}
                       >
                         <Key size={16} />
@@ -832,16 +837,13 @@ export default function AgencyOnboardingModal() {
           {activeStep === 2 && (
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
               <div>
-                <h3 style={{ fontSize: '1rem', fontWeight: 700, color: 'var(--dark-navy)', marginBottom: '0.2rem' }}>
+                <h3 style={{ fontSize: '1rem', fontWeight: 700, color: 'var(--dark-navy)', margin: 0 }}>
                   Stage 1 — 2. Company Details
                 </h3>
-                <p className="text-xs text-muted">
-                  Legal company registration, tax credentials, address, and statutory numbers
-                </p>
               </div>
 
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '1rem' }}>
-                <div style={{ gridColumn: '1 / -1' }}>
+                <div>
                   <label className="form-label">Company / Business Name <span style={{ color: 'var(--error)' }}>*</span></label>
                   <input
                     type="text"
@@ -886,7 +888,7 @@ export default function AgencyOnboardingModal() {
                       })
                     }
                   >
-                    {BUSINESS_TYPES.map((b) => (
+                    {availableBusinessTypes.map((b) => (
                       <option key={b} value={b}>{b}</option>
                     ))}
                   </select>
@@ -1020,7 +1022,7 @@ export default function AgencyOnboardingModal() {
                   />
                 </div>
 
-                <div style={{ gridColumn: '1 / -1' }}>
+                <div>
                   <label className="form-label">Company Address Line 1 <span style={{ color: 'var(--error)' }}>*</span></label>
                   <input
                     type="text"
@@ -1037,7 +1039,7 @@ export default function AgencyOnboardingModal() {
                   />
                 </div>
 
-                <div style={{ gridColumn: '1 / -1' }}>
+                <div>
                   <label className="form-label">Company Address Line 2 (Optional)</label>
                   <input
                     type="text"
@@ -1149,7 +1151,7 @@ export default function AgencyOnboardingModal() {
                   />
                 </div>
 
-                <div style={{ gridColumn: '1 / -1' }}>
+                <div>
                   <label className="form-label">Company Description</label>
                   <textarea
                     className="form-input"
@@ -1172,12 +1174,9 @@ export default function AgencyOnboardingModal() {
           {activeStep === 3 && (
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
               <div>
-                <h3 style={{ fontSize: '1rem', fontWeight: 700, color: 'var(--dark-navy)', marginBottom: '0.2rem' }}>
+                <h3 style={{ fontSize: '1rem', fontWeight: 700, color: 'var(--dark-navy)', margin: 0 }}>
                   Stage 1 — 3. Contact Details
                 </h3>
-                <p className="text-xs text-muted">
-                  Primary operations contact, billing/accounts personnel, and communication preferences
-                </p>
               </div>
 
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '1rem' }}>
@@ -1317,7 +1316,7 @@ export default function AgencyOnboardingModal() {
                       })
                     }
                   >
-                    {PREFERRED_CONTACT_METHODS.map((m) => (
+                    {availableContactMethods.map((m) => (
                       <option key={m} value={m}>{m}</option>
                     ))}
                   </select>
@@ -1346,12 +1345,9 @@ export default function AgencyOnboardingModal() {
           {activeStep === 4 && (
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
               <div>
-                <h3 style={{ fontSize: '1rem', fontWeight: 700, color: 'var(--dark-navy)', marginBottom: '0.2rem' }}>
+                <h3 style={{ fontSize: '1rem', fontWeight: 700, color: 'var(--dark-navy)', margin: 0 }}>
                   Stage 1 — 4. Types of Services Offered
                 </h3>
-                <p className="text-xs text-muted">
-                  Use the repeatable service list to add every service category offered by this company.
-                </p>
               </div>
 
               {/* Add Service Box */}
@@ -1508,7 +1504,7 @@ export default function AgencyOnboardingModal() {
                       key={srv.id}
                       style={{
                         padding: '0.75rem 1rem',
-                        backgroundColor: '#FFFFFF',
+                        backgroundColor: 'var(--bg-card)',
                         borderRadius: 'var(--radius-md)',
                         border: '1px solid var(--border-color)',
                         display: 'flex',
@@ -1550,19 +1546,16 @@ export default function AgencyOnboardingModal() {
           {activeStep === 5 && (
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
               <div>
-                <h3 style={{ fontSize: '1rem', fontWeight: 700, color: 'var(--dark-navy)', marginBottom: '0.2rem' }}>
+                <h3 style={{ fontSize: '1rem', fontWeight: 700, color: 'var(--dark-navy)', margin: 0 }}>
                   Stage 1 — 5. Document Uploads
                 </h3>
-                <p className="text-xs text-muted">
-                  Attach statutory incorporation, GST, PAN, insurance policies, and licenses
-                </p>
               </div>
 
               {/* Add Document Box */}
               <div
                 style={{
                   padding: '1rem',
-                  backgroundColor: '#F8FAFC',
+                  backgroundColor: 'var(--bg-subtle)',
                   borderRadius: 'var(--radius-md)',
                   border: '1px solid var(--border-color)',
                   display: 'flex',
@@ -1645,7 +1638,7 @@ export default function AgencyOnboardingModal() {
                     key={d.id}
                     style={{
                       padding: '0.75rem 1rem',
-                      backgroundColor: '#FFFFFF',
+                      backgroundColor: 'var(--bg-card)',
                       borderRadius: 'var(--radius-sm)',
                       border: '1px solid var(--border-color)',
                       display: 'flex',
@@ -1680,19 +1673,16 @@ export default function AgencyOnboardingModal() {
           {activeStep === 6 && (
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
               <div>
-                <h3 style={{ fontSize: '1rem', fontWeight: 700, color: 'var(--dark-navy)', marginBottom: '0.2rem' }}>
+                <h3 style={{ fontSize: '1rem', fontWeight: 700, color: 'var(--dark-navy)', margin: 0 }}>
                   Stage 1 — 6. Registration Review & Declaration
                 </h3>
-                <p className="text-xs text-muted">
-                  Acknowledge statutory onboarding policies and finalize registration submission
-                </p>
               </div>
 
               {/* Summary Card */}
               <div
                 style={{
                   padding: '1rem',
-                  backgroundColor: '#F8FAFC',
+                  backgroundColor: 'var(--bg-subtle)',
                   borderRadius: 'var(--radius-md)',
                   border: '1px solid var(--border-color)',
                   display: 'grid',
@@ -1744,7 +1734,7 @@ export default function AgencyOnboardingModal() {
               </div>
 
               {/* Declarations Checkboxes strictly matching PRD Section 5.E & docx Section 6 */}
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', padding: '1rem', backgroundColor: '#FFFFFF', borderRadius: 'var(--radius-md)', border: '1px solid var(--border-color)' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', padding: '1rem', backgroundColor: 'var(--bg-card)', borderRadius: 'var(--radius-md)', border: '1px solid var(--border-color)' }}>
                 <label style={{ display: 'flex', alignItems: 'flex-start', gap: '0.625rem', cursor: 'pointer', fontSize: '0.8125rem' }}>
                   <input
                     type="checkbox"
@@ -1754,7 +1744,7 @@ export default function AgencyOnboardingModal() {
                     required
                   />
                   <span>
-                    <strong>Terms and Privacy Acknowledgement:</strong> I confirm that the service company adheres to BEE Residence code of conduct, worker welfare compliance, and data privacy policies.
+                    <strong>Terms and Privacy Acknowledgement:</strong> I confirm that the service company adheres to Bee Property code of conduct, worker welfare compliance, and data privacy policies.
                   </span>
                 </label>
 
@@ -1776,11 +1766,11 @@ export default function AgencyOnboardingModal() {
               <div
                 style={{
                   padding: '0.875rem 1rem',
-                  backgroundColor: '#FEF3C7',
+                  backgroundColor: 'var(--warning-bg)',
                   borderRadius: 'var(--radius-md)',
-                  border: '1px solid #FDE68A',
+                  border: '1px solid var(--warning-border)',
                   fontSize: '0.75rem',
-                  color: '#92400E',
+                  color: 'var(--warning)',
                   display: 'flex',
                   alignItems: 'center',
                   gap: '0.5rem'
@@ -1804,7 +1794,8 @@ export default function AgencyOnboardingModal() {
             justifyContent: 'space-between',
             padding: '1rem 1.5rem',
             borderTop: '1px solid var(--border-color)',
-            backgroundColor: '#FFFFFF'
+            backgroundColor: 'var(--bg-card)',
+            flexShrink: 0
           }}
         >
           <button

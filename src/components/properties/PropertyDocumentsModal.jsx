@@ -78,7 +78,6 @@ export default function PropertyDocumentsModal() {
       isOpen={isOpen}
       onClose={() => setPropertyDocumentsModal({ isOpen: false, propertyId: null })}
       title={`${apartment.name} — Document Repository`}
-      subtitle="Manage master plans, blueprints, occupancy approvals, and certificates"
       size="lg"
     >
       <div className="modal-body" style={{ flex: 1, minHeight: 0, overflowY: 'auto', display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
@@ -91,7 +90,7 @@ export default function PropertyDocumentsModal() {
             flexWrap: 'wrap',
             gap: '0.75rem',
             padding: '0.75rem 1rem',
-            backgroundColor: '#F8FAFC',
+            backgroundColor: 'var(--bg-subtle)',
             borderRadius: 'var(--radius-md)',
             border: '1px solid var(--border-color)'
           }}
@@ -211,7 +210,7 @@ export default function PropertyDocumentsModal() {
           <div
             style={{
               padding: '1.25rem',
-              backgroundColor: '#FFFFFF',
+              backgroundColor: 'var(--bg-card)',
               borderRadius: 'var(--radius-md)',
               border: '2px solid var(--primary-blue)',
               display: 'flex',
@@ -235,7 +234,7 @@ export default function PropertyDocumentsModal() {
             <div
               style={{
                 height: '140px',
-                backgroundColor: '#F8FAFC',
+                backgroundColor: 'var(--bg-subtle)',
                 borderRadius: 'var(--radius-sm)',
                 border: '1px dashed var(--border-color)',
                 display: 'flex',
@@ -281,7 +280,7 @@ export default function PropertyDocumentsModal() {
             style={{
               padding: '2.5rem',
               textAlign: 'center',
-              backgroundColor: '#F8FAFC',
+              backgroundColor: 'var(--bg-subtle)',
               borderRadius: 'var(--radius-md)',
               border: '1px dashed var(--border-color)',
               color: 'var(--text-secondary)'
@@ -300,7 +299,7 @@ export default function PropertyDocumentsModal() {
                 key={doc.id}
                 style={{
                   padding: '0.875rem 1rem',
-                  backgroundColor: '#FFFFFF',
+                  backgroundColor: 'var(--bg-card)',
                   borderRadius: 'var(--radius-md)',
                   border: '1px solid var(--border-color)',
                   display: 'flex',
@@ -378,7 +377,7 @@ export default function PropertyDocumentsModal() {
         )}
       </div>
 
-      <div className="modal-footer" style={{ padding: '0.875rem 1.5rem', display: 'flex', justifyContent: 'flex-end', backgroundColor: '#FFFFFF', borderTop: '1px solid var(--border-color)', flexShrink: 0 }}>
+      <div className="modal-footer" style={{ padding: '0.875rem 1.5rem', display: 'flex', justifyContent: 'flex-end', backgroundColor: 'var(--bg-card)', borderTop: '1px solid var(--border-color)', flexShrink: 0 }}>
         <button
           type="button"
           className="btn btn-secondary"

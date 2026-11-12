@@ -89,7 +89,7 @@ export default function AgencyCard({ agency, onSelect }) {
             gridTemplateColumns: '1fr 1fr',
             gap: '0.5rem',
             padding: '0.625rem 0.75rem',
-            backgroundColor: '#F8FAFC',
+            backgroundColor: 'var(--bg-subtle)',
             borderRadius: 'var(--radius-md)',
             border: '1px solid var(--border-color)',
             fontSize: '0.75rem'
@@ -118,15 +118,15 @@ export default function AgencyCard({ agency, onSelect }) {
             fontSize: '0.75rem'
           }}
         >
-          <div style={{ padding: '0.35rem', backgroundColor: '#FFFFFF', border: '1px solid var(--border-color)', borderRadius: 'var(--radius-sm)' }}>
+          <div style={{ padding: '0.35rem', backgroundColor: 'var(--bg-card)', border: '1px solid var(--border-color)', borderRadius: 'var(--radius-sm)' }}>
             <div className="text-muted" style={{ fontSize: '0.6875rem' }}>Total Staff</div>
             <div style={{ fontWeight: 700, color: 'var(--dark-navy)', fontSize: '0.875rem' }}>{agency.totalPersonnel}</div>
           </div>
-          <div style={{ padding: '0.35rem', backgroundColor: '#EFF6FF', border: '1px solid #BFDBFE', borderRadius: 'var(--radius-sm)' }}>
+          <div style={{ padding: '0.35rem', backgroundColor: 'var(--primary-blue-subtle)', border: '1px solid var(--primary-blue-border)', borderRadius: 'var(--radius-sm)' }}>
             <div style={{ fontSize: '0.6875rem', color: 'var(--primary-blue)', fontWeight: 600 }}>Allocated</div>
             <div style={{ fontWeight: 700, color: 'var(--primary-blue)', fontSize: '0.875rem' }}>{agency.allocatedPersonnel}</div>
           </div>
-          <div style={{ padding: '0.35rem', backgroundColor: '#DCFCE7', border: '1px solid #BBF7D0', borderRadius: 'var(--radius-sm)' }}>
+          <div style={{ padding: '0.35rem', backgroundColor: 'var(--success-bg)', border: '1px solid var(--success-border)', borderRadius: 'var(--radius-sm)' }}>
             <div style={{ fontSize: '0.6875rem', color: 'var(--success)', fontWeight: 600 }}>Available</div>
             <div style={{ fontWeight: 700, color: 'var(--success)', fontSize: '0.875rem' }}>{agency.availablePersonnel}</div>
           </div>

@@ -43,16 +43,16 @@ export default function Header() {
 
   const pageTitles = {
     dashboard: {
-      title: 'Dashboard Overview',
-      subtitle: 'Real-time overview of apartments, occupancy, agencies, and maintenance'
+      title: 'Dashboard Overview'
     },
     properties: {
-      title: 'Properties & Communities',
-      subtitle: 'Hierarchical navigation of apartments, blocks, floors, and residences'
+      title: 'Properties & Communities'
     },
     agencies: {
-      title: 'Agencies & Service Providers',
-      subtitle: 'Service allocation, personnel roster, and availability scheduling'
+      title: 'Agencies & Service Providers'
+    },
+    settings: {
+      title: 'Settings'
     }
   };
 
@@ -171,7 +171,7 @@ export default function Header() {
                 top: '44px',
                 right: 0,
                 width: '360px',
-                backgroundColor: '#FFFFFF',
+                backgroundColor: 'var(--bg-card)',
                 borderRadius: 'var(--radius-md)',
                 boxShadow: 'var(--shadow-xl)',
                 border: '1px solid var(--border-color)',
@@ -300,7 +300,7 @@ export default function Header() {
                 height: '8px',
                 borderRadius: '50%',
                 backgroundColor: 'var(--primary-blue)',
-                boxShadow: '0 0 0 2px #FFFFFF'
+                boxShadow: '0 0 0 2px var(--bg-card)'
               }}
             />
           </button>
@@ -312,7 +312,7 @@ export default function Header() {
                 top: '46px',
                 right: 0,
                 width: '320px',
-                backgroundColor: '#FFFFFF',
+                backgroundColor: 'var(--bg-card)',
                 borderRadius: 'var(--radius-lg)',
                 boxShadow: 'var(--shadow-xl)',
                 border: '1px solid var(--border-color)',
@@ -379,7 +379,7 @@ export default function Header() {
               gap: '0.625rem',
               padding: '0.35rem 0.75rem',
               borderRadius: 'var(--radius-full)',
-              backgroundColor: isProfileOpen ? '#EFF6FF' : '#F8FAFC',
+              backgroundColor: isProfileOpen ? 'var(--primary-blue-subtle)' : 'var(--bg-subtle)',
               border: isProfileOpen ? '1px solid var(--primary-blue)' : '1px solid var(--border-color)',
               cursor: 'pointer',
               transition: 'all var(--transition-fast)',
@@ -387,13 +387,13 @@ export default function Header() {
             }}
             onMouseEnter={(e) => {
               if (!isProfileOpen) {
-                e.currentTarget.style.backgroundColor = '#F1F5F9';
+                e.currentTarget.style.backgroundColor = 'var(--bg-card-hover)';
                 e.currentTarget.style.borderColor = 'var(--primary-blue-border)';
               }
             }}
             onMouseLeave={(e) => {
               if (!isProfileOpen) {
-                e.currentTarget.style.backgroundColor = '#F8FAFC';
+                e.currentTarget.style.backgroundColor = 'var(--bg-subtle)';
                 e.currentTarget.style.borderColor = 'var(--border-color)';
               }
             }}
@@ -447,7 +447,7 @@ export default function Header() {
                 padding: '0.875rem',
                 borderRadius: 'var(--radius-md)',
                 boxShadow: '0 10px 25px -5px rgba(15, 23, 42, 0.12), 0 8px 10px -6px rgba(15, 23, 42, 0.08)',
-                border: '1px solid rgba(226, 232, 240, 0.9)',
+                border: '1px solid var(--border-color)',
                 animation: 'fadeIn 0.15s ease-out'
               }}
             >

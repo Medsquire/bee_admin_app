@@ -66,6 +66,31 @@ export default function StatusBadge({ status }) {
     badgeClass = 'badge-slate';
     label = 'Not Registered';
   }
+  // Agency Registration & Assignment statuses
+  else if (normalized === 'approved' || normalized === 'approved for property assignment') {
+    badgeClass = 'badge-green';
+    label = status;
+  } else if (normalized === 'submitted' || normalized === 'submitted for approval' || normalized === 'under review') {
+    badgeClass = 'badge-amber';
+    label = status;
+  } else if (normalized === 'approved with restrictions') {
+    badgeClass = 'badge-amber';
+    label = status;
+  } else if (normalized === 'rejected') {
+    badgeClass = 'badge-red';
+    label = status;
+  }
+  // Property Level Statuses
+  else if (normalized === 'active - optimal') {
+    badgeClass = 'badge-green';
+    label = status;
+  } else if (normalized === 'active - maintenance due') {
+    badgeClass = 'badge-amber';
+    label = status;
+  } else if (normalized === 'under expansion' || normalized === 'under inspection') {
+    badgeClass = 'badge-blue';
+    label = status;
+  }
 
   return (
     <span className={`badge ${badgeClass}`}>

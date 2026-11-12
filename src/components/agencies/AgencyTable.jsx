@@ -23,7 +23,7 @@ export default function AgencyTable({ agencies, onSelectAgency }) {
         <thead>
           <tr
             style={{
-              backgroundColor: '#F8FAFC',
+              backgroundColor: 'var(--bg-subtle)',
               borderBottom: '1px solid var(--border-color)',
               color: 'var(--text-secondary)',
               fontSize: '0.75rem',

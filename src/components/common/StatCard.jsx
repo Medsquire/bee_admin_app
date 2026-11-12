@@ -3,29 +3,29 @@ import React from 'react';
 export default function StatCard({ title, value, icon: Icon, trend, color = 'blue', subtitle, onClick }) {
   const colorMap = {
     blue: {
-      bg: '#EFF6FF',
-      text: '#2563EB',
-      border: '#BFDBFE'
+      bg: 'var(--primary-blue-subtle)',
+      text: 'var(--primary-blue)',
+      border: 'var(--primary-blue-border)'
     },
     green: {
-      bg: '#DCFCE7',
-      text: '#16A34A',
-      border: '#BBF7D0'
+      bg: 'var(--success-bg)',
+      text: 'var(--success)',
+      border: 'var(--success-border)'
     },
     amber: {
-      bg: '#FEF3C7',
-      text: '#D97706',
-      border: '#FDE68A'
+      bg: 'var(--warning-bg)',
+      text: 'var(--warning)',
+      border: 'var(--warning-border)'
     },
     purple: {
-      bg: '#F3E8FF',
+      bg: 'rgba(147, 51, 234, 0.14)',
       text: '#9333EA',
-      border: '#E9D5FF'
+      border: 'rgba(168, 85, 247, 0.3)'
     },
     navy: {
-      bg: '#EFF6FF',
-      text: '#172554',
-      border: '#CBD5E1'
+      bg: 'var(--light-blue)',
+      text: 'var(--primary-blue)',
+      border: 'var(--border-color)'
     }
   };
 

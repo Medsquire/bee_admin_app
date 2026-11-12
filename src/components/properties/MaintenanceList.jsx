@@ -8,10 +8,8 @@ export default function MaintenanceList({ apartmentId = null, blockId = null }) 
   const {
     maintenanceRequests,
     apartments,
-    setAgencyAllocationRequest,
     setMaintenanceDetailModalRequest,
-    setNewMaintenanceModalApartmentId,
-    updateMaintenanceStatus
+    setNewMaintenanceModalApartmentId
   } = useApp();
 
   const [search, setSearch] = useState('');
@@ -40,23 +38,31 @@ export default function MaintenanceList({ apartmentId = null, blockId = null }) 
 
   const filteredRequests = useMemo(() => {
     return maintenanceRequests.filter((req) => {
-      // Apartment filter
+      // 1. STRICT SCOPE FILTER: Show ONLY property-level structure & facilities
+      // (Apartment / Community, Block / Tower, Floor, Common areas/facilities).
+      // Exclude individual flat/unit-level issues (e.g. Flat 101, Flat 202, private interiors).
+      const scope = (req.scope || '').toLowerCase().trim();
+      if (scope === 'flat' || scope === 'unit' || scope === 'private' || req.flatNumber || req.flatId) {
+        return false;
+      }
+
+      // 2. Apartment filter
       if (apartmentId && req.apartmentId !== apartmentId) return false;
       if (!apartmentId && selectedApartmentFilter !== 'ALL' && req.apartmentId !== selectedApartmentFilter) return false;
 
-      // Block filter
+      // 3. Block filter
       if (blockId && req.blockId !== blockId) return false;
 
-      // Category filter
+      // 4. Category filter
       if (selectedCategory !== 'ALL' && req.category !== selectedCategory) return false;
 
-      // Priority filter
+      // 5. Priority filter
       if (selectedPriority !== 'ALL' && req.priority !== selectedPriority) return false;
 
-      // Status filter
+      // 6. Status filter
       if (selectedStatus !== 'ALL' && req.status !== selectedStatus) return false;
 
-      // Search text
+      // 7. Search text
       if (search.trim()) {
         const q = search.toLowerCase();
         const matchesTitle = req.title.toLowerCase().includes(q);
@@ -87,7 +93,7 @@ export default function MaintenanceList({ apartmentId = null, blockId = null }) 
       <div
         style={{
           padding: '1rem 1.25rem',
-          backgroundColor: '#FFFFFF',
+          backgroundColor: 'var(--bg-card)',
           borderRadius: 'var(--radius-lg)',
           border: '1px solid var(--border-color)',
           display: 'flex',
@@ -249,14 +255,14 @@ export default function MaintenanceList({ apartmentId = null, blockId = null }) 
                     </div>
                   </td>
 
-                  {/* Location */}
+                  {/* Location / Scope (Property Level only) */}
                   <td>
                     <div style={{ fontWeight: 600, fontSize: '0.8125rem' }}>
                       {req.apartmentName}
                     </div>
                     <div className="text-xs text-muted">
-                      {req.blockName || 'Community Wide'}
-                      {req.flatNumber ? ` • Flat ${req.flatNumber}` : ''}
+                      {req.blockName || 'Community Common Area'}
+                      {req.floorName ? ` • ${req.floorName}` : ''}
                     </div>
                   </td>
 
@@ -295,49 +301,25 @@ export default function MaintenanceList({ apartmentId = null, blockId = null }) 
                     {req.reportedDate}
                   </td>
 
-                  {/* Actions */}
+                  {/* Actions: ONLY View action/icon */}
                   <td style={{ textAlign: 'right', whiteSpace: 'nowrap' }}>
-                    <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.35rem' }}>
-                      {req.status !== 'Assigned' && req.status !== 'Completed' && (
-                        <button
-                          type="button"
-                          className="btn btn-primary btn-sm"
-                          onClick={() => setAgencyAllocationRequest(req)}
-                        >
-                          Assign Agency
-                        </button>
-                      )}
-
-                      {req.status === 'Assigned' && (
-                        <button
-                          type="button"
-                          className="btn btn-subtle btn-sm"
-                          onClick={() => updateMaintenanceStatus(req.id, 'In Progress')}
-                        >
-                          Start Work
-                        </button>
-                      )}
-
-                      {req.status === 'In Progress' && (
-                        <button
-                          type="button"
-                          className="btn btn-secondary btn-sm"
-                          onClick={() => updateMaintenanceStatus(req.id, 'Completed')}
-                          style={{ color: 'var(--success)', borderColor: 'var(--success-border)' }}
-                        >
-                          Mark Done
-                        </button>
-                      )}
-
-                      <button
-                        type="button"
-                        className="btn btn-ghost btn-icon-sm"
-                        onClick={() => setMaintenanceDetailModalRequest(req)}
-                        title="View details"
-                      >
-                        <Eye size={15} />
-                      </button>
-                    </div>
+                    <button
+                      type="button"
+                      className="btn btn-ghost btn-sm"
+                      onClick={() => setMaintenanceDetailModalRequest(req)}
+                      title="View complete issue details"
+                      style={{
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        gap: '0.35rem',
+                        color: 'var(--primary-blue)',
+                        fontWeight: 600,
+                        padding: '0.35rem 0.75rem'
+                      }}
+                    >
+                      <Eye size={15} />
+                      <span>View</span>
+                    </button>
                   </td>
                 </tr>
               ))}

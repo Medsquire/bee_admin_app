@@ -17,7 +17,7 @@ export default function EmptyState({
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: '#FFFFFF',
+        backgroundColor: 'var(--bg-card)',
         borderRadius: 'var(--radius-lg)',
         border: '1px dashed var(--border-color)',
         margin: '1rem 0'

@@ -6,6 +6,7 @@ import Header from './components/layout/Header';
 import Dashboard from './pages/Dashboard';
 import Properties from './pages/Properties';
 import Agencies from './pages/Agencies';
+import Settings from './pages/Settings';
 import RWAManagementModal from './components/properties/RWAManagementModal';
 import AgencyAllocationModal from './components/agencies/AgencyAllocationModal';
 import SecurityAllocationModal from './components/agencies/SecurityAllocationModal';
@@ -53,6 +54,7 @@ function AppContent() {
           {activePage === 'dashboard' && <Dashboard />}
           {activePage === 'properties' && <Properties />}
           {activePage === 'agencies' && <Agencies />}
+          {activePage === 'settings' && <Settings />}
         </main>
       </div>
 

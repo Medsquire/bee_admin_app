@@ -12,9 +12,9 @@ export default function InteractiveLocationPicker({
   const mapInstanceRef = useRef(null);
   const markerRef = useRef(null);
 
-  // Default coordinates (Skyline Towers / Emerald City area: 37.7749, -122.4194)
-  const defaultLat = latitude ? parseFloat(latitude) : 37.7749;
-  const defaultLng = longitude ? parseFloat(longitude) : -122.4194;
+  // Default coordinates (Hyderabad Financial District / HITEC City area: 17.4401, 78.3489)
+  const defaultLat = latitude ? parseFloat(latitude) : 17.4401;
+  const defaultLng = longitude ? parseFloat(longitude) : 78.3489;
 
   const [currentCoords, setCurrentCoords] = useState({ lat: defaultLat, lng: defaultLng });
   const [searchQuery, setSearchQuery] = useState('');
@@ -81,7 +81,7 @@ export default function InteractiveLocationPicker({
         const newCity = addr.city || addr.town || addr.municipality || addr.suburb || addr.county || '';
         const newState = addr.state || addr.province || '';
         const newZip = addr.postcode || '';
-        const newCountry = addr.country || 'United States';
+        const newCountry = addr.country || 'India';
         const mapUrl = `https://www.google.com/maps?q=${lat},${lng}`;
 
         onLocationSelect({
@@ -240,7 +240,7 @@ export default function InteractiveLocationPicker({
       const newCity = addr.city || addr.town || addr.municipality || addr.suburb || addr.county || '';
       const newState = addr.state || addr.province || '';
       const newZip = addr.postcode || '';
-      const newCountry = addr.country || 'United States';
+      const newCountry = addr.country || 'India';
       const mapUrl = `https://www.google.com/maps?q=${lat},${lng}`;
 
       onLocationSelect({
@@ -292,7 +292,7 @@ export default function InteractiveLocationPicker({
               left: 0,
               right: 0,
               zIndex: 1000,
-              backgroundColor: '#FFFFFF',
+              backgroundColor: 'var(--bg-card)',
               borderRadius: 'var(--radius-md)',
               border: '1px solid var(--border-color)',
               boxShadow: 'var(--shadow-lg)',
@@ -400,7 +400,7 @@ export default function InteractiveLocationPicker({
           fontSize: '0.75rem',
           color: 'var(--text-muted)',
           padding: '0.35rem 0.5rem',
-          backgroundColor: '#F8FAFC',
+          backgroundColor: 'var(--bg-subtle)',
           borderRadius: 'var(--radius-sm)'
         }}
       >

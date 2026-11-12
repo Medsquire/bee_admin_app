@@ -26,8 +26,15 @@ export default function PropertyFormModal() {
     setPropertyFormModal,
     apartments,
     addProperty,
-    updateProperty
+    updateProperty,
+    propertyTypes: ctxPropertyTypes,
+    propertyStatuses: ctxPropertyStatuses,
+    propertyDocumentCategories: ctxPropertyDocCategories
   } = useApp();
+
+  const availablePropertyTypes = ctxPropertyTypes || PROPERTY_TYPES;
+  const availablePropertyStatuses = ctxPropertyStatuses || PROPERTY_STATUSES;
+  const availableDocCategories = ctxPropertyDocCategories || PROPERTY_DOCUMENT_CATEGORIES;
 
   const { isOpen, mode, propertyId } = propertyFormModal;
 
@@ -44,12 +51,12 @@ export default function PropertyFormModal() {
     description: '',
     address: '',
     address2: '',
-    city: 'Emerald City',
-    state: 'CA',
-    zip: '94016',
-    country: 'United States',
-    latitude: 37.7749,
-    longitude: -122.4194,
+    city: 'Hyderabad',
+    state: 'Telangana',
+    zip: '500032',
+    country: 'India',
+    latitude: 17.4401,
+    longitude: 78.3489,
     mapLink: '',
     image: '/Images/bee-community-master.jpg',
     additionalImages: [],
@@ -93,12 +100,12 @@ export default function PropertyFormModal() {
             description: apt.description || '',
             address: apt.address || '',
             address2: apt.address2 || '',
-            city: apt.city || 'Emerald City',
-            state: apt.state || 'CA',
+            city: apt.city || 'Hyderabad',
+            state: apt.state || 'Telangana',
             zip: apt.zip || '',
-            country: apt.country || 'United States',
-            latitude: apt.latitude || (apt.coordinates ? apt.coordinates.lat : 37.7749),
-            longitude: apt.longitude || (apt.coordinates ? apt.coordinates.lng : -122.4194),
+            country: apt.country || 'India',
+            latitude: apt.latitude || (apt.coordinates ? apt.coordinates.lat : 17.4401),
+            longitude: apt.longitude || (apt.coordinates ? apt.coordinates.lng : 78.3489),
             mapLink: apt.mapLink || '',
             image: apt.image || '/Images/bee-community-master.jpg',
             additionalImages: apt.additionalImages ? [...apt.additionalImages] : [],
@@ -125,12 +132,12 @@ export default function PropertyFormModal() {
           description: 'Modern residential community with lifestyle amenities and automated facility infrastructure.',
           address: '',
           address2: '',
-          city: 'Emerald City',
-          state: 'CA',
-          zip: '94016',
-          country: 'United States',
-          latitude: 37.7749,
-          longitude: -122.4194,
+          city: 'Hyderabad',
+          state: 'Telangana',
+          zip: '500032',
+          country: 'India',
+          latitude: 17.4401,
+          longitude: 78.3489,
           mapLink: '',
           image: '/Images/bee-community-master.jpg',
           additionalImages: ['/Images/ApartmentImage.jpeg'],
@@ -322,19 +329,21 @@ export default function PropertyFormModal() {
       isOpen={isOpen}
       onClose={() => setPropertyFormModal({ isOpen: false, mode: 'create', propertyId: null })}
       title={mode === 'edit' ? `Edit Property — ${formData.name}` : 'Register New Property'}
-      subtitle="Complete property registration form strictly complying with PRD Section 4.D"
       size="xl"
     >
-      <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', height: '100%', flex: 1, minHeight: 0, overflow: 'hidden' }}>
+      <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', flex: 1, minHeight: 0, overflow: 'hidden' }}>
         {/* Step Navigation Tabs */}
         <div
           style={{
             display: 'flex',
+            flexDirection: 'row',
+            alignItems: 'center',
             borderBottom: '1px solid var(--border-color)',
-            backgroundColor: '#F8FAFC',
+            backgroundColor: 'var(--bg-subtle)',
             overflowX: 'auto',
-            padding: '0.25rem 0.5rem',
-            gap: '0.25rem'
+            padding: '0.35rem 0.75rem',
+            gap: '0.35rem',
+            flexShrink: 0
           }}
         >
           {tabs.map((tab) => {
@@ -351,7 +360,8 @@ export default function PropertyFormModal() {
                   fontSize: '0.75rem',
                   fontWeight: 600,
                   whiteSpace: 'nowrap',
-                  padding: '0.4rem 0.75rem'
+                  padding: '0.4rem 0.75rem',
+                  flexShrink: 0
                 }}
               >
                 <Icon size={14} />
@@ -362,17 +372,14 @@ export default function PropertyFormModal() {
         </div>
 
         {/* Modal Scrollable Body */}
-        <div className="modal-body" style={{ flex: 1, overflowY: 'auto', padding: '1.5rem' }}>
+        <div className="modal-body" style={{ flex: 1, overflowY: 'auto', padding: '1.5rem 1.5rem 2.5rem 1.5rem' }}>
           {/* SECTION 1: BASIC PROPERTY INFORMATION */}
           {activeTab === 'basic' && (
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
               <div>
-                <h3 style={{ fontSize: '1rem', fontWeight: 700, color: 'var(--dark-navy)', marginBottom: '0.25rem' }}>
+                <h3 style={{ fontSize: '1rem', fontWeight: 700, color: 'var(--dark-navy)', margin: 0 }}>
                   Section 1: Basic Property Information
                 </h3>
-                <p className="text-xs text-muted">
-                  Official community identity, registration numbers, and structural category
-                </p>
               </div>
 
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '1rem' }}>
@@ -405,7 +412,7 @@ export default function PropertyFormModal() {
                     value={formData.propertyType}
                     onChange={(e) => setFormData({ ...formData, propertyType: e.target.value })}
                   >
-                    {PROPERTY_TYPES.map((t) => (
+                    {availablePropertyTypes.map((t) => (
                       <option key={t} value={t}>{t}</option>
                     ))}
                   </select>
@@ -418,7 +425,7 @@ export default function PropertyFormModal() {
                     value={formData.status}
                     onChange={(e) => setFormData({ ...formData, status: e.target.value })}
                   >
-                    {PROPERTY_STATUSES.map((s) => (
+                    {availablePropertyStatuses.map((s) => (
                       <option key={s} value={s}>{s}</option>
                     ))}
                   </select>
@@ -474,10 +481,9 @@ export default function PropertyFormModal() {
           {activeTab === 'location' && (
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
               <div>
-                <h3 style={{ fontSize: '1rem', fontWeight: 700, color: 'var(--dark-navy)', marginBottom: '0.25rem' }}>
+                <h3 style={{ fontSize: '1rem', fontWeight: 700, color: 'var(--dark-navy)', margin: 0 }}>
                   Section 2: Location Details
                 </h3>
-                <p className="text-xs text-muted">Geographical address, postal demarcations, and maps</p>
               </div>
 
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '1rem' }}>
@@ -574,12 +580,9 @@ export default function PropertyFormModal() {
           {activeTab === 'images' && (
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
               <div>
-                <h3 style={{ fontSize: '1rem', fontWeight: 700, color: 'var(--dark-navy)', marginBottom: '0.25rem' }}>
+                <h3 style={{ fontSize: '1rem', fontWeight: 700, color: 'var(--dark-navy)', margin: 0 }}>
                   Section 3: Property Images
                 </h3>
-                <p className="text-xs text-muted">
-                  Primary banner image used on hero sections and cards, plus gallery perspectives
-                </p>
               </div>
 
               <div>
@@ -653,12 +656,9 @@ export default function PropertyFormModal() {
           {activeTab === 'structure' && (
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
               <div>
-                <h3 style={{ fontSize: '1rem', fontWeight: 700, color: 'var(--dark-navy)', marginBottom: '0.25rem' }}>
+                <h3 style={{ fontSize: '1rem', fontWeight: 700, color: 'var(--dark-navy)', margin: 0 }}>
                   Section 4: Property Structure & Towers
                 </h3>
-                <p className="text-xs text-muted">
-                  Configure blocks and towers. Notice that different blocks can have different floor counts!
-                </p>
               </div>
 
               {/* Add New Block Form */}
@@ -740,7 +740,7 @@ export default function PropertyFormModal() {
                         key={block.id}
                         style={{
                           padding: '0.75rem 1rem',
-                          backgroundColor: '#FFFFFF',
+                          backgroundColor: 'var(--bg-card)',
                           borderRadius: 'var(--radius-md)',
                           border: '1px solid var(--border-color)',
                           display: 'flex',
@@ -777,19 +777,16 @@ export default function PropertyFormModal() {
           {activeTab === 'documents' && (
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
               <div>
-                <h3 style={{ fontSize: '1rem', fontWeight: 700, color: 'var(--dark-navy)', marginBottom: '0.25rem' }}>
+                <h3 style={{ fontSize: '1rem', fontWeight: 700, color: 'var(--dark-navy)', margin: 0 }}>
                   Section 5: Property Documents
                 </h3>
-                <p className="text-xs text-muted">
-                  Master plans, blueprints, municipal occupancy approvals, fire clearance, and manuals
-                </p>
               </div>
 
               {/* Upload Document Box */}
               <div
                 style={{
                   padding: '1rem',
-                  backgroundColor: '#F8FAFC',
+                  backgroundColor: 'var(--bg-subtle)',
                   borderRadius: 'var(--radius-md)',
                   border: '1px solid var(--border-color)',
                   display: 'flex',
@@ -819,7 +816,7 @@ export default function PropertyFormModal() {
                       value={newDocDef.category}
                       onChange={(e) => setNewDocDef({ ...newDocDef, category: e.target.value })}
                     >
-                      {PROPERTY_DOCUMENT_CATEGORIES.map((cat) => (
+                      {availableDocCategories.map((cat) => (
                         <option key={cat} value={cat}>{cat}</option>
                       ))}
                     </select>
@@ -861,7 +858,7 @@ export default function PropertyFormModal() {
                     key={doc.id}
                     style={{
                       padding: '0.75rem 1rem',
-                      backgroundColor: '#FFFFFF',
+                      backgroundColor: 'var(--bg-card)',
                       borderRadius: 'var(--radius-sm)',
                       border: '1px solid var(--border-color)',
                       display: 'flex',
@@ -895,10 +892,9 @@ export default function PropertyFormModal() {
           {activeTab === 'management' && (
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
               <div>
-                <h3 style={{ fontSize: '1rem', fontWeight: 700, color: 'var(--dark-navy)', marginBottom: '0.25rem' }}>
+                <h3 style={{ fontSize: '1rem', fontWeight: 700, color: 'var(--dark-navy)', margin: 0 }}>
                   Section 6: Property Management & Governance
                 </h3>
-                <p className="text-xs text-muted">Designated property manager, RWA status, and emergency lines</p>
               </div>
 
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '1rem' }}>
@@ -967,7 +963,8 @@ export default function PropertyFormModal() {
             justifyContent: 'space-between',
             padding: '1rem 1.5rem',
             borderTop: '1px solid var(--border-color)',
-            backgroundColor: '#FFFFFF'
+            backgroundColor: 'var(--bg-card)',
+            flexShrink: 0
           }}
         >
           <button

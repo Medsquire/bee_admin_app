@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { X } from 'lucide-react';
 
-export default function Modal({ isOpen, onClose, title, children, size = 'md', subtitle }) {
+export default function Modal({ isOpen, onClose, title, children, size = 'md' }) {
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (e.key === 'Escape' && isOpen) {
@@ -36,14 +36,9 @@ export default function Modal({ isOpen, onClose, title, children, size = 'md', s
       >
         <div className="modal-header">
           <div>
-            <h2 style={{ fontSize: '1.125rem', fontWeight: 700, color: 'var(--dark-navy)' }}>
+            <h2 style={{ fontSize: '1.125rem', fontWeight: 700, color: 'var(--dark-navy)', margin: 0 }}>
               {title}
             </h2>
-            {subtitle && (
-              <p className="text-xs text-muted" style={{ marginTop: '0.15rem' }}>
-                {subtitle}
-              </p>
-            )}
           </div>
           <button
             type="button"

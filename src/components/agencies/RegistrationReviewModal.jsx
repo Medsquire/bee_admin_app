@@ -54,7 +54,6 @@ export default function RegistrationReviewModal() {
       isOpen={isOpen}
       onClose={() => setRegistrationReviewModal({ isOpen: false, agencyId: null })}
       title={`Review Agency Registration — ${agency.name}`}
-      subtitle={`Registration Ref: ${agency.registrationRefNumber} • Submitted: ${agency.submissionDate}`}
       size="lg"
     >
       <form onSubmit={handleDecisionSubmit} style={{ display: 'flex', flexDirection: 'column', height: '100%', flex: 1, minHeight: 0, overflow: 'hidden' }}>
@@ -63,7 +62,7 @@ export default function RegistrationReviewModal() {
           <div
             style={{
               padding: '1rem',
-              backgroundColor: '#F8FAFC',
+              backgroundColor: 'var(--bg-subtle)',
               borderRadius: 'var(--radius-md)',
               border: '1px solid var(--border-color)',
               display: 'flex',
@@ -92,7 +91,7 @@ export default function RegistrationReviewModal() {
               gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
               gap: '0.75rem',
               padding: '0.875rem',
-              backgroundColor: '#FFFFFF',
+              backgroundColor: 'var(--bg-card)',
               borderRadius: 'var(--radius-md)',
               border: '1px solid var(--border-color)',
               fontSize: '0.8125rem'
@@ -147,7 +146,7 @@ export default function RegistrationReviewModal() {
                   key={doc.id}
                   style={{
                     padding: '0.5rem 0.75rem',
-                    backgroundColor: '#F8FAFC',
+                    backgroundColor: 'var(--bg-subtle)',
                     borderRadius: 'var(--radius-sm)',
                     border: '1px solid var(--border-color)',
                     display: 'flex',
@@ -169,7 +168,7 @@ export default function RegistrationReviewModal() {
           </div>
 
           {/* Verification Checklist strictly matching PRD Section 5.H */}
-          <div style={{ padding: '0.875rem 1rem', backgroundColor: '#F8FAFC', borderRadius: 'var(--radius-md)', border: '1px solid var(--border-color)' }}>
+          <div style={{ padding: '0.875rem 1rem', backgroundColor: 'var(--bg-subtle)', borderRadius: 'var(--radius-md)', border: '1px solid var(--border-color)' }}>
             <div className="text-xs font-semibold" style={{ color: 'var(--dark-navy)', marginBottom: '0.5rem' }}>
               ADMINISTRATIVE VERIFICATION CHECKLIST
             </div>
@@ -271,7 +270,7 @@ export default function RegistrationReviewModal() {
           </div>
         </div>
 
-        <div className="modal-footer" style={{ padding: '0.875rem 1.5rem', display: 'flex', justifyContent: 'space-between', backgroundColor: '#FFFFFF', borderTop: '1px solid var(--border-color)', flexShrink: 0 }}>
+        <div className="modal-footer" style={{ padding: '0.875rem 1.5rem', display: 'flex', justifyContent: 'space-between', backgroundColor: 'var(--bg-card)', borderTop: '1px solid var(--border-color)', flexShrink: 0 }}>
           <button
             type="button"
             className="btn btn-secondary"

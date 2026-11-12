@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useApp } from '../context/AppContext';
 import { User, Lock, Eye, EyeOff, ShieldCheck, ArrowRight, AlertCircle } from 'lucide-react';
+import logoImg from '../assets/logo.jpg';
 
 export default function AdminLogin() {
   const { login } = useApp();
@@ -105,32 +106,29 @@ export default function AdminLogin() {
           <div style={{ textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
             <div
               style={{
-                width: '56px',
-                height: '56px',
-                borderRadius: '16px',
-                background: 'linear-gradient(135deg, var(--primary-blue) 0%, #1D4ED8 100%)',
-                color: '#FFFFFF',
+                width: '68px',
+                height: '68px',
+                borderRadius: '18px',
+                background: '#FFFFFF',
+                border: '1.5px solid rgba(226, 232, 240, 0.95)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                boxShadow: '0 8px 20px rgba(37, 99, 235, 0.35)',
-                marginBottom: '1rem'
+                boxShadow: '0 8px 24px rgba(37, 99, 235, 0.16)',
+                marginBottom: '1rem',
+                overflow: 'hidden',
+                padding: '4px'
               }}
             >
-              <svg
-                width="30"
-                height="30"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2.3"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M12 2L4 7v10l8 5 8-5V7l-8-5z" />
-                <path d="M12 22V12" />
-                <path d="M20 7l-8 5-8-5" />
-              </svg>
+              <img
+                src={logoImg}
+                alt="Bee Property Logo"
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'contain'
+                }}
+              />
             </div>
 
             <h1
@@ -142,7 +140,7 @@ export default function AdminLogin() {
                 marginBottom: '1.25rem'
               }}
             >
-              BEE Residence
+              Bee Property
             </h1>
           </div>
 
@@ -192,7 +190,7 @@ export default function AdminLogin() {
                   type="text"
                   className="form-input"
                   style={{ paddingLeft: '2.5rem', height: '42px', fontSize: '0.875rem' }}
-                  placeholder="admin or admin@beeresidence.com"
+                  placeholder="admin or admin@beeproperty.com"
                   value={username}
                   onChange={(e) => {
                     setUsername(e.target.value);

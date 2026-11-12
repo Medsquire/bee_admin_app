@@ -169,15 +169,18 @@ export default function Properties() {
     );
   }
 
-  // Calculate active maintenance for this specific apartment
-  const apartmentMaintenanceCount = maintenanceRequests.filter(
-    (m) =>
-      m.apartmentId === currentApartment.id &&
-      (m.status === 'Reported' ||
-        m.status === 'Pending Assignment' ||
-        m.status === 'Assigned' ||
-        m.status === 'In Progress')
-  ).length;
+  // Calculate active property-level structure & facility maintenance for this specific apartment (excluding flat-level issues)
+  const apartmentMaintenanceCount = maintenanceRequests.filter((m) => {
+    if (m.apartmentId !== currentApartment.id) return false;
+    const scope = (m.scope || '').toLowerCase().trim();
+    if (scope === 'flat' || scope === 'unit' || scope === 'private' || m.flatNumber || m.flatId) return false;
+    return (
+      m.status === 'Reported' ||
+      m.status === 'Pending Assignment' ||
+      m.status === 'Assigned' ||
+      m.status === 'In Progress'
+    );
+  }).length;
 
   return (
     <div className="page-container" style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
@@ -223,7 +226,7 @@ export default function Properties() {
             <div
               style={{
                 padding: '0.75rem 1rem',
-                backgroundColor: '#FFFFFF',
+                backgroundColor: 'var(--bg-card)',
                 borderRadius: 'var(--radius-md)',
                 border: '1px solid var(--border-color)',
                 display: 'flex',

@@ -25,7 +25,7 @@ export default function PropertyAssignmentModal() {
 
   // Form State
   const [formData, setFormData] = useState({
-    organization: 'BEE Residence / Zivion Management',
+    organization: 'Bee Property / Zivion Management',
     propertyId: '',
     propertyName: '',
     propertyCode: '',
@@ -58,7 +58,7 @@ export default function PropertyAssignmentModal() {
       const initialServices = agency?.services ? agency.services.map((s) => s.category) : agency?.categories || [];
 
       setFormData({
-        organization: 'BEE Residence / Zivion Management',
+        organization: 'Bee Property / Zivion Management',
         propertyId: defaultApt.id,
         propertyName: defaultApt.name,
         propertyCode: defaultApt.code,
@@ -205,7 +205,6 @@ export default function PropertyAssignmentModal() {
       isOpen={isOpen}
       onClose={() => setPropertyAssignmentModal({ isOpen: false, agencyId: null })}
       title={`Request Property Assignment — ${agency.name}`}
-      subtitle="Stage 2: Specify target communities, tower blocks, approved service categories, and operational dates"
       size="xl"
     >
       <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', height: '100%', flex: 1, minHeight: 0, overflow: 'hidden' }}>
@@ -244,7 +243,7 @@ export default function PropertyAssignmentModal() {
                   className="form-input"
                   value={formData.organization}
                   disabled
-                  style={{ backgroundColor: '#F8FAFC' }}
+                  style={{ backgroundColor: 'var(--bg-subtle)' }}
                 />
               </div>
 
@@ -271,7 +270,7 @@ export default function PropertyAssignmentModal() {
                   className="form-input"
                   value={formData.propertyCode}
                   disabled
-                  style={{ backgroundColor: '#F8FAFC' }}
+                  style={{ backgroundColor: 'var(--bg-subtle)' }}
                 />
               </div>
 
@@ -282,7 +281,7 @@ export default function PropertyAssignmentModal() {
                   className="form-input"
                   value={formData.propertyType}
                   disabled
-                  style={{ backgroundColor: '#F8FAFC' }}
+                  style={{ backgroundColor: 'var(--bg-subtle)' }}
                 />
               </div>
 
@@ -293,7 +292,7 @@ export default function PropertyAssignmentModal() {
                   className="form-input"
                   value={`${formData.propertyAddress}, ${formData.city}, ${formData.state}`}
                   disabled
-                  style={{ backgroundColor: '#F8FAFC' }}
+                  style={{ backgroundColor: 'var(--bg-subtle)' }}
                 />
               </div>
 
@@ -476,7 +475,7 @@ export default function PropertyAssignmentModal() {
 
           {/* Queued Multiple Property Assignments */}
           {queuedAssignments.length > 0 && (
-            <div style={{ padding: '0.75rem 1rem', backgroundColor: '#F8FAFC', borderRadius: 'var(--radius-md)', border: '1px solid var(--border-color)' }}>
+            <div style={{ padding: '0.75rem 1rem', backgroundColor: 'var(--bg-subtle)', borderRadius: 'var(--radius-md)', border: '1px solid var(--border-color)' }}>
               <div className="text-xs font-semibold text-muted" style={{ marginBottom: '0.4rem' }}>
                 ADDITIONAL PROPERTIES IN BATCH ({queuedAssignments.length})
               </div>
@@ -519,7 +518,7 @@ export default function PropertyAssignmentModal() {
             justifyContent: 'space-between',
             padding: '1rem 1.5rem',
             borderTop: '1px solid var(--border-color)',
-            backgroundColor: '#FFFFFF',
+            backgroundColor: 'var(--bg-card)',
             flexShrink: 0
           }}
         >

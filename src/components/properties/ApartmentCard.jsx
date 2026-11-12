@@ -67,7 +67,8 @@ export default function ApartmentCard({ apartment, onSelect }) {
                 fontSize: '0.6875rem',
                 fontWeight: 600,
                 color: 'var(--primary-blue)',
-                backgroundColor: 'var(--light-blue)',
+                backgroundColor: 'var(--primary-blue-subtle)',
+                border: '1px solid var(--primary-blue-border)',
                 padding: '0.15rem 0.45rem',
                 borderRadius: 'var(--radius-full)'
               }}
@@ -123,7 +124,7 @@ export default function ApartmentCard({ apartment, onSelect }) {
             gridTemplateColumns: 'repeat(4, 1fr)',
             gap: '0.35rem',
             padding: '0.625rem',
-            backgroundColor: '#F8FAFC',
+            backgroundColor: 'var(--bg-subtle)',
             borderRadius: 'var(--radius-md)',
             border: '1px solid var(--border-color)',
             marginTop: 'auto'

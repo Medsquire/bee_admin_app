@@ -94,7 +94,6 @@ export default function AgencyAllocationModal() {
       isOpen={Boolean(agencyAllocationRequest)}
       onClose={() => setAgencyAllocationRequest(null)}
       title="Allocate Maintenance Service Provider"
-      subtitle={`Ticket #${req.id} • ${req.apartmentName}`}
       size="lg"
     >
       <form onSubmit={handleConfirmAssignment} style={{ display: 'flex', flexDirection: 'column', height: '100%', flex: 1, minHeight: 0, overflow: 'hidden' }}>
@@ -103,7 +102,7 @@ export default function AgencyAllocationModal() {
           <div
             style={{
               padding: '1.25rem',
-              backgroundColor: '#F8FAFC',
+              backgroundColor: 'var(--bg-subtle)',
               borderRadius: 'var(--radius-md)',
               border: '1px solid var(--border-color)',
               display: 'flex',
@@ -188,7 +187,7 @@ export default function AgencyAllocationModal() {
                         border: isSelected
                           ? '2px solid var(--primary-blue)'
                           : '1px solid var(--border-color)',
-                        backgroundColor: isSelected ? 'var(--light-blue)' : '#FFFFFF',
+                        backgroundColor: isSelected ? 'var(--primary-blue-subtle)' : 'var(--bg-card)',
                         cursor: 'pointer',
                         transition: 'all 0.15s ease',
                         display: 'flex',
@@ -254,7 +253,7 @@ export default function AgencyAllocationModal() {
                           border: isChecked
                             ? '1px solid var(--primary-blue)'
                             : '1px solid var(--border-color)',
-                          backgroundColor: isChecked ? 'var(--light-blue)' : '#FFFFFF',
+                          backgroundColor: isChecked ? 'var(--primary-blue-subtle)' : 'var(--bg-card)',
                           cursor: 'pointer',
                           display: 'flex',
                           alignItems: 'center',
@@ -284,7 +283,7 @@ export default function AgencyAllocationModal() {
           <div
             style={{
               padding: '1.25rem',
-              backgroundColor: '#F8FAFC',
+              backgroundColor: 'var(--bg-subtle)',
               borderRadius: 'var(--radius-md)',
               border: '1px solid var(--border-color)',
               display: 'grid',
@@ -320,7 +319,7 @@ export default function AgencyAllocationModal() {
         </div>
 
         {/* Step 8: Confirm Action */}
-        <div className="modal-footer">
+        <div className="modal-footer" style={{ flexShrink: 0 }}>
           <button
             type="button"
             className="btn btn-secondary"

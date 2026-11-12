@@ -93,7 +93,6 @@ export default function AssignmentApprovalModal() {
       isOpen={isOpen}
       onClose={() => setAssignmentApprovalModal({ isOpen: false, agencyId: null, assignmentId: null })}
       title="Property Assignment Approval"
-      subtitle={`Request ID: ${assignment.id} • ${agency.name}`}
       size="lg"
     >
       <form onSubmit={handleDecisionSubmit} style={{ display: 'flex', flexDirection: 'column', height: '100%', flex: 1, minHeight: 0, overflow: 'hidden' }}>
@@ -102,7 +101,7 @@ export default function AssignmentApprovalModal() {
           <div
             style={{
               padding: '1rem',
-              backgroundColor: '#F8FAFC',
+              backgroundColor: 'var(--bg-subtle)',
               borderRadius: 'var(--radius-md)',
               border: '1px solid var(--border-color)',
               display: 'flex',
@@ -131,7 +130,7 @@ export default function AssignmentApprovalModal() {
               gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
               gap: '0.75rem',
               padding: '0.875rem',
-              backgroundColor: '#FFFFFF',
+              backgroundColor: 'var(--bg-card)',
               borderRadius: 'var(--radius-md)',
               border: '1px solid var(--border-color)',
               fontSize: '0.8125rem'
@@ -172,7 +171,7 @@ export default function AssignmentApprovalModal() {
           </div>
 
           {/* Administrative Verification Checklist */}
-          <div style={{ padding: '0.875rem 1rem', backgroundColor: '#F8FAFC', borderRadius: 'var(--radius-md)', border: '1px solid var(--border-color)' }}>
+          <div style={{ padding: '0.875rem 1rem', backgroundColor: 'var(--bg-subtle)', borderRadius: 'var(--radius-md)', border: '1px solid var(--border-color)' }}>
             <div className="text-xs font-semibold" style={{ color: 'var(--dark-navy)', marginBottom: '0.5rem' }}>
               PROPERTY ACCESS VERIFICATION CHECKLIST
             </div>
@@ -376,7 +375,7 @@ export default function AssignmentApprovalModal() {
           </div>
         </div>
 
-        <div className="modal-footer" style={{ padding: '0.875rem 1.5rem', display: 'flex', justifyContent: 'space-between', backgroundColor: '#FFFFFF', borderTop: '1px solid var(--border-color)', flexShrink: 0 }}>
+        <div className="modal-footer" style={{ padding: '0.875rem 1.5rem', display: 'flex', justifyContent: 'space-between', backgroundColor: 'var(--bg-card)', borderTop: '1px solid var(--border-color)', flexShrink: 0 }}>
           <button
             type="button"
             className="btn btn-secondary"

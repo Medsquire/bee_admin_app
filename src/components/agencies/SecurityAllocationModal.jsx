@@ -63,7 +63,6 @@ export default function SecurityAllocationModal() {
       isOpen={securityAllocationModalOpen}
       onClose={() => setSecurityAllocationModalOpen(false)}
       title="Allocate Security Agency & Personnel"
-      subtitle="Deploy licensed security squads to communities, towers, and perimeter gates"
       size="md"
     >
       <form onSubmit={handleConfirm} style={{ display: 'flex', flexDirection: 'column', height: '100%', flex: 1, minHeight: 0, overflow: 'hidden' }}>
@@ -105,7 +104,7 @@ export default function SecurityAllocationModal() {
           <div
             style={{
               padding: '1rem',
-              backgroundColor: '#F8FAFC',
+              backgroundColor: 'var(--bg-subtle)',
               borderRadius: 'var(--radius-md)',
               border: '1px solid var(--border-color)',
               display: 'flex',
@@ -137,7 +136,7 @@ export default function SecurityAllocationModal() {
                   alignItems: 'center',
                   justifyContent: 'space-between',
                   padding: '0.5rem 0.75rem',
-                  backgroundColor: '#FFFFFF',
+                  backgroundColor: 'var(--bg-card)',
                   borderRadius: 'var(--radius-sm)',
                   border: '1px solid var(--border-color)',
                   fontSize: '0.8125rem'

@@ -75,7 +75,7 @@ export default function BlockCard({ block, apartmentId, onSelect }) {
             gridTemplateColumns: 'repeat(4, 1fr)',
             gap: '0.35rem',
             padding: '0.625rem',
-            backgroundColor: '#F8FAFC',
+            backgroundColor: 'var(--bg-subtle)',
             borderRadius: 'var(--radius-md)',
             border: '1px solid var(--border-color)'
           }}

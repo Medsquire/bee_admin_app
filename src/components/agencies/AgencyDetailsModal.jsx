@@ -111,15 +111,14 @@ export default function AgencyDetailsModal() {
       isOpen={Boolean(agencyDetailModalId)}
       onClose={() => setAgencyDetailModalId(null)}
       title={agency.name}
-      subtitle={`Service Partner • Ref: ${agency.registrationRefNumber || 'N/A'}`}
       size="xl"
     >
-      <div style={{ display: 'flex', flexDirection: 'column', height: '100%', flex: 1, minHeight: 0, overflow: 'hidden' }}>
+      <div style={{ display: 'flex', flexDirection: 'column', flex: 1, minHeight: 0, overflow: 'hidden' }}>
         {/* Top Header Card */}
         <div
           style={{
             padding: '1.25rem 1.5rem',
-            backgroundColor: '#F8FAFC',
+            backgroundColor: 'var(--bg-subtle)',
             borderBottom: '1px solid var(--border-color)',
             display: 'flex',
             alignItems: 'center',
@@ -200,7 +199,7 @@ export default function AgencyDetailsModal() {
           style={{
             display: 'flex',
             borderBottom: '1px solid var(--border-color)',
-            backgroundColor: '#FFFFFF',
+            backgroundColor: 'var(--bg-card)',
             overflowX: 'auto',
             padding: '0.25rem 0.75rem',
             gap: '0.35rem',
@@ -244,35 +243,35 @@ export default function AgencyDetailsModal() {
                   gap: '0.75rem'
                 }}
               >
-                <div style={{ padding: '0.875rem', backgroundColor: '#F8FAFC', borderRadius: 'var(--radius-md)', border: '1px solid var(--border-color)', textAlign: 'center' }}>
+                <div style={{ padding: '0.875rem', backgroundColor: 'var(--bg-subtle)', borderRadius: 'var(--radius-md)', border: '1px solid var(--border-color)', textAlign: 'center' }}>
                   <div className="text-xs text-muted font-semibold">Total Staff</div>
                   <div style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--dark-navy)' }}>
                     {agency.totalPersonnel}
                   </div>
                 </div>
 
-                <div style={{ padding: '0.875rem', backgroundColor: '#EFF6FF', borderRadius: 'var(--radius-md)', border: '1px solid #BFDBFE', textAlign: 'center' }}>
+                <div style={{ padding: '0.875rem', backgroundColor: 'var(--primary-blue-subtle)', borderRadius: 'var(--radius-md)', border: '1px solid var(--primary-blue-border)', textAlign: 'center' }}>
                   <div className="text-xs font-semibold" style={{ color: 'var(--primary-blue)' }}>Allocated</div>
                   <div style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--primary-blue)' }}>
                     {agency.allocatedPersonnel}
                   </div>
                 </div>
 
-                <div style={{ padding: '0.875rem', backgroundColor: '#DCFCE7', borderRadius: 'var(--radius-md)', border: '1px solid #BBF7D0', textAlign: 'center' }}>
+                <div style={{ padding: '0.875rem', backgroundColor: 'var(--success-bg)', borderRadius: 'var(--radius-md)', border: '1px solid var(--success-border)', textAlign: 'center' }}>
                   <div className="text-xs font-semibold" style={{ color: 'var(--success)' }}>Available</div>
                   <div style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--success)' }}>
                     {agency.availablePersonnel}
                   </div>
                 </div>
 
-                <div style={{ padding: '0.875rem', backgroundColor: '#FEF3C7', borderRadius: 'var(--radius-md)', border: '1px solid #FDE68A', textAlign: 'center' }}>
+                <div style={{ padding: '0.875rem', backgroundColor: 'var(--warning-bg)', borderRadius: 'var(--radius-md)', border: '1px solid var(--warning-border)', textAlign: 'center' }}>
                   <div className="text-xs font-semibold" style={{ color: 'var(--warning)' }}>On Leave</div>
                   <div style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--warning)' }}>
                     {agency.onLeavePersonnel || 0}
                   </div>
                 </div>
 
-                <div style={{ padding: '0.875rem', backgroundColor: '#F1F5F9', borderRadius: 'var(--radius-md)', border: '1px solid var(--border-color)', textAlign: 'center' }}>
+                <div style={{ padding: '0.875rem', backgroundColor: 'var(--bg-subtle)', borderRadius: 'var(--radius-md)', border: '1px solid var(--border-color)', textAlign: 'center' }}>
                   <div className="text-xs text-muted font-semibold">Active Jobs</div>
                   <div style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--dark-navy)' }}>
                     {agency.activeAssignmentsCount || 0}
@@ -309,7 +308,7 @@ export default function AgencyDetailsModal() {
 
               {/* Company & Liaison Snapshot */}
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '1rem' }}>
-                <div style={{ padding: '1rem', backgroundColor: '#FFFFFF', borderRadius: 'var(--radius-md)', border: '1px solid var(--border-color)' }}>
+                <div style={{ padding: '1rem', backgroundColor: 'var(--bg-card)', borderRadius: 'var(--radius-md)', border: '1px solid var(--border-color)' }}>
                   <div className="text-xs font-semibold text-muted" style={{ marginBottom: '0.5rem' }}>
                     PRIMARY CONTACT & LIAISON
                   </div>
@@ -324,7 +323,7 @@ export default function AgencyDetailsModal() {
                   </div>
                 </div>
 
-                <div style={{ padding: '1rem', backgroundColor: '#FFFFFF', borderRadius: 'var(--radius-md)', border: '1px solid var(--border-color)' }}>
+                <div style={{ padding: '1rem', backgroundColor: 'var(--bg-card)', borderRadius: 'var(--radius-md)', border: '1px solid var(--border-color)' }}>
                   <div className="text-xs font-semibold text-muted" style={{ marginBottom: '0.5rem' }}>
                     SERVICE CAPABILITY SCOPE
                   </div>
@@ -345,9 +344,9 @@ export default function AgencyDetailsModal() {
               <div
                 style={{
                   padding: '1.15rem 1.25rem',
-                  backgroundColor: '#FFFFFF',
+                  backgroundColor: 'var(--bg-card)',
                   borderRadius: 'var(--radius-md)',
-                  border: '1.5px solid #DBEAFE',
+                  border: '1.5px solid var(--primary-blue-border)',
                   boxShadow: '0 2px 8px rgba(37, 99, 235, 0.06)'
                 }}
               >
@@ -358,7 +357,7 @@ export default function AgencyDetailsModal() {
                         width: '32px',
                         height: '32px',
                         borderRadius: 'var(--radius-sm)',
-                        backgroundColor: '#EFF6FF',
+                        backgroundColor: 'var(--primary-blue-subtle)',
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
@@ -406,9 +405,9 @@ export default function AgencyDetailsModal() {
                     gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
                     gap: '0.75rem',
                     padding: '0.875rem 1rem',
-                    backgroundColor: '#F8FAFC',
+                    backgroundColor: 'var(--bg-subtle)',
                     borderRadius: 'var(--radius-md)',
-                    border: '1px solid #E2E8F0'
+                    border: '1px solid var(--border-color)'
                   }}
                 >
                   <div>
@@ -587,7 +586,7 @@ export default function AgencyDetailsModal() {
                   gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
                   gap: '1rem',
                   padding: '1.25rem',
-                  backgroundColor: '#F8FAFC',
+                  backgroundColor: 'var(--bg-subtle)',
                   borderRadius: 'var(--radius-md)',
                   border: '1px solid var(--border-color)'
                 }}
@@ -659,7 +658,7 @@ export default function AgencyDetailsModal() {
                   key={srv.id || srv.category}
                   style={{
                     padding: '1rem',
-                    backgroundColor: '#FFFFFF',
+                    backgroundColor: 'var(--bg-card)',
                     borderRadius: 'var(--radius-md)',
                     border: '1px solid var(--border-color)',
                     display: 'flex',
@@ -713,7 +712,7 @@ export default function AgencyDetailsModal() {
                     key={p.id}
                     style={{
                       padding: '0.75rem 1rem',
-                      backgroundColor: '#FFFFFF',
+                      backgroundColor: 'var(--bg-card)',
                       borderRadius: 'var(--radius-md)',
                       border: '1px solid var(--border-color)',
                       display: 'flex',
@@ -792,7 +791,7 @@ export default function AgencyDetailsModal() {
                   key={doc.id}
                   style={{
                     padding: '0.875rem 1rem',
-                    backgroundColor: '#FFFFFF',
+                    backgroundColor: 'var(--bg-card)',
                     borderRadius: 'var(--radius-md)',
                     border: '1px solid var(--border-color)',
                     display: 'flex',
@@ -843,7 +842,7 @@ export default function AgencyDetailsModal() {
               </div>
 
               {(agency.propertyAssignments || []).length === 0 ? (
-                <div style={{ padding: '2rem', textAlign: 'center', backgroundColor: '#F8FAFC', borderRadius: 'var(--radius-md)', border: '1px dashed var(--border-color)' }}>
+                <div style={{ padding: '2rem', textAlign: 'center', backgroundColor: 'var(--bg-subtle)', borderRadius: 'var(--radius-md)', border: '1px dashed var(--border-color)' }}>
                   <div className="text-xs text-muted">No property assignments requested yet.</div>
                   <button
                     type="button"
@@ -863,9 +862,9 @@ export default function AgencyDetailsModal() {
                         key={pa.id}
                         style={{
                           padding: '1rem',
-                          backgroundColor: '#FFFFFF',
+                          backgroundColor: 'var(--bg-card)',
                           borderRadius: 'var(--radius-md)',
-                          border: isPending ? '1px solid #BFDBFE' : '1px solid var(--border-color)',
+                          border: isPending ? '1px solid var(--primary-blue-border)' : '1px solid var(--border-color)',
                           display: 'flex',
                           flexDirection: 'column',
                           gap: '0.5rem'
@@ -916,7 +915,7 @@ export default function AgencyDetailsModal() {
                         </div>
 
                         {pa.comments && (
-                          <div className="text-xs" style={{ backgroundColor: '#F8FAFC', padding: '0.4rem 0.6rem', borderRadius: 'var(--radius-sm)', color: 'var(--text-secondary)' }}>
+                          <div className="text-xs" style={{ backgroundColor: 'var(--bg-subtle)', padding: '0.4rem 0.6rem', borderRadius: 'var(--radius-sm)', color: 'var(--text-secondary)' }}>
                             Admin remarks: {pa.comments}
                           </div>
                         )}
@@ -936,7 +935,7 @@ export default function AgencyDetailsModal() {
                   key={h.id}
                   style={{
                     padding: '0.875rem 1rem',
-                    backgroundColor: '#FFFFFF',
+                    backgroundColor: 'var(--bg-card)',
                     borderRadius: 'var(--radius-md)',
                     border: '1px solid var(--border-color)',
                     display: 'flex',
@@ -993,7 +992,7 @@ export default function AgencyDetailsModal() {
             justifyContent: 'space-between',
             padding: '1rem 1.5rem',
             borderTop: '1px solid var(--border-color)',
-            backgroundColor: '#FFFFFF',
+            backgroundColor: 'var(--bg-card)',
             flexShrink: 0
           }}
         >

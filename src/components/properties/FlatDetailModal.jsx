@@ -76,7 +76,6 @@ export default function FlatDetailModal() {
       isOpen={Boolean(flatDetailModalData)}
       onClose={() => setFlatDetailModalData(null)}
       title={`Flat ${flat.number} Details`}
-      subtitle={`${apartment.name} • ${block.name} • ${floor.name}`}
       size="md"
     >
       <div className="modal-body">
@@ -137,7 +136,7 @@ export default function FlatDetailModal() {
               <div
                 style={{
                   padding: '1rem',
-                  backgroundColor: '#FFFFFF',
+                  backgroundColor: 'var(--bg-card)',
                   borderRadius: 'var(--radius-md)',
                   border: '1px solid var(--border-color)',
                   display: 'flex',
@@ -199,7 +198,7 @@ export default function FlatDetailModal() {
               <div
                 style={{
                   padding: '1.25rem',
-                  backgroundColor: '#F8FAFC',
+                  backgroundColor: 'var(--bg-subtle)',
                   borderRadius: 'var(--radius-md)',
                   border: '1px dashed var(--border-color)',
                   textAlign: 'center'
@@ -216,7 +215,7 @@ export default function FlatDetailModal() {
               onSubmit={handleSave}
               style={{
                 padding: '1.25rem',
-                backgroundColor: '#F8FAFC',
+                backgroundColor: 'var(--bg-subtle)',
                 borderRadius: 'var(--radius-md)',
                 border: '1px solid var(--border-color)',
                 display: 'flex',
@@ -329,7 +328,7 @@ export default function FlatDetailModal() {
             <div
               style={{
                 padding: '1rem',
-                backgroundColor: '#FFFFFF',
+                backgroundColor: 'var(--bg-card)',
                 borderRadius: 'var(--radius-md)',
                 border: '1px solid var(--border-color)',
                 textAlign: 'center',
@@ -346,7 +345,7 @@ export default function FlatDetailModal() {
                   key={req.id}
                   style={{
                     padding: '0.75rem 1rem',
-                    backgroundColor: '#FFFFFF',
+                    backgroundColor: 'var(--bg-card)',
                     borderRadius: 'var(--radius-md)',
                     border: '1px solid var(--border-color)',
                     display: 'flex',

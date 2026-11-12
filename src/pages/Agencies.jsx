@@ -4,11 +4,10 @@ import EmptyState from '../components/common/EmptyState';
 import AgencyTable from '../components/agencies/AgencyTable';
 import AgencyCard from '../components/agencies/AgencyCard';
 import { useApp } from '../context/AppContext';
-import { SERVICE_CATEGORIES, REGISTRATION_STATUSES } from '../data/constants';
+import { REGISTRATION_STATUSES } from '../data/constants';
 import { STORAGE_KEYS, loadFromStorage, saveToStorage } from '../utils/storage';
 import {
   Briefcase,
-  Users,
   CheckCircle2,
   Clock,
   ShieldCheck,
@@ -149,7 +148,8 @@ export default function Agencies() {
             <div
               style={{
                 display: 'inline-flex',
-                backgroundColor: '#F1F5F9',
+                backgroundColor: 'var(--bg-subtle)',
+                border: '1px solid var(--border-color)',
                 borderRadius: 'var(--radius-md)',
                 padding: '0.2rem'
               }}
@@ -183,23 +183,6 @@ export default function Agencies() {
                 Table
               </button>
             </div>
-
-            {/* Add Service Category Button strictly adhering to Requirement 1 */}
-            <button
-              type="button"
-              className="btn btn-secondary"
-              onClick={() =>
-                setAddServiceCategoryModal({
-                  isOpen: true,
-                  onCategoryAdded: (cat) => setSelectedCategory(cat.name)
-                })
-              }
-              style={{ fontWeight: 600 }}
-              title="Add a new service category to the system"
-            >
-              <Plus size={16} />
-              Add Service Category
-            </button>
 
             {/* Add Agency Button strictly matching PRD Section 5.A */}
             <button

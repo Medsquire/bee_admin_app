@@ -84,7 +84,7 @@ export default function FlatCard({ flat, onSelect }) {
         <div
           style={{
             padding: '0.5rem',
-            backgroundColor: '#F8FAFC',
+            backgroundColor: 'var(--bg-subtle)',
             borderRadius: 'var(--radius-sm)',
             textAlign: 'center',
             fontSize: '0.75rem',

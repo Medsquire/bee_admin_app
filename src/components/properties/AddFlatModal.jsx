@@ -51,7 +51,6 @@ export default function AddFlatModal() {
       isOpen={isOpen}
       onClose={() => setAddFlatModal({ isOpen: false, apartmentId: null, blockId: null, floorId: null })}
       title={`Add Flat to ${floor.name}`}
-      subtitle={`${apartment.name} • ${block.name}`}
       size="md"
     >
       <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', height: '100%', flex: 1, minHeight: 0, overflow: 'hidden' }}>
@@ -81,7 +80,7 @@ export default function AddFlatModal() {
           </div>
 
           {formData.status === 'Occupied' && (
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', padding: '0.875rem', backgroundColor: '#F8FAFC', borderRadius: 'var(--radius-md)', border: '1px solid var(--border-color)' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', padding: '0.875rem', backgroundColor: 'var(--bg-subtle)', borderRadius: 'var(--radius-md)', border: '1px solid var(--border-color)' }}>
               <div>
                 <label className="form-label">Resident Type</label>
                 <select
@@ -132,7 +131,7 @@ export default function AddFlatModal() {
           )}
         </div>
 
-        <div className="modal-footer" style={{ padding: '0.875rem 1.5rem', display: 'flex', justifyContent: 'space-between', backgroundColor: '#FFFFFF', borderTop: '1px solid var(--border-color)', flexShrink: 0 }}>
+        <div className="modal-footer" style={{ padding: '0.875rem 1.5rem', display: 'flex', justifyContent: 'space-between', backgroundColor: 'var(--bg-card)', borderTop: '1px solid var(--border-color)', flexShrink: 0 }}>
           <button
             type="button"
             className="btn btn-secondary"

@@ -301,7 +301,7 @@ export default function Dashboard() {
                 key={req.id}
                 style={{
                   padding: '0.75rem 1rem',
-                  backgroundColor: '#F8FAFC',
+                  backgroundColor: 'var(--bg-subtle)',
                   borderRadius: 'var(--radius-md)',
                   border: '1px solid var(--border-color)',
                   display: 'flex',
@@ -392,9 +392,9 @@ export default function Dashboard() {
             <div
               style={{
                 padding: '0.5rem',
-                backgroundColor: '#DCFCE7',
+                backgroundColor: 'var(--success-bg)',
                 borderRadius: 'var(--radius-md)',
-                border: '1px solid #BBF7D0'
+                border: '1px solid var(--success-border)'
               }}
             >
               <div className="text-xs" style={{ color: 'var(--success)', fontWeight: 600 }}>
@@ -408,9 +408,9 @@ export default function Dashboard() {
             <div
               style={{
                 padding: '0.5rem',
-                backgroundColor: '#EFF6FF',
+                backgroundColor: 'var(--primary-blue-subtle)',
                 borderRadius: 'var(--radius-md)',
-                border: '1px solid #BFDBFE'
+                border: '1px solid var(--primary-blue-border)'
               }}
             >
               <div className="text-xs" style={{ color: 'var(--primary-blue)', fontWeight: 600 }}>
@@ -424,9 +424,9 @@ export default function Dashboard() {
             <div
               style={{
                 padding: '0.5rem',
-                backgroundColor: '#FEF3C7',
+                backgroundColor: 'var(--warning-bg)',
                 borderRadius: 'var(--radius-md)',
-                border: '1px solid #FDE68A'
+                border: '1px solid var(--warning-border)'
               }}
             >
               <div className="text-xs" style={{ color: 'var(--warning)', fontWeight: 600 }}>
@@ -440,7 +440,7 @@ export default function Dashboard() {
             <div
               style={{
                 padding: '0.5rem',
-                backgroundColor: '#F1F5F9',
+                backgroundColor: 'var(--bg-subtle)',
                 borderRadius: 'var(--radius-md)',
                 border: '1px solid var(--border-color)'
               }}
@@ -465,9 +465,9 @@ export default function Dashboard() {
                     key={ag.id}
                     style={{
                       padding: '0.625rem 0.875rem',
-                      backgroundColor: '#FFFBEB',
+                      backgroundColor: 'var(--warning-bg)',
                       borderRadius: 'var(--radius-sm)',
-                      border: '1px solid #FDE68A',
+                      border: '1px solid var(--warning-border)',
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'space-between',
@@ -497,9 +497,9 @@ export default function Dashboard() {
                     key={pa.id}
                     style={{
                       padding: '0.625rem 0.875rem',
-                      backgroundColor: '#EFF6FF',
+                      backgroundColor: 'var(--primary-blue-subtle)',
                       borderRadius: 'var(--radius-sm)',
-                      border: '1px solid #BFDBFE',
+                      border: '1px solid var(--primary-blue-border)',
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'space-between',
@@ -544,7 +544,7 @@ export default function Dashboard() {
                   key={index}
                   style={{
                     padding: '0.625rem 0.875rem',
-                    backgroundColor: '#FFFFFF',
+                    backgroundColor: 'var(--bg-subtle)',
                     borderRadius: 'var(--radius-sm)',
                     border: '1px solid var(--border-color)',
                     display: 'flex',
@@ -605,7 +605,7 @@ export default function Dashboard() {
                 gap: '0.875rem',
                 padding: '0.625rem 0.75rem',
                 borderRadius: 'var(--radius-sm)',
-                backgroundColor: '#F8FAFC'
+                backgroundColor: 'var(--bg-subtle)'
               }}
             >
               <div
@@ -613,7 +613,7 @@ export default function Dashboard() {
                   width: '28px',
                   height: '28px',
                   borderRadius: 'var(--radius-sm)',
-                  backgroundColor: '#FFFFFF',
+                  backgroundColor: 'var(--bg-card)',
                   border: '1px solid var(--border-color)',
                   display: 'flex',
                   alignItems: 'center',

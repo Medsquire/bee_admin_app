@@ -66,7 +66,6 @@ export default function PersonnelModal() {
       isOpen={isOpen}
       onClose={() => setPersonnelModal({ isOpen: false, agencyId: null, personnel: null })}
       title={personnel ? `Edit Staff — ${personnel.name}` : `Add Personnel to ${agency.name}`}
-      subtitle="Manage employee profile, service specialization, and operational shift"
       size="md"
     >
       <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', height: '100%', flex: 1, minHeight: 0, overflow: 'hidden' }}>
@@ -159,7 +158,7 @@ export default function PersonnelModal() {
           </div>
         </div>
 
-        <div className="modal-footer" style={{ padding: '0.875rem 1.5rem', display: 'flex', justifyContent: 'space-between', backgroundColor: '#FFFFFF', borderTop: '1px solid var(--border-color)', flexShrink: 0 }}>
+        <div className="modal-footer" style={{ padding: '0.875rem 1.5rem', display: 'flex', justifyContent: 'space-between', backgroundColor: 'var(--bg-card)', borderTop: '1px solid var(--border-color)', flexShrink: 0 }}>
           <button
             type="button"
             className="btn btn-secondary"

@@ -52,7 +52,6 @@ export default function AddServiceCategoryModal() {
       isOpen={addServiceCategoryModal.isOpen}
       onClose={handleClose}
       title="Add Service Category"
-      subtitle="Define a new service specialization for agency onboarding and property maintenance"
       size="sm"
     >
       <form onSubmit={handleSubmit}>

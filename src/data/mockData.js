@@ -1,9 +1,9 @@
 // Realistic apartment property management data for BeeProperty (ZIVION Design System)
 
 export const PROPERTIES = [
-  { id: 'prop-1', name: 'BeeTower Grand Sapphire', code: 'BTGS', unitsCount: 164, occupancy: 96.4, address: '742 Evergreen Blvd, Metro District', city: 'Emerald City' },
-  { id: 'prop-2', name: 'Emerald Bay Residences', code: 'EBR', unitsCount: 112, occupancy: 94.6, address: '88 Marina Promenade', city: 'Emerald Bay' },
-  { id: 'prop-3', name: 'The Heights Penthouse Lofts', code: 'THPL', unitsCount: 72, occupancy: 98.6, address: '120 Skyline Crest', city: 'Metro District' }
+  { id: 'prop-1', name: 'BeeTower Grand Sapphire', code: 'BTGS', unitsCount: 164, occupancy: 96.4, address: 'Plot 18 & 19, Financial District, Nanakramguda', city: 'Hyderabad', state: 'Telangana', zip: '500032' },
+  { id: 'prop-2', name: 'Emerald Bay Residences', code: 'EBR', unitsCount: 112, occupancy: 94.6, address: 'Durgam Cheruvu Lakefront Promenade, Madhapur', city: 'Hyderabad', state: 'Telangana', zip: '500081' },
+  { id: 'prop-3', name: 'The Heights Penthouse Lofts', code: 'THPL', unitsCount: 72, occupancy: 98.6, address: 'Road No. 36, Jubilee Hills', city: 'Hyderabad', state: 'Telangana', zip: '500033' }
 ];
 
 export const INITIAL_UNITS = [

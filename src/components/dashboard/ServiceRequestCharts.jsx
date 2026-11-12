@@ -121,12 +121,12 @@ export default function ServiceRequestCharts({ maintenanceRequests = [] }) {
       return (
         <div
           style={{
-            backgroundColor: 'rgba(255, 255, 255, 0.96)',
+            backgroundColor: 'var(--bg-card)',
             backdropFilter: 'blur(8px)',
             border: `1px solid ${data.color}`,
             borderRadius: 'var(--radius-sm)',
             padding: '0.5rem 0.75rem',
-            boxShadow: '0 4px 12px rgba(15, 23, 42, 0.08)'
+            boxShadow: '0 4px 12px rgba(15, 23, 42, 0.15)'
           }}
         >
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
@@ -157,12 +157,12 @@ export default function ServiceRequestCharts({ maintenanceRequests = [] }) {
       return (
         <div
           style={{
-            backgroundColor: 'rgba(255, 255, 255, 0.96)',
+            backgroundColor: 'var(--bg-card)',
             backdropFilter: 'blur(8px)',
             border: '1px solid var(--primary-blue-border)',
             borderRadius: 'var(--radius-sm)',
             padding: '0.5rem 0.75rem',
-            boxShadow: '0 4px 12px rgba(15, 23, 42, 0.08)'
+            boxShadow: '0 4px 12px rgba(15, 23, 42, 0.15)'
           }}
         >
           <div style={{ fontSize: '0.8125rem', fontWeight: 700, color: 'var(--dark-navy)', marginBottom: '0.25rem' }}>
@@ -240,7 +240,7 @@ export default function ServiceRequestCharts({ maintenanceRequests = [] }) {
                     paddingAngle={3}
                   >
                     {statusData.map((entry, index) => (
-                      <Cell key={`cell-${index}`} fill={entry.color} stroke="#FFFFFF" strokeWidth={2} />
+                      <Cell key={`cell-${index}`} fill={entry.color} stroke="var(--bg-card)" strokeWidth={2} />
                     ))}
                   </Pie>
                 </PieChart>
@@ -294,8 +294,8 @@ export default function ServiceRequestCharts({ maintenanceRequests = [] }) {
                     justifyContent: 'space-between',
                     padding: '0.4rem 0.6rem',
                     borderRadius: 'var(--radius-sm)',
-                    backgroundColor: 'rgba(248, 250, 252, 0.7)',
-                    border: '1px solid rgba(226, 232, 240, 0.6)'
+                    backgroundColor: 'var(--bg-subtle)',
+                    border: '1px solid var(--border-color)'
                   }}
                 >
                   <div style={{ display: 'flex', alignItems: 'center', gap: '0.45rem' }}>
@@ -379,25 +379,25 @@ export default function ServiceRequestCharts({ maintenanceRequests = [] }) {
                 layout="vertical"
                 margin={{ top: 5, right: 25, left: 10, bottom: 5 }}
               >
-                <CartesianGrid strokeDasharray="3 3" horizontal={false} stroke="#E2E8F0" />
+                <CartesianGrid strokeDasharray="3 3" horizontal={false} stroke="var(--border-color)" />
                 <XAxis
                   type="number"
                   allowDecimals={false}
-                  stroke="#94A3B8"
+                  stroke="var(--text-muted)"
                   fontSize={11}
                   tickLine={false}
-                  axisLine={{ stroke: '#E2E8F0' }}
+                  axisLine={{ stroke: 'var(--border-color)' }}
                 />
                 <YAxis
                   type="category"
                   dataKey="category"
-                  stroke="#64748B"
+                  stroke="var(--text-secondary)"
                   fontSize={11}
                   tickLine={false}
-                  axisLine={{ stroke: '#E2E8F0' }}
+                  axisLine={{ stroke: 'var(--border-color)' }}
                   width={110}
                 />
-                <Tooltip content={<CustomCategoryTooltip />} cursor={{ fill: 'rgba(37, 99, 235, 0.04)' }} />
+                <Tooltip content={<CustomCategoryTooltip />} cursor={{ fill: 'var(--primary-blue-subtle)' }} />
                 <Bar dataKey="requests" radius={[0, 4, 4, 0]}>
                   {categoryData.map((entry, index) => (
                     <Cell key={`bar-cell-${index}`} fill={entry.fill} />

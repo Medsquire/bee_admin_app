@@ -1,4 +1,4 @@
-// BEE Residence & Zivion Standards, Field Options, and Categories
+// Bee Property & Zivion Standards, Field Options, and Categories
 // Strictly matching PRD.md and Bee_Zivion_Agent_Onboarding_Fields.docx
 
 export const SERVICE_CATEGORIES = [

@@ -83,7 +83,6 @@ export default function NewMaintenanceModal() {
       isOpen={Boolean(newMaintenanceModalApartmentId)}
       onClose={() => setNewMaintenanceModalApartmentId(null)}
       title="Report Maintenance Issue"
-      subtitle="Register an infrastructure or unit ticket linked directly to property hierarchy"
       size="md"
     >
       <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', height: '100%', flex: 1, minHeight: 0, overflow: 'hidden' }}>
@@ -135,7 +134,7 @@ export default function NewMaintenanceModal() {
           <div
             style={{
               padding: '1rem',
-              backgroundColor: '#F8FAFC',
+              backgroundColor: 'var(--bg-subtle)',
               borderRadius: 'var(--radius-md)',
               border: '1px solid var(--border-color)',
               display: 'flex',
@@ -266,7 +265,7 @@ export default function NewMaintenanceModal() {
           </div>
         </div>
 
-        <div className="modal-footer">
+        <div className="modal-footer" style={{ flexShrink: 0 }}>
           <button
             type="button"
             className="btn btn-secondary"
